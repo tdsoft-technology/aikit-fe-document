@@ -2,34 +2,23 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'AIKit',
+  tagline: 'Structure OpenCode with Skills, Agents, and Workflows',
   favicon: 'img/favicon.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: 'https://aikit.dev',
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'tdsoft-tech',
+  projectName: 'aikit',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -41,25 +30,21 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/tdsoft-tech/aikit/edit/main/document/aikit/docs',
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: 'v0.1.14',
+              path: '/',
+            },
+          },
         },
         blog: {
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
-            xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          editUrl: 'https://github.com/tdsoft-tech/aikit/edit/main/document/aikit/blog',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -69,41 +54,76 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
+      defaultMode: 'dark',
     },
+
     navbar: {
-      title: 'My Site',
+      title: 'AIKit',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'AIKit Logo',
         src: 'img/logo.svg',
+        srcDark: 'img/logo-dark.svg',
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'mainSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Documentation',
+        },
+        {
+          type: 'doc',
+          docId: 'features',
+          position: 'left',
+          label: 'Features',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/tdsoft-tech/aikit',
           label: 'GitHub',
           position: 'right',
+          className: 'github-link',
         },
       ],
+      hideOnScroll: false,
     },
     footer: {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Documentation',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Getting Started',
               to: '/docs/intro',
+            },
+            {
+              label: 'Features',
+              to: '/docs/features',
+            },
+            {
+              label: 'Installation',
+              to: '/docs/installation',
+            },
+          ],
+        },
+        {
+          title: 'Resources',
+          items: [
+            {
+              label: 'Skills Guide',
+              to: '/docs/skills/intro',
+            },
+            {
+              label: 'Agents Guide',
+              to: '/docs/agents/intro',
+            },
+            {
+              label: 'Commands Reference',
+              to: '/docs/commands/intro',
             },
           ],
         },
@@ -111,38 +131,33 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/tdsoft-tech/aikit',
+            },
+            {
+              label: 'Issues',
+              href: 'https://github.com/tdsoft-tech/aikit/issues',
+            },
+            {
+              label: 'Discussions',
+              href: 'https://github.com/tdsoft-tech/aikit/discussions',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} TDSoft. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['typescript', 'bash', 'json', 'markdown'],
+    },
+    announcementBar: {
+      id: 'beta-notice',
+      content: '⚡ AIKit v0.1.14 is now available - Check out the new features!',
+      backgroundColor: '#25c2a0',
+      textColor: '#091e42',
+      isCloseable: true,
     },
   } satisfies Preset.ThemeConfig,
 };

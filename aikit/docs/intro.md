@@ -2,46 +2,113 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Welcome to AIKit
 
-Let's discover **Docusaurus in less than 5 minutes**.
+AIKit is an **Open-source AI coding agent toolkit** that extends OpenCode's capabilities with structured workflows, specialized agents, and integrated tools. It transforms OpenCode from a general-purpose coding assistant into a structured development environment with task tracking, quality enforcement, and cross-session continuity.
 
-## Getting Started
+## Why AIKit?
 
-Get started by **creating a new site**.
+OpenCode is powerful, but it lacks:
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+- <MaterialIcon name="cancel" className="icon-error" /> Structured workflows for development tasks
+- <MaterialIcon name="cancel" className="icon-error" /> Task tracking and management
+- <MaterialIcon name="cancel" className="icon-error" /> Automatic quality gates
+- <MaterialIcon name="cancel" className="icon-error" /> Session continuity between work sessions
+- <MaterialIcon name="cancel" className="icon-error" /> Persistent memory for learnings
+- <MaterialIcon name="cancel" className="icon-error" /> Enforced best practices
 
-### What you'll need
+AIKit adds all of this and more:
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- <MaterialIcon name="check_circle" className="icon-success" /> **23 Built-in Skills** - Enforce TDD, debugging, refactoring workflows
+- <MaterialIcon name="check_circle" className="icon-success" /> **8 Specialized Agents** - Planner, Builder, Reviewer, Researcher, etc.
+- <MaterialIcon name="check_circle" className="icon-success" /> **27+ Slash Commands** - Quick shortcuts for common workflows
+- <MaterialIcon name="check_circle" className="icon-success" /> **Task Tracking** - Beads integration for tracking and quality gates
+- <MaterialIcon name="check_circle" className="icon-success" /> **Anti-Hallucination** - 3-layer system to prevent AI errors
+- <MaterialIcon name="check_circle" className="icon-success" /> **Persistent Memory** - Cross-session context with handoffs
+- <MaterialIcon name="check_circle" className="icon-success" /> **Figma Integration** - Extract design tokens and automate development
 
-## Generate a new site
+## What You Can Do With AIKit
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
+### Enforce Structured Workflows
 
 ```bash
-cd my-website
-npm run start
+> use_skill("test-driven-development")
+> Implement user authentication
+# Agent follows TDD: RED → GREEN → REFACTOR
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+### Track Tasks with Quality Gates
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+```bash
+/create Add user authentication
+/plan user authentication system
+/implement
+/finish
+# Runs quality gates: typecheck, test, lint, build
+```
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+### Session Continuity
+
+```bash
+/handoff
+# Saves progress to memory
+# ... later ...
+/resume
+# Loads context and continues where you left off
+```
+
+### Specialized Agents
+
+```bash
+@planner Design authentication system
+# Delegates to @scout for research
+# Delegates to @build for implementation
+# Delegates to @review for verification
+```
+
+## Quick Comparison
+
+| Feature | Without AIKit | With AIKit |
+|---------|---------------|------------|
+| Workflow Enforcement | None | 23 built-in skills |
+| Task Tracking | Manual | Beads integration |
+| Quality Gates | Manual | Automatic in /finish |
+| Session Continuity | None | Handoffs + /resume |
+| Persistent Memory | None | Memory system |
+| Agent Specialization | Default only | 8 specialized agents |
+| Anti-Hallucination | None | 3-layer system |
+| Figma Integration | None | Design tokens + assets |
+
+## Next Steps
+
+- **[Features](features)** - Learn about all AIKit features
+- **[Installation](installation)** - Install and setup AIKit
+- **[Quick Start](quick-start)** - Get started in 5 minutes
+- **[Skills Guide](skills/intro)** - Explore 23 built-in skills
+- **[Agents Guide](agents/intro)** - Understand specialized agents
+- **[Commands Reference](commands/intro)** - All 27+ slash commands
+
+## Get Started
+
+```bash
+# Install AIKit
+cd aikit
+npm install
+npm run build
+npm link
+
+# Initialize in your project
+aikit init --global
+cd your-project
+aikit init
+aikit install
+
+# Create your first task
+/create Add user authentication
+```
+
+## Join the Community
+
+- <MaterialIcon name="bug_report" className="icon-error" /> [Report Issues](https://github.com/tdsoft-tech/aikit/issues)
+- <MaterialIcon name="lightbulb" className="icon-warning" /> [Feature Requests](https://github.com/tdsoft-tech/aikit/discussions)
+- <MaterialIcon name="description" className="icon-primary" /> [Documentation](https://github.com/tdsoft-tech/aikit/blob/main/docs)
