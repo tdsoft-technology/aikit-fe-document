@@ -6,6 +6,8 @@ sidebar_position: 1
 
 Skills are **structured workflow instructions** that AI agents must follow. They enforce consistent processes for common development tasks.
 
+<MaterialIcon name="lightbulb" className="icon-info" /> **All skills now use the `/ak_sk_` prefix** (e.g., `/ak_sk_test-driven-development`)
+
 ## Why Skills?
 
 Without skills, AI agents may:
@@ -31,10 +33,13 @@ With skills, AI agents:
 > find_skills("refactor")
 ```
 
-### Use Skills
+### Use Skills (OpenCode)
 
 ```bash
-# Use a skill for current task
+# Direct invocation with prefix
+/ak_sk_test-driven-development
+
+# Or via tool
 > use_skill("test-driven-development")
 > Implement user authentication
 ```
@@ -54,51 +59,56 @@ aikit skills create my-custom-skill
 
 ## All Skills
 
-### Development Skills
+Skills are organized into **9 categories** for better discoverability:
 
-- **[Test-Driven Development](test-driven-development)** - TDD workflow (RED → GREEN → REFACTOR)
-- **[Refactoring](refactoring)** - Code restructuring with tests
-- **[Error Handling](error-handling)** - Exception handling patterns
-- **[State Management](state-management)** - Application state patterns
+### Debugging (1 skill)
 
-### Testing Skills
+- **[Systematic Debugging](debugging/systematic-debugging)** - Structured debugging workflow
 
-- **[Unit Testing](unit-testing)** - Test individual functions/components
-- **[Integration Testing](integration-testing)** - Test component interactions
+### Design (4 skills)
 
-### Design Skills
+- **[Accessibility](design/accessibility)** - WCAG compliance and a11y guidelines
+- **[Database Design](design/database-design)** - Schema design principles
+- **[Design Measurement](design/design-measurement)** - Design metrics and analysis
+- **[Frontend Aesthetics](design/frontend-aesthetics)** - UI design principles
 
-- **[API Design](api-design)** - REST API design best practices
-- **[Component Design](component-design)** - React/Vue component patterns
-- **[Database Design](database-design)** - Schema design principles
+### Development (6 skills)
 
-### UI/UX Skills
+- **[API Design](development/api-design)** - REST API design best practices
+- **[Component Design](development/component-design)** - React/Vue component patterns
+- **[Error Handling](development/error-handling)** - Exception handling patterns
+- **[Performance Optimization](development/performance-optimization)** - Frontend performance
+- **[Refactoring](development/refactoring)** - Code restructuring with tests
+- **[State Management](development/state-management)** - Application state patterns
 
-- **[Accessibility](accessibility)** - WCAG compliance and a11y guidelines
-- **[Frontend Aesthetics](frontend-aesthetics)** - UI design principles
-- **[Performance Optimization](performance-optimization)** - Frontend performance
+### Documentation (1 skill)
 
-### Debugging & Review Skills
+- **[Documentation](documentation/documentation)** - Technical documentation best practices
 
-- **[Systematic Debugging](systematic-debugging)** - Structured debugging workflow
-- **[Code Review](code-review)** - Code quality review
-- **[Security Audit](security-audit)** - Security vulnerability scanning
+### Figma (2 skills)
 
-### Collaboration Skills
+- **[Analyze Figma](figma/analyze-figma)** - Extract design tokens from Figma
+- **[Figma to Code](figma/figma-to-code)** - Convert Figma designs to code
 
-- **[Documentation](documentation)** - Technical documentation
-- **[Git Workflow](git-workflow)** - Best git practices
-- **[Writing Plans](writing-plans)** - Implementation planning
+### Git (1 skill)
 
-### Meta Skills
+- **[Git Workflow](git/git-workflow)** - Best git practices and workflow
 
-- **[Using Superpowers](using-superpowers)** - How to use skills system
-- **[Design Measurement](design-measurement)** - Design metrics
+### Meta (2 skills)
 
-### Figma Skills
+- **[Using Superpowers](meta/using-superpowers)** - How to use skills system
+- **[Writing Plans](meta/writing-plans)** - Implementation planning
 
-- **[Analyze Figma](analyze-figma)** - Extract design tokens
-- **[Figma to Code](figma-to-code)** - Convert designs to code
+### Review (2 skills)
+
+- **[Code Review](review/code-review)** - Code quality review
+- **[Security Audit](review/security-audit)** - Security vulnerability scanning
+
+### Testing (3 skills)
+
+- **[Integration Testing](testing/integration-testing)** - Test component interactions
+- **[Test-Driven Development](testing/test-driven-development)** - TDD workflow (RED → GREEN → REFACTOR)
+- **[Unit Testing](testing/unit-testing)** - Test individual functions/components
 
 ## Skill Format
 
@@ -147,5 +157,5 @@ aikit skills sync
 ## Next Steps
 
 - **[Agents](../agents/intro)** - Learn about specialized agents
-- **[Commands](../commands/intro)** - All slash commands
+- **[Commands](../commands/intro)** - All slash commands (using `/ak_cm_` prefix)
 - **[Tools](../tools/intro)** - Built-in tools

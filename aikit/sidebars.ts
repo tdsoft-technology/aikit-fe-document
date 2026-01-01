@@ -21,16 +21,52 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'skills/intro',
-        'skills/test-driven-development',
-        'skills/systematic-debugging',
-        'skills/refactoring',
-        'skills/unit-testing',
-        'skills/integration-testing',
-        'skills/code-review',
-        'skills/error-handling',
-        'skills/design-measurement',
-        'skills/analyze-figma',
-        'skills/figma-to-code',
+        {
+          type: 'category',
+          label: 'Debugging',
+          items: [
+            'skills/debugging/systematic-debugging',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Design',
+          items: [
+            'skills/design/design-measurement',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Development',
+          items: [
+            'skills/development/error-handling',
+            'skills/development/refactoring',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Figma',
+          items: [
+            'skills/figma/analyze-figma',
+            'skills/figma/figma-to-code',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Review',
+          items: [
+            'skills/review/code-review',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Testing',
+          items: [
+            'skills/testing/integration-testing',
+            'skills/testing/test-driven-development',
+            'skills/testing/unit-testing',
+          ],
+        },
       ],
     },
     {

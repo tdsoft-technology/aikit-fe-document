@@ -6,12 +6,14 @@ sidebar_position: 3
 
 Create a detailed implementation plan.
 
+<MaterialIcon name="terminal" className="icon-info" /> **Command:** `/ak_cm_plan`
+
 ## Usage
 
 ```bash
-/plan user authentication system
-/plan refactor database layer
-/plan add dark mode
+/ak_cm_plan user authentication system
+/ak_cm_plan refactor database layer
+/ak_cm_plan add dark mode
 ```
 
 ## Workflow
@@ -48,7 +50,7 @@ Brief description of goal.
 ## Example
 
 ```bash
-/plan user authentication system
+/ak_cm_plan user authentication system
 
 # AIKit generates:
 # Plan: User Authentication System
@@ -87,5 +89,5 @@ Implement JWT-based authentication with login/logout.
 
 ## Related Commands
 
-- **[/create](create)** - Create task first
-- **[/implement](implement)** - Implement the plan
+- **[/ak_cm_create](create)** - Create task first
+- **[/ak_cm_implement](implement)** - Implement the plan

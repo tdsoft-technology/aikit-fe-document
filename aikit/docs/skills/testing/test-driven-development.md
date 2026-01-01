@@ -6,6 +6,8 @@ sidebar_position: 2
 
 Enforce the RED-GREEN-REFACTOR cycle for all code changes.
 
+<MaterialIcon name="terminal" className="icon-info" /> **Use this skill with:** `/ak_sk_test-driven-development`
+
 ## When to Use
 
 Use this skill when:

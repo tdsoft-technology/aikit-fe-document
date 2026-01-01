@@ -6,12 +6,14 @@ sidebar_position: 3
 
 Get started with AIKit in 5 minutes.
 
+<MaterialIcon name="lightbulb" className="icon-info" /> **All commands use `/ak_cm_` prefix, skills use `/ak_sk_` prefix**
+
 ## 1. Create Your First Task
 
 Create a new task using Beads:
 
 ```bash
-/create Add user authentication
+/ak_cm_create Add user authentication
 ```
 
 This creates a task in `.beads/` with status "in-progress".
@@ -21,7 +23,7 @@ This creates a task in `.beads/` with status "in-progress".
 Create a detailed implementation plan:
 
 ```bash
-/plan user authentication system
+/ak_cm_plan user authentication system
 ```
 
 AIKit will:
@@ -35,8 +37,8 @@ AIKit will:
 Use a skill to enforce best practices:
 
 ```bash
-> use_skill("test-driven-development")
-/implement
+/ak_sk_test-driven-development
+/ak_cm_implement
 ```
 
 The AI will:
@@ -49,7 +51,7 @@ The AI will:
 Finish the task with mandatory quality checks:
 
 ```bash
-/finish
+/ak_cm_finish
 ```
 
 AIKit runs these hard gates (all must pass):
@@ -66,7 +68,7 @@ If any gate fails, AIKit reports the issue and stops.
 Save your progress:
 
 ```bash
-/handoff
+/ak_cm_handoff
 ```
 
 This creates a handoff bundle in `memory/handoffs/[timestamp].md` with:
@@ -80,7 +82,7 @@ This creates a handoff bundle in `memory/handoffs/[timestamp].md` with:
 Continue where you left off:
 
 ```bash
-/resume
+/ak_cm_resume
 ```
 
 AIKit loads the latest handoff and continues your work.
@@ -89,15 +91,15 @@ AIKit loads the latest handoff and continues your work.
 
 ```bash
 # Session 1
-/create Implement user login
-/plan login feature
-> use_skill("test-driven-development")
-/implement
-/finish
-/handoff
+/ak_cm_create Implement user login
+/ak_cm_plan login feature
+/ak_sk_test-driven-development
+/ak_cm_implement
+/ak_cm_finish
+/ak_cm_handoff
 
 # Session 2
-/resume
+/ak_cm_resume
 # Continue with next task...
 ```
 
@@ -109,7 +111,10 @@ Find and use skills:
 # Find skills
 > find_skills("test")
 
-# Use a skill
+# Use a skill via direct invocation
+/ak_sk_test-driven-development
+
+# Or via tool
 > use_skill("test-driven-development")
 > Implement authentication
 ```
@@ -149,7 +154,7 @@ Or use `/help` in OpenCode:
 
 ```bash
 /help
-/help plan
+/help ak_cm_plan
 ```
 
 ## Common Workflows
@@ -157,26 +162,26 @@ Or use `/help` in OpenCode:
 ### Feature Development
 
 ```bash
-/create Add new feature
-/plan feature
-/implement
-/finish
+/ak_cm_create Add new feature
+/ak_cm_plan feature
+/ak_cm_implement
+/ak_cm_finish
 ```
 
 ### Bug Fix
 
 ```bash
-/fix bug description
+/ak_cm_fix bug description
 # or
-/use_skill("systematic-debugging")
+/ak_sk_systematic-debugging
 ```
 
 ### Code Review
 
 ```bash
-/review-codebase
+/ak_cm_review-codebase
 # or
-/use_skill("code-review")
+/ak_sk_code-review
 > Review this PR
 ```
 
@@ -184,21 +189,21 @@ Or use `/help` in OpenCode:
 
 ```bash
 # Session 1
-/create Complex feature
-/plan feature
-/implement
-/handoff
+/ak_cm_create Complex feature
+/ak_cm_plan feature
+/ak_cm_implement
+/ak_cm_handoff
 
 # Session 2
-/resume
-/implement
-/finish
+/ak_cm_resume
+/ak_cm_implement
+/ak_cm_finish
 ```
 
 ## Next Steps
 
 - **[Features](features)** - Learn about all features
-- **[Skills Guide](skills/intro)** - Explore 23 built-in skills
+- **[Skills Guide](skills/intro)** - Explore 22 built-in skills organized in 9 categories
 - **[Agents Guide](agents/intro)** - Understand 8 specialized agents
-- **[Commands Reference](commands/intro)** - All 27+ slash commands
+- **[Commands Reference](commands/intro)** - All 28 slash commands
 - **[Tools](tools/intro)** - Built-in tools

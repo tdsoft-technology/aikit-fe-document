@@ -6,12 +6,14 @@ sidebar_position: 2
 
 Create a new Beads task for tracking work.
 
+<MaterialIcon name="terminal" className="icon-info" /> **Command:** `/ak_cm_create`
+
 ## Usage
 
 ```bash
-/create Add user authentication
-/create Fix navigation bug
-/create Implement dark mode
+/ak_cm_create Add user authentication
+/ak_cm_create Fix navigation bug
+/ak_cm_create Implement dark mode
 ```
 
 ## Workflow
@@ -30,30 +32,30 @@ Title: Add user authentication
 Description: ...
 Status: in-progress
 
-Use /implement to start work
+Use /ak_cm_implement to start work
 ```
 
 ## Example
 
 ```bash
 # Create task
-/create Implement JWT authentication
+/ak_cm_create Implement JWT authentication
 
 # Output:
 ✓ Created bead: bead-001
 
 # Plan work
-/plan JWT authentication system
+/ak_cm_plan JWT authentication system
 
 # Implement
-/implement
+/ak_cm_implement
 
 # Complete
-/finish bead-001
+/ak_cm_finish bead-001
 ```
 
 ## Related Commands
 
-- **[/plan](plan)** - Create implementation plan
-- **[/implement](implement)** - Implement with TDD
-- **[/finish](finish)** - Complete with quality gates
+- **[/ak_cm_plan](plan)** - Create implementation plan
+- **[/ak_cm_implement](implement)** - Implement with TDD
+- **[/ak_cm_finish](finish)** - Complete with quality gates
