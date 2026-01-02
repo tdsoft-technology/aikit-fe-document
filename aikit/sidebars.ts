@@ -211,34 +211,34 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
-    {
-      type: 'category',
-      label: 'Beads',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'beads/intro',
-        'beads/workflow',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'MCP Server',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'mcp-server/intro',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Sessions',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'sessions/intro',
-      ],
-    },
+    // {
+    //   type: 'category',
+    //   label: 'Beads',
+    //   collapsible: true,
+    //   collapsed: false,
+    //   items: [
+    //     'beads/intro',
+    //     'beads/workflow',
+    //   ],
+    // },
+    // {
+    //   type: 'category',
+    //   label: 'MCP Server',
+    //   collapsible: true,
+    //   collapsed: false,
+    //   items: [
+    //     'mcp-server/intro',
+    //   ],
+    // },
+    // {
+    //   type: 'category',
+    //   label: 'Sessions',
+    //   collapsible: true,
+    //   collapsed: false,
+    //   items: [
+    //     'sessions/intro',
+    //   ],
+    // },
     {
       type: 'category',
       label: 'Tools',
@@ -248,15 +248,15 @@ const sidebars: SidebarsConfig = {
         'tools/intro',
       ],
     },
-    {
-      type: 'category',
-      label: 'Plugins',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'plugins/intro',
-      ],
-    },
+    // {
+    //   type: 'category',
+    //   label: 'Plugins',
+    //   collapsible: true,
+    //   collapsed: false,
+    //   items: [
+    //     'plugins/intro',
+    //   ],
+    // },
     {
       type: 'category',
       label: 'Advanced',
@@ -266,8 +266,8 @@ const sidebars: SidebarsConfig = {
         'advanced/anti-hallucination',
         'advanced/configuration',
         'advanced/custom-skills',
-        'advanced/custom-tools',
-        'advanced/custom-plugins',
+        // 'advanced/custom-tools',
+        // 'advanced/custom-plugins',
         'advanced/one-shot-mode',
       ],
     },

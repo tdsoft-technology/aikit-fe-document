@@ -1,14 +1,18 @@
 ---
 sidebar_position: 1
+description: AIKit - Open-source AI coding agent toolkit for Claude Code and OpenCode. Structured workflows, specialized agents, task tracking, and quality gates for AI-powered development.
+keywords: ['Claude Code', 'OpenCode', 'AI coding agent', 'AI development toolkit', 'Claude AI assistant', 'task tracking', 'quality gates', 'AI workflows']
 ---
 
-# Welcome to AIKit v0.1.17
+# Welcome to AIKit v0.1.18
 
-AIKit is an **Open-source AI coding agent toolkit** that extends OpenCode's capabilities with structured workflows, specialized agents, and integrated tools. It transforms OpenCode from a general-purpose coding assistant into a structured development environment with task tracking, quality enforcement, and cross-session continuity.
+AIKit is an **Open-source AI coding agent toolkit** that extends **Claude Code** and **OpenCode** capabilities with structured workflows, specialized agents, and integrated tools. It transforms Claude Code from a general-purpose AI assistant into a structured development environment with task tracking, quality enforcement, and cross-session continuity.
+
+Built for **Claude Code** (Anthropic's official CLI) and compatible with **OpenCode**, AIKit brings enterprise-grade development practices to AI-powered software engineering.
 
 ## Why AIKit?
 
-OpenCode is powerful, but it lacks:
+Claude Code and OpenCode are powerful, but they lack:
 
 - <MaterialIcon name="cancel" className="icon-error" /> Structured workflows for development tasks
 - <MaterialIcon name="cancel" className="icon-error" /> Task tracking and management
@@ -22,7 +26,7 @@ AIKit adds all of this and more:
  - <MaterialIcon name="check_circle" className="icon-success" /> **22 Built-in Skills** - Enforce TDD, debugging, refactoring workflows
  - <MaterialIcon name="check_circle" className="icon-success" /> **8 Specialized Agents** - Planner, Builder, Reviewer, Researcher, etc.
  - <MaterialIcon name="check_circle" className="icon-success" /> **42+ Slash Commands** - Quick shortcuts for common workflows
- - <MaterialIcon name="check_circle" className="icon-success" /> **MCP Server** - Full OpenCode integration via Model Context Protocol
+ - <MaterialIcon name="check_circle" className="icon-success" /> **MCP Server** - Full Claude Code and OpenCode integration via Model Context Protocol
  - <MaterialIcon name="check_circle" className="icon-success" /> **Task Tracking** - Beads integration for tracking and quality gates
  - <MaterialIcon name="check_circle" className="icon-success" /> **Session Management** - Track development work across sessions
  - <MaterialIcon name="check_circle" className="icon-success" /> **Anti-Hallucination** - 3-layer system to prevent AI errors
@@ -86,7 +90,7 @@ AIKit adds all of this and more:
 - **[Features](features)** - Learn about all AIKit features
 - **[Installation](installation)** - Install and setup AIKit
 - **[Quick Start](quick-start)** - Get started in 5 minutes
-- **[MCP Server](mcp-server/intro)** - OpenCode integration via MCP
+- **[MCP Server](mcp-server/intro)** - Claude Code and OpenCode integration via MCP
 - **[Beads Task Tracking](beads/intro)** - Track tasks with quality gates
 - **[Skills Guide](skills/intro)** - Explore 22 built-in skills
 - **[Agents Guide](agents/intro)** - Understand specialized agents

@@ -32,7 +32,7 @@ AIKit's 3-layer system prevents these issues.
 # Create task first
 bd create "Add user authentication"
 
-# Or in OpenCode
+# Or in Claude Code or OpenCode
 /create Add user authentication
 
 # Then implement

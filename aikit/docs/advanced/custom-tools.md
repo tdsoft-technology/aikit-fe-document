@@ -157,7 +157,7 @@ export default defineTool({
 ## Use Custom Tools
 
 ```bash
-# Call tool in OpenCode
+# Call tool in Claude Code or OpenCode
 > git-status()
 > find-files(pattern="*.test.ts")
 > call-api(url="https://api.example.com/users", method="GET")

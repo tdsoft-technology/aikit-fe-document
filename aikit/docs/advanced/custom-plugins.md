@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Custom Plugins
 
-Create **custom plugins** to hook into OpenCode events and add automatic behaviors.
+Create **custom plugins** to hook into Claude Code and OpenCode events and add automatic behaviors.
 
 ## Create a Custom Plugin
 

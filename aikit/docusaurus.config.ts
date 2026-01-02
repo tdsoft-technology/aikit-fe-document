@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'AIKit',
   tagline: 'Structure OpenCode with Skills, Agents, and Workflows',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
 
   future: {
     v4: true,
@@ -34,7 +34,7 @@ const config: Config = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: 'v0.1.17',
+              label: 'v0.1.18',
               path: '/',
             },
           },
@@ -146,7 +146,7 @@ const config: Config = {
     },
     announcementBar: {
       id: 'beta-notice',
-      content: '⚡ AIKit v0.1.17 is now available - Check out the new features!',
+      content: '⚡ AIKit v0.1.18 is now available - Check out the new features!',
       backgroundColor: '#25c2a0',
       textColor: '#091e42',
       isCloseable: true,

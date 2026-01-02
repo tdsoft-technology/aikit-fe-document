@@ -8,7 +8,7 @@ Tools are **functions that AI agents can call** during conversations. They provi
 
 ## How to Use Tools
 
-### In OpenCode
+### In Claude Code or OpenCode
 
 ```bash
 # Read from memory

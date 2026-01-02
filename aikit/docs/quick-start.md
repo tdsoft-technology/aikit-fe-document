@@ -183,7 +183,7 @@ List all commands:
 aikit commands list
 ```
 
-Or use `/help` in OpenCode:
+Or use `/help` in Claude Code or OpenCode:
 
 ```bash
 /help

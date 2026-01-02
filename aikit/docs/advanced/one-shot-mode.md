@@ -232,7 +232,7 @@ Enable one-shot in `.aikit/aikit.json`:
 ## CLI
 
 ```bash
-# One-shot is accessed via @one-shot agent in OpenCode
+# One-shot is accessed via @one-shot agent in Claude Code or OpenCode
 > @one-shot Your task here
 ```
 

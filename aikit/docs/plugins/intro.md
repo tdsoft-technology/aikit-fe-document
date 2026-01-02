@@ -1,10 +1,10 @@
----
+<!-- ---
 sidebar_position: 1
 ---
 
 # Plugins
 
-Plugins hook into **OpenCode events** to provide automatic behaviors and enhance the AIKit experience.
+Plugins hook into **Claude Code and OpenCode events** to provide automatic behaviors and enhance the AIKit experience.
 
 ## How Plugins Work
 
@@ -92,7 +92,7 @@ In `.aikit/aikit.json`:
 
 ### Notification Plugin
 
-**Purpose:** OS notifications when OpenCode completes session.
+**Purpose:** OS notifications when Claude Code or OpenCode completes session.
 
 **How it works:**
 - Listens for `session.idle` events
@@ -100,7 +100,7 @@ In `.aikit/aikit.json`:
 - Works on macOS, Linux, Windows
 
 **Notification displays:**
-- "OpenCode Session Complete"
+- "Session Complete"
 - Session summary
 
 **Enable/Disable:**
@@ -180,4 +180,8 @@ aikit plugins list
 
 - **[Advanced](../advanced/anti-hallucination)** - Advanced features
 - **[Tools](../tools/intro)** - Built-in tools
-- **[Skills](../skills/intro)** - Learn about skills
+- **[Skills](../skills/intro)** - Learn about skills -->
+
+
+
+# TO BE DEVELOPING  

@@ -1,6 +1,6 @@
 # AIKit Documentation
 
-Official documentation for AIKit - the Open-source AI coding agent toolkit for OpenCode.
+Official documentation for AIKit - the Open-source AI coding agent toolkit for **Claude Code** and **OpenCode**.
 
 ## Quick Start
 
