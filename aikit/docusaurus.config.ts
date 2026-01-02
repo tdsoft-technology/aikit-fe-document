@@ -49,8 +49,9 @@ const config: Config = {
   themeConfig: {
     image: 'img/social-card.jpg',
     colorMode: {
-      respectPrefersColorScheme: true,
-      defaultMode: 'dark',
+      respectPrefersColorScheme: false,
+      defaultMode: 'light',
+      disableSwitch: true,
     },
 
     navbar: {
@@ -82,7 +83,7 @@ const config: Config = {
       hideOnScroll: false,
     },
     footer: {
-      style: 'dark',
+      style: 'light',
       links: [
         {
           title: 'Documentation',

@@ -1,25 +1,25 @@
 /**
  * AIKit Custom Theme - Modern Developer-Focused Design
- * Color scheme: Purple/Blue gradients with dark mode default
+ * Color scheme: Teal/Blue gradients matching logo colors
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;500;600&display=swap');
 
 :root {
-  --ifm-color-primary: #6366f1;
-  --ifm-color-primary-dark: #4f46e5;
-  --ifm-color-primary-darker: #4338ca;
-  --ifm-color-primary-darkest: #3730a3;
-  --ifm-color-primary-light: #818cf8;
-  --ifm-color-primary-lighter: #a5b4fc;
-  --ifm-color-primary-lightest: #c7d2fe;
-  --ifm-primary-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-  --ifm-secondary-gradient: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #14b8a6;
+  --ifm-color-primary-darker: #0d9488;
+  --ifm-color-primary-darkest: #0f766e;
+  --ifm-color-primary-light: #2dd4bf;
+  --ifm-color-primary-lighter: #5eead4;
+  --ifm-color-primary-lightest: #99f6e4;
+  --ifm-primary-gradient: linear-gradient(135deg, #25c2a0 0%, #06b6d4 100%);
+  --ifm-secondary-gradient: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(99, 102, 241, 0.15);
+  --docusaurus-highlighted-code-line-bg: rgba(37, 194, 160, 0.15);
   --ifm-background-color: #ffffff;
   --ifm-background-surface-color: #f8fafc;
-  --ifm-text-color: #1e293b;
+  --ifm-text-color: #091e42;
   --ifm-border-color: #e2e8f0;
   --ifm-card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
                  0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -29,16 +29,16 @@
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #818cf8;
-  --ifm-color-primary-dark: #6366f1;
-  --ifm-color-primary-darker: #4f46e5;
-  --ifm-color-primary-darkest: #4338ca;
-  --ifm-color-primary-light: #a5b4fc;
-  --ifm-color-primary-lighter: #c7d2fe;
-  --ifm-color-primary-lightest: #e0e7ff;
-  --ifm-primary-gradient: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
-  --ifm-secondary-gradient: linear-gradient(135deg, #60a5fa 0%, #22d3ee 100%);
-  --docusaurus-highlighted-code-line-bg: rgba(99, 102, 241, 0.25);
+  --ifm-color-primary: #2dd4bf;
+  --ifm-color-primary-dark: #25c2a0;
+  --ifm-color-primary-darker: #14b8a6;
+  --ifm-color-primary-darkest: #0d9488;
+  --ifm-color-primary-light: #5eead4;
+  --ifm-color-primary-lighter: #99f6e4;
+  --ifm-color-primary-lightest: #ccfbf1;
+  --ifm-primary-gradient: linear-gradient(135deg, #2dd4bf 0%, #22d3ee 100%);
+  --ifm-secondary-gradient: linear-gradient(135deg, #22d3ee 0%, #60a5fa 100%);
+  --docusaurus-highlighted-code-line-bg: rgba(37, 194, 160, 0.25);
   --ifm-background-color: #0f172a;
   --ifm-background-surface-color: #1e293b;
   --ifm-text-color: #f1f5f9;
@@ -263,12 +263,12 @@ tr:hover td {
 .button--primary {
   background: var(--ifm-primary-gradient);
   border: none;
-  box-shadow: 0 4px 6px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 4px 6px rgba(37, 194, 160, 0.3);
 }
 
 .button--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 6px 12px rgba(37, 194, 160, 0.4);
 }
 
 .button--secondary {
@@ -317,7 +317,7 @@ tr:hover td {
 }
 
 .icon-primary {
-  color: #6366f1;
+  color: #25c2a0;
 }
 
 .icon-small {
@@ -335,8 +335,8 @@ tr:hover td {
 }
 
 .admonition--note {
-  border-left-color: #6366f1;
-  background: rgba(99, 102, 241, 0.1);
+  border-left-color: #25c2a0;
+  background: rgba(37, 194, 160, 0.1);
 }
 
 .admonition--tip {
@@ -356,7 +356,8 @@ tr:hover td {
 
 /* Footer */
 .footer {
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  background: linear-gradient(135deg, #091e42 0%, #0a192f 100%);
+  color: #ffffff;
 }
 
 .footer__title {
@@ -365,11 +366,12 @@ tr:hover td {
 }
 
 .footer__link-item {
+  color: rgba(255, 255, 255, 0.8);
   transition: all 0.2s ease;
 }
 
 .footer__link-item:hover {
-  color: var(--ifm-color-primary);
+  color: #2dd4bf;
   transform: translateX(4px);
 }
 
