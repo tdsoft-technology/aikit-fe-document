@@ -39,13 +39,6 @@ const config: Config = {
             },
           },
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-          },
-          editUrl: 'https://github.com/tdsoft-tech/aikit/edit/main/document/aikit/blog',
-        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -79,7 +72,6 @@ const config: Config = {
           position: 'left',
           label: 'Features',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/tdsoft-tech/aikit',
           label: 'GitHub',
@@ -144,7 +136,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} TDSoft. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} TDSoft.`,
     },
     prism: {
       theme: prismThemes.github,
