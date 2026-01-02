@@ -8,38 +8,79 @@ Install AIKit in minutes and start using structured workflows with OpenCode.
 
 ## Prerequisites
 
+Before installing AIKit, ensure you have:
+
 - **Node.js** version 18.0 or above
+- **npm** package manager (comes with Node.js)
 - **OpenCode** installed and configured
-- **npm** or **yarn** package manager
 
-## Step 1: Install AIKit
+<MaterialIcon name="check_circle" className="icon-success" /> **Check Node.js version:**
+```bash
+node --version  # Should be v18.0.0 or higher
+npm --version   # Should be 8.0.0 or higher
+```
 
-Clone or download the AIKit repository:
+## Installation Methods
+
+Choose your preferred installation method:
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs groupId="package-manager" defaultValue="npm" queryString="p">
+<TabItem value="npm" label="npm (Recommended)" default>
+
+### Install from npm
+
+The easiest way to install AIKit globally:
 
 ```bash
+npm install -g @tdsoft-tech/aikit
+```
+
+This will:
+- Download and install the latest AIKit version
+- Make `aikit` command available globally
+- Set up all dependencies automatically
+
+<MaterialIcon name="info" className="icon-info" /> **Why npm?**
+- Always get the latest version
+- Easy updates with `npm update -g @tdsoft-tech/aikit`
+- No need to build manually
+- Works across all platforms
+
+</TabItem>
+<TabItem value="git" label="Manual (Git Clone)">
+
+### Install from Git
+
+Clone the repository and build manually:
+
+```bash
+# Clone the repository
 git clone https://github.com/tdsoft-tech/aikit.git
 cd aikit
-```
 
-Install dependencies:
-
-```bash
+# Install dependencies
 npm install
-```
 
-Build the project:
-
-```bash
+# Build the project
 npm run build
-```
 
-Link globally (optional):
-
-```bash
+# Link globally (optional, for CLI usage)
 npm link
 ```
 
-## Step 2: Initialize Global Config
+<MaterialIcon name="info" className="icon-info" /> **Why Manual?**
+- Access to latest development version
+- Can modify source code
+- Contribute to the project
+- Full control over build process
+
+</TabItem>
+</Tabs>
+
+## Step 1: Initialize Global Config
 
 Create global AIKit configuration:
 
@@ -49,12 +90,12 @@ aikit init --global
 
 This creates:
 - `~/.config/aikit/aikit.json` - Global configuration
-- `~/.config/aikit/skills/` - Global skills
-- `~/.config/aikit/commands/` - Global commands
+- `~/.config/aikit/skills/` - Global skills (42 built-in skills)
+- `~/.config/aikit/commands/` - Global commands (42+ commands)
 - `~/.config/aikit/tools/` - Global tools
 - `~/.config/aikit/plugins/` - Global plugins
 
-## Step 3: Initialize in Your Project
+## Step 2: Initialize in Your Project
 
 Navigate to your project and initialize:
 
@@ -65,14 +106,15 @@ aikit init
 
 This creates:
 - `.aikit/aikit.json` - Project configuration
-- `.aikit/AGENTS.md` - Project-specific rules
-- `.aikit/skills/` - Project-specific skills
+- `.aikit/AGENTS.md` - Project-specific rules for AI agents
+- `.aikit/skills/` - Project-specific skills (extends global)
 - `.aikit/commands/` - Project-specific commands
 - `.aikit/tools/` - Project-specific tools
 - `.aikit/plugins/` - Project-specific plugins
 - `.aikit/memory/` - Project memory
+- `.aikit/sessions/` - Session tracking
 
-## Step 4: Initialize Beads (Optional but Recommended)
+## Step 3: Initialize Beads (Optional but Recommended)
 
 Initialize Beads task tracking:
 
@@ -82,7 +124,13 @@ bd init
 
 This creates `.beads/` directory for task tracking.
 
-## Step 5: Install into OpenCode
+<MaterialIcon name="star" className="icon-warning" /> **Why Beads?**
+- Track all development tasks
+- Integrate with AIKit workflows
+- Enforce quality gates
+- Git-based task management
+
+## Step 4: Install into OpenCode
 
 Install AIKit into OpenCode:
 
@@ -90,7 +138,92 @@ Install AIKit into OpenCode:
 aikit install
 ```
 
-This makes all skills, agents, and commands available in OpenCode.
+This makes all skills, agents, and commands available in OpenCode:
+
+- ✅ 22 built-in skills
+- ✅ 8 specialized agents
+- ✅ 42+ slash commands
+- ✅ Session management
+- ✅ All tools and plugins
+
+## Step 5: Configure MCP Server (Optional but Recommended)
+
+Configure Model Context Protocol (MCP) server for seamless OpenCode integration:
+
+### What is MCP?
+
+MCP (Model Context Protocol) is a standard for connecting AI assistants with external tools. AIKit provides an MCP server that exposes all its capabilities to OpenCode.
+
+### OpenCode Configuration
+
+Add AIKit MCP server to your OpenCode configuration:
+
+**OpenCode Desktop (Claude):**
+
+1. Open Claude Desktop Settings
+2. Navigate to "Developer" → "MCP Servers"
+3. Add the following configuration:
+
+```json
+{
+  "mcpServers": {
+    "aikit": {
+      "command": "node",
+      "args": [
+        "/path/to/aikit/dist/mcp-server.js"
+      ],
+      "env": {
+        "AIKIT_CONFIG": "/path/to/aikit.json"
+      }
+    }
+  }
+}
+```
+
+**Configuration Options:**
+
+| Option | Description | Default | Required |
+|--------|-------------|---------|----------|
+| `command` | Command to start MCP server | `node` | Yes |
+| `args[0]` | Path to MCP server file | `dist/mcp-server.js` | Yes |
+| `env.AIKIT_CONFIG` | Path to AIKit config | `~/.config/aikit/aikit.json` | No |
+
+**Finding the MCP server path:**
+
+```bash
+# Find AIKit installation directory
+which aikit
+
+# Common locations:
+# npm global: /usr/local/lib/node_modules/@tdsoft-tech/aikit
+# npm global (macOS): ~/.npm-global/lib/node_modules/@tdsoft-tech/aikit
+# manual: /path/to/aikit
+
+# Full path to MCP server:
+/usr/local/lib/node_modules/@tdsoft-tech/aikit/dist/mcp-server.js
+```
+
+### Verify MCP Connection
+
+After configuring, restart Claude Desktop and verify MCP tools are available:
+
+In Claude Desktop, you should see these tools:
+- `find_skills(query)`
+- `use_skill(skillName)`
+- `list_agents()`
+- `delegate_to_agent(agentName, task)`
+- `list_commands(category)`
+- `run_command(commandName, args)`
+- `memory_read(key)`
+- `memory_update(key, content)`
+- `list_sessions(limit)`
+- `read_session(sessionId)`
+- `bead_create(title, description)`
+- `bead_update_status(id, status)`
+- `bead_complete(id)`
+- `bead_list([filter])`
+
+<MaterialIcon name="info" className="icon-info" /> **Tip:** If tools don't appear, check Claude Desktop logs for errors and verify the path to `mcp-server.js` is correct.
 
 ## Verify Installation
 
@@ -100,31 +233,161 @@ Check AIKit status:
 aikit status
 ```
 
+Expected output:
+
+```
+🚀 AIKit v0.1.17
+
+✓ Configuration loaded
+  Skills: 22
+  Agents: 8
+  Commands: 42
+  Tools: 16
+  Beads: Installed
+  MCP Server: Available
+```
+
 List available components:
 
 ```bash
-aikit skills list
-aikit agents list
-aikit commands list
-aikit tools list
-aikit plugins list
+aikit skills list      # List all 22 skills
+aikit agents list      # List all 8 agents
+aikit commands list    # List all 42+ commands
+aikit tools list       # List all tools
+aikit plugins list     # List all plugins
 ```
 
 ## Configuration
 
 AIKit uses two-level configuration:
 
-### Global Config (~/.config/aikit/aikit.json)
+### Global Config (`~/.config/aikit/aikit.json`)
 
-Applies to all projects. Contains default settings and shared skills/commands/tools/plugins.
+Applies to all projects. Contains default settings and shared resources.
 
-### Project Config (.aikit/aikit.json)
+**Use for:**
+- Default agent settings
+- Global skills (shared across projects)
+- Default tool configurations
+- Plugin settings
 
-Project-specific settings that override global config. Contains project rules, custom skills, etc.
+### Project Config (`.aikit/aikit.json`)
+
+Project-specific settings that override global config.
+
+**Use for:**
+- Project-specific rules
+- Custom skills for this project
+- Project tool configurations
+- Team-specific settings
+
+## Update AIKit
+
+### If installed via npm:
+
+```bash
+npm update -g @tdsoft-tech/aikit
+```
+
+### If installed via Git:
+
+```bash
+cd aikit
+git pull origin main
+npm install
+npm run build
+npm link
+```
+
+## Uninstall
+
+### If installed via npm:
+
+```bash
+npm uninstall -g @tdsoft-tech/aikit
+```
+
+Then optionally clean up global config:
+
+```bash
+rm -rf ~/.config/aikit
+```
+
+### If installed via Git:
+
+```bash
+npm unlink
+rm -rf ~/.config/aikit
+```
+
+## Troubleshooting
+
+### "aikit: command not found"
+
+If the `aikit` command isn't found:
+
+**Via npm:**
+```bash
+# Check npm global bin directory
+npm config get prefix
+
+# Add to PATH (example for macOS/Linux)
+export PATH="$(npm config get prefix)/bin:$PATH"
+
+# Or use full path
+~/.npm-global/bin/aikit status
+```
+
+**Via Git link:**
+```bash
+# Relink the package
+cd aikit
+npm link
+```
+
+### "Cannot find module"
+
+If you get module errors:
+
+```bash
+# Reinstall dependencies
+cd aikit
+rm -rf node_modules
+npm install
+npm run build
+```
+
+### OpenCode not showing commands
+
+If AIKit commands don't appear in OpenCode:
+
+```bash
+# Reinstall into OpenCode
+aikit install
+
+# Check OpenCode configuration
+aikit install --help
+```
+
+### Permission errors (Linux/macOS)
+
+If you get permission errors with global install:
+
+```bash
+# Fix npm permissions
+mkdir -p ~/.npm-global
+npm config set prefix '~/.npm-global'
+export PATH=~/.npm-global/bin:$PATH
+
+# Then install again
+npm install -g @tdsoft-tech/aikit
+```
 
 ## Next Steps
 
 - **[Quick Start](quick-start)** - Get started with your first task
 - **[Features](features)** - Learn about all features
-- **[Skills Guide](skills/intro)** - Explore skills
-- **[Commands Reference](commands/intro)** - All commands
+- **[MCP Server](mcp-server/intro)** - OpenCode integration via MCP
+- **[Skills Guide](skills/intro)** - Explore 22 built-in skills
+- **[Session Management](sessions/intro)** - Track your development work
+- **[Commands Reference](commands/intro)** - All 42+ commands

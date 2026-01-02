@@ -32,29 +32,15 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           label: 'Design',
           items: [
-            'skills/design/accessibility',
-            'skills/design/database-design',
             'skills/design/design-measurement',
-            'skills/design/frontend-aesthetics',
           ],
         },
         {
           type: 'category',
           label: 'Development',
           items: [
-            'skills/development/api-design',
-            'skills/development/component-design',
             'skills/development/error-handling',
-            'skills/development/performance-optimization',
             'skills/development/refactoring',
-            'skills/development/state-management',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Documentation',
-          items: [
-            'skills/documentation/documentation',
           ],
         },
         {
@@ -67,17 +53,9 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
-          label: 'Git',
-          items: [
-            'skills/git/git-workflow',
-          ],
-        },
-        {
-          type: 'category',
           label: 'Review',
           items: [
             'skills/review/code-review',
-            'skills/review/security-audit',
           ],
         },
         {
@@ -98,14 +76,6 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'agents/intro',
-        'agents/planner',
-        'agents/build',
-        'agents/rush',
-        'agents/review',
-        'agents/scout',
-        'agents/explore',
-        'agents/vision',
-        'agents/one-shot',
       ],
     },
     {
@@ -123,90 +93,6 @@ const sidebars: SidebarsConfig = {
             'commands/core/plan',
             'commands/core/implement',
             'commands/core/finish',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Quick Actions',
-          items: [
-            'commands/quick/fix',
-            'commands/quick/fix-types',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Research & Design',
-          items: [
-            'commands/research/index',
-            {
-              type: 'category',
-              label: 'Research',
-              items: [
-                'commands/research/research',
-                'commands/research/analyze-project',
-                'commands/research/review-codebase',
-                'commands/research/brainstorm',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Design',
-              items: [
-                'commands/design/design',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Git',
-          items: [
-            'commands/git/branch',
-            'commands/git/merge',
-            'commands/git/rebase',
-            'commands/git/cherry-pick',
-            'commands/git/stash',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Utility',
-          items: [
-            'commands/utility/index',
-            'commands/utility/help',
-            'commands/utility/version',
-            'commands/utility/status',
-            'commands/utility/config',
-            'commands/utility/sync',
-            'commands/utility/docs',
-            'commands/utility/install',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Sessions',
-          collapsible: true,
-          collapsed: false,
-          items: [
-            'sessions/intro',
-            'commands/sessions/session-start',
-            'commands/sessions/session-update',
-            'commands/sessions/session-end',
-            'commands/sessions/session-list',
-            'commands/sessions/session-current',
-            'commands/sessions/session-show',
-            'commands/sessions/session-search',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Checkpoint',
-          collapsible: true,
-          collapsed: false,
-          items: [
-            'commands/checkpoint/create',
-            'commands/checkpoint/list',
-            'commands/checkpoint/restore',
           ],
         },
       ],

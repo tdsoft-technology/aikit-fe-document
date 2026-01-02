@@ -34,7 +34,7 @@ const config: Config = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: 'v0.1.14',
+              label: 'v0.1.17',
               path: '/',
             },
           },
@@ -153,7 +153,7 @@ const config: Config = {
     },
     announcementBar: {
       id: 'beta-notice',
-      content: '⚡ AIKit v0.1.14 is now available - Check out the new features!',
+      content: '⚡ AIKit v0.1.17 is now available - Check out the new features!',
       backgroundColor: '#25c2a0',
       textColor: '#091e42',
       isCloseable: true,

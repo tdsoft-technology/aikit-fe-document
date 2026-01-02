@@ -17,7 +17,7 @@ AIKit solves these problems in OpenCode:
 
 ## What AIKit Provides
 
-### 1. Skills System (23 Built-in Skills)
+### 1. Skills System (42 Built-in Skills)
 
 **What it does:** Enforces structured workflows for common development tasks.
 
@@ -75,7 +75,7 @@ AIKit solves these problems in OpenCode:
 - Specialized system prompts for each agent type
 - Better quality through focused expertise
 
-### 3. Slash Commands (27+ Commands)
+### 3. Slash Commands (42+ Commands)
 
 **What it does:** Provides shortcuts for common workflows.
 
@@ -280,7 +280,88 @@ AIKit solves these problems in OpenCode:
 - Context transfer between sessions
 - Collective intelligence over time
 
-### 9. Figma Integration
+### 9. Session Management System
+
+**What it does:** Tracks development work across multiple coding sessions with automatic git capture and progress tracking.
+
+**Features:**
+
+- Start named sessions with goals
+- Add timestamped progress notes
+- Automatic git state capture (branch, commits, files)
+- Integration with Beads tasks
+- Session search and filtering
+- Comprehensive summaries on session end
+- Both CLI and AI chat command support
+
+**Commands:**
+
+```bash
+# CLI commands
+aikit session start "auth-refactor" -g "Refactor OAuth" "Add JWT"
+aikit session update "Fixed authentication bug"
+aikit session current
+aikit session list
+aikit session show 20260102-1430
+aikit session search oauth
+aikit session end
+
+# AI chat commands
+/session:start [name]
+/session:update [notes]
+/session:end
+/session:current
+/session:list
+/session:show <id>
+/session:search <query>
+```
+
+**Session files:**
+
+Stored as markdown in `.aikit/sessions/` with frontmatter:
+
+```markdown
+---
+id: "20260102-1430-auth-refactor"
+name: "Authentication Refactor"
+startTime: "2026-01-02T14:30:00Z"
+status: "ended"
+goals:
+  - "Refactor OAuth flow"
+  - "Add JWT support"
+---
+
+# Development Session
+
+**Started:** 1/2/2026, 2:30:00 PM
+**Status:** Ended
+
+## Goals
+- [ ] Refactor OAuth flow
+- [ ] Add JWT support
+
+## Progress
+
+### 1/2/2026, 3:45:00 PM
+Implemented OAuth 2.0 flow
+**Git Branch:** feature/auth
+**Modified Files:** 5 files
+
+## Summary
+**Duration:** 2h 30m
+**Git Commits:** 3
+**Files Modified:** 7
+```
+
+**Why this matters:**
+- Maintains continuity across sessions
+- Historical record of development work
+- Automatic git tracking
+- Searchable past work
+- Progress visualization
+- Integration with Beads tasks
+
+### 10. Figma Integration
 
 **What it does:** Extracts design tokens and automates screen development.
 
@@ -312,7 +393,72 @@ AIKit solves these problems in OpenCode:
 - Design consistency
 - Faster development
 
-### 10. Configuration System
+### 11. MCP Server Integration
+
+**What it does:** Provides Model Context Protocol (MCP) server for seamless OpenCode integration.
+
+**Features:**
+
+- Exposes all AIKit skills as MCP tools
+- Exposes all AIKit agents as MCP tools
+- Provides command invocation tools
+- Offers session management tools
+- Integrates memory system
+- Supports task tracking via Beads
+
+**Available MCP Tools:**
+
+**Skill Tools:**
+- `find_skills(query)` - Search available skills
+- `use_skill(skillName)` - Activate skill for current task
+
+**Agent Tools:**
+- `delegate_to_agent(agentName, task)` - Delegate to specialized agent
+- `list_agents()` - List all available agents
+- `get_agent_info(agentName)` - Get agent details and capabilities
+
+**Command Tools:**
+- `run_command(commandName, args)` - Execute AIKit commands
+- `list_commands(category)` - List available commands by category
+
+**Session Tools:**
+- `list_sessions(limit)` - List recent sessions
+- `read_session(sessionId)` - Load session context
+
+**Memory Tools:**
+- `memory_read(key)` - Read from persistent memory
+- `memory_update(key, content)` - Update memory (append or overwrite)
+
+**Task Tracking Tools:**
+- `bead_create(title, description)` - Create new task
+- `bead_update_status(id, status)` - Update task status
+- `bead_complete(id)` - Complete task with quality gates
+- `bead_list([filter])` - List all tasks
+
+**How it works:**
+```typescript
+// OpenCode configuration for MCP
+{
+  "mcpServers": {
+    "aikit": {
+      "command": "node",
+      "args": ["/path/to/aikit/dist/mcp-server.js"],
+      "env": {
+        "AIKIT_CONFIG": "/path/to/aikit.json"
+      }
+    }
+  }
+}
+```
+
+**Why this matters:**
+- Seamless OpenCode integration
+- All AIKit capabilities accessible via MCP
+- Standard protocol for AI agent tools
+- Automatic tool discovery
+- Consistent interface across AI platforms
+
+### 12. Configuration System
 
 **What it does:** Flexible configuration at global and project levels.
 
@@ -347,7 +493,7 @@ AIKit solves these problems in OpenCode:
 - Customizable per team
 - Extensible
 
-### 11. One-Shot Mode (Beta)
+### 12. One-Shot Mode (Beta)
 
 **What it does:** End-to-end autonomous task execution.
 
@@ -434,17 +580,19 @@ Requirements → Planning → Execution → Testing → Verification → Complet
 
 | Feature | Without AIKit | With AIKit |
 |---------|---------------|------------|
-| Workflow Enforcement | None | 23 built-in skills |
+| Workflow Enforcement | None | 22 built-in skills |
 | Task Tracking | Manual | Beads integration |
 | Quality Gates | Manual | Automatic in /finish |
-| Session Continuity | None | Handoffs + /resume |
+| Session Continuity | None | Handoffs + /resume + Session tracking |
 | Persistent Memory | None | Memory system |
 | Agent Specialization | Default only | 8 specialized agents |
-| Command Shortcuts | None | 27+ slash commands |
+| Command Shortcuts | None | 42+ slash commands |
+| MCP Integration | None | Full OpenCode integration via MCP |
 | Anti-Hallucination | None | 3-layer system |
 | Figma Integration | None | Design tokens + assets |
 | Git Workflows | Manual | Integrated (/branch, /pr, etc.) |
 | Code Review | Manual | /review + @review agent |
+| Progress Tracking | None | Session management |
 
 ## Real-World Impact
 
@@ -512,13 +660,15 @@ bd init
 
 AIKit transforms OpenCode from a general-purpose AI coding assistant into a **structured development environment** by providing:
 
-1. **Structured workflows** via skills (23 built-in)
+1. **Structured workflows** via skills (22 built-in)
 2. **Specialized agents** (8 types with automatic delegation)
 3. **Task tracking** with Beads integration
-4. **Quality enforcement** via anti-hallucination and quality gates
-5. **Session continuity** via handoffs and memory system
-6. **Integrated tools** for Figma, git, testing, etc.
-7. **Plugin system** for custom behaviors
-8. **Slash commands** for common workflows
+4. **MCP Server** for seamless OpenCode integration
+5. **Quality enforcement** via anti-hallucination and quality gates
+6. **Session continuity** via handoffs, memory system, and session tracking
+7. **Integrated tools** for Figma, git, testing, etc.
+8. **Plugin system** for custom behaviors
+9. **Slash commands** for common workflows
+10. **Session management** for tracking development work
 
 **Bottom line:** AIKit adds structure, tracking, and quality enforcement to OpenCode, making it more reliable, consistent, and efficient for real-world development workflows.

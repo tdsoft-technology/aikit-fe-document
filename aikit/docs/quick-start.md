@@ -63,7 +63,22 @@ AIKit runs these hard gates (all must pass):
 
 If any gate fails, AIKit reports the issue and stops.
 
-## 5. Handoff for Next Session
+## 5. Track Your Session
+
+Start a development session to track your work:
+
+```bash
+/ak_cm_session:start "user-auth"
+```
+
+Add progress notes as you work:
+
+```bash
+/ak_cm_session:update "Implemented login form"
+/ak_cm_session:update "Added JWT authentication"
+```
+
+## 6. Handoff for Next Session
 
 Save your progress:
 
@@ -77,7 +92,21 @@ This creates a handoff bundle in `memory/handoffs/[timestamp].md` with:
 - Remaining tasks
 - Context for next session
 
-## 6. Resume Later
+## 7. End Session
+
+End the session with a summary:
+
+```bash
+/ak_cm_session:end
+```
+
+AIKit generates a comprehensive summary with:
+- Session duration
+- Goals completed
+- Git activity (commits, modified files)
+- All progress notes
+
+## 8. Resume Later
 
 Continue where you left off:
 
@@ -91,15 +120,19 @@ AIKit loads the latest handoff and continues your work.
 
 ```bash
 # Session 1
+/ak_cm_session:start "user-login"
 /ak_cm_create Implement user login
 /ak_cm_plan login feature
 /ak_sk_test-driven-development
 /ak_cm_implement
+/ak_cm_session:update "Added login form"
 /ak_cm_finish
-/ak_cm_handoff
+/ak_cm_session:end
 
 # Session 2
+/ak_cm_session:start "user-registration"
 /ak_cm_resume
+/ak_cm_session:update "Implementing registration"
 # Continue with next task...
 ```
 
@@ -203,7 +236,8 @@ Or use `/help` in OpenCode:
 ## Next Steps
 
 - **[Features](features)** - Learn about all features
-- **[Skills Guide](skills/intro)** - Explore 22 built-in skills organized in 9 categories
+- **[Session Management](sessions/intro)** - Track your development work
+- **[Skills Guide](skills/intro)** - Explore 42 built-in skills organized in 9 categories
 - **[Agents Guide](agents/intro)** - Understand 8 specialized agents
-- **[Commands Reference](commands/intro)** - All 28 slash commands
+- **[Commands Reference](commands/intro)** - All 42+ slash commands
 - **[Tools](tools/intro)** - Built-in tools
