@@ -74,7 +74,7 @@ const config: Config = {
           label: 'Features',
         },
         {
-          href: 'https://github.com/tdsoft-tech/aikit',
+          href: 'https://github.com/tdsoft-technology/aikit',
           label: 'GitHub',
           position: 'right',
           className: 'github-link',
@@ -124,15 +124,15 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/tdsoft-tech/aikit',
+              href: 'https://github.com/tdsoft-technology/aikit',
             },
             {
               label: 'Issues',
-              href: 'https://github.com/tdsoft-tech/aikit/issues',
+              href: 'https://github.com/tdsoft-technology/aikit/issues',
             },
             {
               label: 'Discussions',
-              href: 'https://github.com/tdsoft-tech/aikit/discussions',
+              href: 'https://github.com/tdsoft-technology/aikit/issues',
             },
           ],
         },
@@ -146,7 +146,7 @@ const config: Config = {
     },
     announcementBar: {
       id: 'beta-notice',
-      content: '⚡ AIKit v0.1.18 is now available - Check out the new features!',
+      content: '⚡ AIKit v0.1.20 is now available - Check out the new features!',
       backgroundColor: '#25c2a0',
       textColor: '#091e42',
       isCloseable: true,
