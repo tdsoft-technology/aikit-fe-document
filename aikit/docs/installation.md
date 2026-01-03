@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Installation
 
-Install AIKit in minutes and start using structured workflows with OpenCode.
+Install AIKit in minutes and start using structured workflows with your AI coding assistant.
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ Before installing AIKit, ensure you have:
 
 - **Node.js** version 18.0 or above
 - **npm** package manager (comes with Node.js)
-- **OpenCode** installed and configured
+- **OpenCode** or **Claude Code CLI** installed and configured
 
 <MaterialIcon name="check_circle" className="icon-success" /> **Check Node.js version:**
 ```bash
@@ -113,29 +113,25 @@ This creates:
 - `.aikit/plugins/` - Project-specific plugins
 - `.aikit/memory/` - Project memory
 - `.aikit/sessions/` - Session tracking
+- `.beads/` - Task tracking (automatically initialized)
 
-## Step 3: Initialize Beads (Optional but Recommended)
+<MaterialIcon name="star" className="icon-warning" /> **Automatic Beads Setup**
+- `.beads/` directory is created automatically with full configuration
+- Ready to use with OpenCode and Claude Code - no manual setup required
+- Includes config.yaml, metadata.json, and git hooks
+- Track all development tasks with quality gates
 
-Initialize Beads task tracking:
+## Step 3: Install into OpenCode or Claude Code
 
-```bash
-bd init
-```
+Choose your AI coding assistant:
 
-This creates `.beads/` directory for task tracking.
+<Tabs groupId="assistant" defaultValue="opencode" queryString="assistant">
+<TabItem value="opencode" label="OpenCode" default>
 
-<MaterialIcon name="star" className="icon-warning" /> **Why Beads?**
-- Track all development tasks
-- Integrate with AIKit workflows
-- Enforce quality gates
-- Git-based task management
-
-## Step 4: Install into OpenCode
-
-Install AIKit into OpenCode:
+### Install into OpenCode
 
 ```bash
-aikit install
+aikit install opencode
 ```
 
 This makes all skills, agents, and commands available in OpenCode:
@@ -146,7 +142,33 @@ This makes all skills, agents, and commands available in OpenCode:
 - ✅ Session management
 - ✅ All tools and plugins
 
-## Step 5: Configure MCP Server (Optional but Recommended)
+**Commands are installed to:** `.opencode/command/` and `.opencode/skill/`
+
+</TabItem>
+<TabItem value="claude" label="Claude Code CLI">
+
+### Install into Claude Code CLI
+
+```bash
+aikit install claude
+```
+
+This makes all skills, agents, and commands available in Claude Code CLI:
+
+- ✅ 22 built-in skills
+- ✅ 8 specialized agents
+- ✅ 42+ slash commands
+- ✅ Session management
+- ✅ All tools and plugins
+
+**Commands are installed to:** `.claude/commands/` and `.claude/skills/`
+
+**Note:** You can install into both OpenCode and Claude Code CLI simultaneously - just run both commands!
+
+</TabItem>
+</Tabs>
+
+## Step 4: Configure MCP Server (Optional but Recommended)
 
 Configure Model Context Protocol (MCP) server for seamless OpenCode integration:
 
@@ -236,12 +258,12 @@ aikit status
 Expected output:
 
 ```
-🚀 AIKit v0.1.17
+🚀 AIKit v0.1.20
 
 ✓ Configuration loaded
   Skills: 22
   Agents: 8
-  Commands: 42
+  Commands: 43
   Tools: 16
   Beads: Installed
   MCP Server: Available
@@ -357,16 +379,46 @@ npm install
 npm run build
 ```
 
-### OpenCode not showing commands
+### Commands not showing in OpenCode
 
 If AIKit commands don't appear in OpenCode:
 
 ```bash
 # Reinstall into OpenCode
-aikit install
+aikit install opencode
 
-# Check OpenCode configuration
-aikit install --help
+# Check installation directory
+ls -la .opencode/command/
+
+# Verify commands exist
+aikit commands list
+```
+
+### Commands not showing in Claude Code CLI
+
+If AIKit commands don't appear in Claude Code CLI:
+
+```bash
+# Reinstall into Claude Code CLI
+aikit install claude
+
+# Check installation directory
+ls -la .claude/commands/
+
+# Verify commands exist
+aikit commands list
+```
+
+### Wrong commands installed for platform
+
+If you accidentally installed for the wrong platform:
+
+```bash
+# For OpenCode
+aikit install opencode
+
+# For Claude Code CLI
+aikit install claude
 ```
 
 ### Permission errors (Linux/macOS)

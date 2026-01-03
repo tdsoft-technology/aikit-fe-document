@@ -282,7 +282,7 @@ tr:hover td {
 
 .button--secondary:hover {
   background: var(--ifm-color-primary);
-  color: #06b6d4;
+  color: #ffffff;
 }
 
 /* Sidebar */
@@ -303,13 +303,13 @@ tr:hover td {
 
 .menu__link--active {
   background: var(--ifm-primary-gradient);
-  color: #06b6d4;
+  color: #000000;
   font-weight: 600;
 }
 
 .menu__link--active:hover {
   background: var(--ifm-primary-gradient);
-  color: #06b6d4;
+  color: #ffffff;
 }
 
 .icon-success {

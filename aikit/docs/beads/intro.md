@@ -24,31 +24,38 @@ Beads is a **git-based task tracking system** integrated with AIKit for managing
 
 ## Getting Started
 
-### Install Beads
+### Automatic Setup (Recommended)
 
-Beads is typically installed with AIKit:
+Beads is automatically initialized when you run `aikit init`:
+
+```bash
+cd your-project
+aikit init
+```
+
+This creates a fully functional `.beads/` directory with:
+- `.beads/config.yaml` - Beads configuration
+- `.beads/metadata.json` - Database settings
+- `.beads/.gitignore` - Git ignore patterns
+- `.beads/.local_version` - Version tracking
+- `.beads/README.md` - Documentation
+- Git hooks for automatic syncing
+
+<MaterialIcon name="check_circle" className="icon-success" /> **No manual setup required!** The workspace is ready to use immediately with OpenCode and Claude Code.
+
+### Optional: Install Beads CLI
+
+For advanced Beads functionality beyond what AIKit provides, you can optionally install the Beads CLI:
 
 ```bash
 # Via npm
-npm install -g @tdsoft-tech/aikit
+npm install -g beads
 
 # Verify installation
 bd --version
 ```
 
-### Initialize Beads
-
-Initialize Beads in your project:
-
-```bash
-cd your-project
-bd init
-```
-
-This creates:
-- `.beads/` - Task directory
-- `.beads/.gitignore` - Git ignore pattern (optional)
-- `beads.md` - Project-level configuration
+<MaterialIcon name="info" className="icon-info" /> **Note:** The Beads CLI is optional. AIKit provides full Beads functionality through slash commands and MCP tools. Only install the CLI if you want additional command-line features.
 
 ## Task Structure
 
@@ -131,21 +138,36 @@ Implement OAuth 2.0 authentication flow with JWT tokens for user login and sessi
 
 ## Beads Commands
 
-### Initialize
+### Create Task (via AIKit)
 
 ```bash
-bd init
+/create Add user authentication
 ```
 
-Initialize Beads in current directory.
+This creates a new task using AIKit's integrated Beads functionality:
 
-### Create Task
+<MaterialIcon name="check_circle" className="icon-success" /> **AIKit automatically:**
+- Generates unique task ID
+- Creates task file in `.beads/`
+- Sets initial status to "in-progress"
+- Links to current session
+
+**Example:**
+```bash
+/create "Add user authentication" --type feature --priority high
+```
+
+### Create Task (via Beads CLI)
+
+If you have the Beads CLI installed:
 
 ```bash
 bd create "Add user authentication"
 ```
 
-Creates new task file: `.beads/001-add-user-authentication.md`
+Creates new task file: `.beads/bead-001.md`
+
+<MaterialIcon name="info" className="icon-info" /> **Tip:** Use AIKit's `/create` command for better integration with sessions and workflows.
 
 **Options:**
 ```bash

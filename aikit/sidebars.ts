@@ -14,83 +14,83 @@ const sidebars: SidebarsConfig = {
         'quick-start',
       ],
     },
-    {
-      type: 'category',
-      label: 'Skills',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'skills/intro',
-        {
-          type: 'category',
-          label: 'Debugging',
-          items: [
-            'skills/debugging/systematic-debugging',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Design',
-          items: [
-            'skills/design/accessibility',
-            'skills/design/database-design',
-            'skills/design/design-measurement',
-            'skills/design/frontend-aesthetics',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Development',
-          items: [
-            'skills/development/api-design',
-            'skills/development/component-design',
-            'skills/development/error-handling',
-            'skills/development/performance-optimization',
-            'skills/development/refactoring',
-            'skills/development/state-management',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Documentation',
-          items: [
-            'skills/documentation/documentation',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Figma',
-          items: [
-            'skills/figma/analyze-figma',
-            'skills/figma/figma-to-code',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Git',
-          items: [
-            'skills/git/git-workflow',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Review',
-          items: [
-            'skills/review/code-review',
-            'skills/review/security-audit',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Testing',
-          items: [
-            'skills/testing/integration-testing',
-            'skills/testing/test-driven-development',
-            'skills/testing/unit-testing',
-          ],
-        },
-      ],
-    },
+    // {
+    //   type: 'category',
+    //   label: 'Skills',
+    //   collapsible: true,
+    //   collapsed: false,
+    //   items: [
+    //     'skills/intro',
+    //     {
+    //       type: 'category',
+    //       label: 'Debugging',
+    //       items: [
+    //         'skills/debugging/systematic-debugging',
+    //       ],
+    //     },
+    //     {
+    //       type: 'category',
+    //       label: 'Design',
+    //       items: [
+    //         'skills/design/accessibility',
+    //         'skills/design/database-design',
+    //         'skills/design/design-measurement',
+    //         'skills/design/frontend-aesthetics',
+    //       ],
+    //     },
+    //     {
+    //       type: 'category',
+    //       label: 'Development',
+    //       items: [
+    //         'skills/development/api-design',
+    //         'skills/development/component-design',
+    //         'skills/development/error-handling',
+    //         'skills/development/performance-optimization',
+    //         'skills/development/refactoring',
+    //         'skills/development/state-management',
+    //       ],
+    //     },
+    //     {
+    //       type: 'category',
+    //       label: 'Documentation',
+    //       items: [
+    //         'skills/documentation/documentation',
+    //       ],
+    //     },
+    //     {
+    //       type: 'category',
+    //       label: 'Figma',
+    //       items: [
+    //         'skills/figma/analyze-figma',
+    //         'skills/figma/figma-to-code',
+    //       ],
+    //     },
+    //     {
+    //       type: 'category',
+    //       label: 'Git',
+    //       items: [
+    //         'skills/git/git-workflow',
+    //       ],
+    //     },
+    //     {
+    //       type: 'category',
+    //       label: 'Review',
+    //       items: [
+    //         'skills/review/code-review',
+    //         'skills/review/security-audit',
+    //       ],
+    //     },
+    //     {
+    //       type: 'category',
+    //       label: 'Testing',
+    //       items: [
+    //         'skills/testing/integration-testing',
+    //         'skills/testing/test-driven-development',
+    //         'skills/testing/unit-testing',
+    //       ],
+    //     },
+    //   ],
+    // },
     {
       type: 'category',
       label: 'Agents',
@@ -137,24 +137,12 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           label: 'Research & Design',
           items: [
-            'commands/research/index',
-            {
-              type: 'category',
-              label: 'Research',
-              items: [
-                'commands/research/research',
-                'commands/research/analyze-project',
-                'commands/research/review-codebase',
-                'commands/research/brainstorm',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Design',
-              items: [
-                'commands/design/design',
-              ],
-            },
+            'commands/research/research',
+            'commands/research/analyze-project',
+            'commands/research/review-codebase',
+            'commands/research/brainstorm',
+            'commands/design/design',
+            'commands/design/drawio-interact',
           ],
         },
         {
@@ -184,22 +172,6 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
-          label: 'Sessions',
-          collapsible: true,
-          collapsed: false,
-          items: [
-            'sessions/intro',
-            'commands/sessions/session-start',
-            'commands/sessions/session-update',
-            'commands/sessions/session-end',
-            'commands/sessions/session-list',
-            'commands/sessions/session-current',
-            'commands/sessions/session-show',
-            'commands/sessions/session-search',
-          ],
-        },
-        {
-          type: 'category',
           label: 'Checkpoint',
           collapsible: true,
           collapsed: false,
@@ -209,6 +181,22 @@ const sidebars: SidebarsConfig = {
             'commands/checkpoint/restore',
           ],
         },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Sessions',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'sessions/intro',
+        'commands/sessions/session-start',
+        'commands/sessions/session-update',
+        'commands/sessions/session-end',
+        'commands/sessions/session-list',
+        'commands/sessions/session-current',
+        'commands/sessions/session-show',
+        'commands/sessions/session-search',
       ],
     },
     // {
@@ -232,22 +220,13 @@ const sidebars: SidebarsConfig = {
     // },
     // {
     //   type: 'category',
-    //   label: 'Sessions',
+    //   label: 'Tools',
     //   collapsible: true,
     //   collapsed: false,
     //   items: [
-    //     'sessions/intro',
+    //     'tools/intro',
     //   ],
     // },
-    {
-      type: 'category',
-      label: 'Tools',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'tools/intro',
-      ],
-    },
     // {
     //   type: 'category',
     //   label: 'Plugins',
@@ -257,20 +236,21 @@ const sidebars: SidebarsConfig = {
     //     'plugins/intro',
     //   ],
     // },
-    {
-      type: 'category',
-      label: 'Advanced',
-      collapsible: true,
-      collapsed: true,
-      items: [
-        'advanced/anti-hallucination',
-        'advanced/configuration',
-        'advanced/custom-skills',
-        // 'advanced/custom-tools',
-        // 'advanced/custom-plugins',
-        'advanced/one-shot-mode',
-      ],
-    },
+    // {
+    //   type: 'category',
+    //   label: 'Advanced',
+    //   collapsible: true,
+    //   collapsed: true,
+    //   items: [
+    //     'advanced/anti-hallucination',
+    //     'advanced/configuration',
+    //     'advanced/custom-skills',
+    //     'advanced/custom-tools',
+    //     'advanced/custom-plugins',
+    //     'advanced/memory',
+    //     'advanced/one-shot-mode',
+    //   ],
+    // },
   ],
 };
 
