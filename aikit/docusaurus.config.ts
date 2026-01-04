@@ -146,7 +146,7 @@ const config: Config = {
     },
     announcementBar: {
       id: 'beta-notice',
-      content: '⚡ AIKit v0.1.20 is now available - Check out the new features!',
+      content: '⚡ AIKit v0.1.30 is now available - Check out the new features!',
       backgroundColor: '#25c2a0',
       textColor: '#091e42',
       isCloseable: true,

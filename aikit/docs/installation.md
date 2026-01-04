@@ -258,7 +258,7 @@ aikit status
 Expected output:
 
 ```
-🚀 AIKit v0.1.20
+🚀 AIKit v0.1.30
 
 ✓ Configuration loaded
   Skills: 22
