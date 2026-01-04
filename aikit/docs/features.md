@@ -4,7 +4,7 @@ description: Complete feature guide for AIKit - visual diagramming, structured w
 keywords: ['Claude Code features', 'AI coding toolkit features', 'Draw.io integration', 'Mermaid diagrams', 'TDD workflow', 'task tracking', 'quality gates', 'AI agents', 'session management', 'code review automation', 'Figma integration']
 ---
 
-# <MaterialIcon name="extension" className="icon-primary" /> AIKit Features
+# AIKit Features
 
 **Everything AIKit brings to Claude Code and OpenCode.**
 
