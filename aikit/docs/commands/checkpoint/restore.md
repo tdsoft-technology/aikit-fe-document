@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# /ak_cm_checkpoint_restore Command
+# /checkpoint_restore Command
 
 Restore project state from a previously created checkpoint.
 
@@ -10,13 +10,13 @@ Restore project state from a previously created checkpoint.
 
 ```bash
 # Restore specific checkpoint
-/ak_cm_checkpoint_restore 20260102-1430
+/checkpoint_restore 20260102-1430
 
 # Restore most recent checkpoint
-/ak_cm_checkpoint_restore
+/checkpoint_restore
 
 # Restore by name
-/ak_cm_checkpoint_restore "Before refactoring"
+/checkpoint_restore "Before refactoring"
 ```
 
 ## Arguments
@@ -33,10 +33,10 @@ Find the checkpoint to restore:
 
 ```bash
 # List checkpoints first
-/ak_cm_checkpoint_list
+/checkpoint_list
 
 # Then restore by ID
-/ak_cm_checkpoint_restore 20260102-1430
+/checkpoint_restore 20260102-1430
 ```
 
 ### 2. Restore Git State
@@ -89,7 +89,7 @@ npm run test
 # Scenario: Refactoring broke something
 
 # 1. List checkpoints
-/ak_cm_checkpoint_list
+/checkpoint_list
 
 # Output shows:
 ID: 20260102-1430
@@ -97,7 +97,7 @@ Name: "Before refactoring auth module"
 ...
 
 # 2. Restore checkpoint
-/ak_cm_checkpoint_restore 20260102-1430
+/checkpoint_restore 20260102-1430
 
 # Result: Git reset to before refactoring state
 # All changes since checkpoint are discarded
@@ -109,10 +109,10 @@ Name: "Before refactoring auth module"
 # Scenario: Tried experimental approach, didn't work
 
 # 1. Restore most recent checkpoint
-/ak_cm_checkpoint_restore
+/checkpoint_restore
 
 # 2. Continue from stable state
-/ak_cm_implement
+/implement
 ```
 
 ### Restore Different Branch State
@@ -121,7 +121,7 @@ Name: "Before refactoring auth module"
 # Scenario: Need work on different branch's state
 
 # 1. Restore checkpoint (which has branch info)
-/ak_cm_checkpoint_restore "feature-users"
+/checkpoint_restore "feature-users"
 
 # 2. Git is now on feature/users at correct commit
 # 3. Continue working
@@ -154,7 +154,7 @@ Name: "Before refactoring auth module"
 git status
 
 # Optional: Create emergency checkpoint
-/ak_cm_checkpoint_create "Emergency: before restore"
+/checkpoint_create "Emergency: before restore"
 ```
 
 ### 2. Restoration Steps
@@ -164,7 +164,7 @@ git status
 git stash push -m "Save before restore"
 
 # 2. Restore checkpoint
-/ak_cm_checkpoint_restore <checkpoint-id>
+/checkpoint_restore <checkpoint-id>
 
 # 3. Verify restoration
 git log --oneline -3
@@ -236,23 +236,23 @@ git status  # Shows CONFLICTED files
 **Recommended workflow:**
 ```bash
 # Create checkpoints regularly
-/ak_cm_checkpoint_create "Progress update" --tags wip
+/checkpoint_create "Progress update" --tags wip
 
 # Before risky operations
-/ak_cm_checkpoint_create "Before refactoring"
+/checkpoint_create "Before refactoring"
 
 # After risky operations
-/ak_cm_checkpoint_create "After refactoring" --tags refactoring
+/checkpoint_create "After refactoring" --tags refactoring
 
 # If issues arise, restore stable checkpoint
-/ak_cm_checkpoint_restore "Before refactoring"
+/checkpoint_restore "Before refactoring"
 ```
 
 ## Related Commands
 
-- **[/ak_cm_checkpoint_create](create.md)** - Create checkpoint
-- **[/ak_cm_checkpoint_list](list.md)** - List all checkpoints
-- **[/ak_cm_branch](../git/branch.md)** - Checkout specific branch
+- **[/checkpoint_create](create.md)** - Create checkpoint
+- **[/checkpoint_list](list.md)** - List all checkpoints
+- **[/branch](../git/branch.md)** - Checkout specific branch
 
 ## Related Documentation
 

@@ -305,8 +305,8 @@ Use @scout when:
 
 ## Related Commands
 
-- **[/ak_cm_research](../commands/research/research.md)** - External research
-- **[/ak_cm_analyze-project](../commands/research/analyze-project.md)** - Analyze codebase
+- **[/research](../commands/research/research.md)** - External research
+- **[/analyze-project](../commands/research/analyze-project.md)** - Analyze codebase
 
 ## Next Steps
 

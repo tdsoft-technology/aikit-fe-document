@@ -23,8 +23,8 @@ aikit session start "oauth-work" -g "Add Google OAuth" "Add JWT tokens"
 
 **Via AI Chat:**
 ```
-/session:start "feature-name"
-/session:start "Implement OAuth 2.0"
+/session-start "feature-name"
+/session-start "Implement OAuth 2.0"
 ```
 
 ### Updating Progress
@@ -37,8 +37,8 @@ aikit session update
 
 **Via AI Chat:**
 ```
-/session:update Added OAuth callback handler
-/session:update
+/session-update Added OAuth callback handler
+/session-update
 ```
 
 ### Ending a Session
@@ -50,7 +50,7 @@ aikit session end
 
 **Via AI Chat:**
 ```
-/session:end
+/session-end
 ```
 
 ## Session Files
@@ -119,14 +119,14 @@ Implemented OAuth 2.0 flow with Google provider
 
 | Command | Description | Example |
 |---------|-------------|---------|
-| `/session:start [name]` | Start new session | `/session:start auth-refactor` |
-| `/session:update [notes]` | Add progress notes | `/session:update Fixed bug` |
-| `/session:end` | End session | `/session:end` |
-| `/session:current` | Show active session | `/session:current` |
-| `/session:list` | List all sessions | `/session:list` |
-| `/session:show <id>` | Show session details | `/session:show 20260102` |
-| `/session:search <query>` | Search sessions | `/session:search oauth` |
-| `/session:resume <id>` | Resume session | `/session:resume latest` |
+| `/session-start [name]` | Start new session | `/session-start auth-refactor` |
+| `/session-update [notes]` | Add progress notes | `/session-update Fixed bug` |
+| `/session-end` | End session | `/session-end` |
+| `/session-current` | Show active session | `/session-current` |
+| `/session-list` | List all sessions | `/session-list` |
+| `/session-show <id>` | Show session details | `/session-show 20260102` |
+| `/session-search <query>` | Search sessions | `/session-search oauth` |
+| `/session-resume <id>` | Resume session | `/session-resume latest` |
 
 ## Workflows
 

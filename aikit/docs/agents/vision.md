@@ -314,5 +314,5 @@ Use @vision when:
 
 ## Related Commands
 
-- **[/ak_cm_analyze-figma](../commands/research/analyze-figma.md)** - Analyze Figma designs
-- **[/ak_cm_develop-figma-screen](../commands/research/design.md)** - Implement from designs
+- **[/analyze-figma](../commands/research/analyze-figma.md)** - Analyze Figma designs
+- **[/develop-figma-screen](../commands/research/design.md)** - Implement from designs

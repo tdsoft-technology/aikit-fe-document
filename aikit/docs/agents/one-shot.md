@@ -39,7 +39,7 @@ Use @one-shot when:
 @one-shot Implement user authentication
 
 # Or via command
-/ak_cm_one-shot Add user authentication
+/one-shot Add user authentication
 
 # With skill activation
 @one-shot Implement user authentication with TDD
@@ -334,10 +334,10 @@ Which do you prefer?
 
 ## Related Commands
 
-- **[/ak_cm_create](../commands/core/create.md)** - Create task for tracking
-- **[/ak_cm_plan](../commands/core/plan.md)** - Detailed planning
-- **[/ak_cm_implement](../commands/core/implement.md)** - Implementation with TDD
-- **[/ak_cm_finish](../commands/core/finish.md)** - Quality gates
+- **[/create](../commands/core/create.md)** - Create task for tracking
+- **[/plan](../commands/core/plan.md)** - Detailed planning
+- **[/implement](../commands/core/implement.md)** - Implementation with TDD
+- **[/finish](../commands/core/finish.md)** - Quality gates
 
 ## Related Documentation
 

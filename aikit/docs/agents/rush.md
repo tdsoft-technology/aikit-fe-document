@@ -202,9 +202,9 @@ Use @rush when:
 
 ## Related Commands
 
-- **[/ak_cm_fix](../commands/quick/fix.md)** - Quick fixes
-- **[/ak_cm_fix-types](../commands/quick/fix-types.md)** - Fix TypeScript errors
-- **[/ak_cm_fix-ci](../commands/quick/fix-ci.md)** - Fix CI failures
+- **[/fix](../commands/quick/fix.md)** - Quick fixes
+- **[/fix-types](../commands/quick/fix-types.md)** - Fix TypeScript errors
+- **[/fix-ci](../commands/quick/fix-ci.md)** - Fix CI failures
 
 ## Example Workflows
 

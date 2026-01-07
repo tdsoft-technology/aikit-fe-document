@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# /ak_cm_analyze-project Command
+# /analyze-project Command
 
 Analyze project structure, architecture, and patterns.
 
@@ -10,10 +10,10 @@ Analyze project structure, architecture, and patterns.
 
 ```bash
 # Analyze full project
-/ak_cm_analyze-project
+/analyze-project
 
 # Analyze specific area
-/ak_cm_analyze-project --focus authentication
+/analyze-project --focus authentication
 ```
 
 ## Arguments
@@ -116,7 +116,7 @@ AIKit analyzes:
 ### Console Output
 
 ```bash
-/ak_cm_analyze-project
+/analyze-project
 
 # Shows structured analysis in terminal
 ```
@@ -124,7 +124,7 @@ AIKit analyzes:
 ### Markdown Report
 
 ```bash
-/ak_cm_analyze-project --output md > project-analysis.md
+/analyze-project --output md > project-analysis.md
 ```
 
 **Generates:**
@@ -136,7 +136,7 @@ AIKit analyzes:
 ### JSON Output
 
 ```bash
-/ak_cm_analyze-project --output json
+/analyze-project --output json
 ```
 
 **Generates:**
@@ -149,7 +149,7 @@ AIKit analyzes:
 
 ```bash
 # Comprehensive analysis
-/ak_cm_analyze-project --depth thorough --output md
+/analyze-project --depth thorough --output md
 
 # Creates: project-analysis.md with complete report
 ```
@@ -158,7 +158,7 @@ AIKit analyzes:
 
 ```bash
 # Analyze authentication system
-/ak_cm_analyze-project --focus authentication
+/analyze-project --focus authentication
 
 # Creates: auth-analysis.md with specific findings
 ```
@@ -167,7 +167,7 @@ AIKit analyzes:
 
 ```bash
 # Fast overview
-/ak_cm_analyze-project --depth quick
+/analyze-project --depth quick
 
 # Creates: quick-analysis.md with high-level findings
 ```
@@ -217,7 +217,7 @@ AIKit analyzes:
 
 ```bash
 # Analyze authentication system
-/ak_cm_analyze-project --focus authentication
+/analyze-project --focus authentication
 ```
 
 **Analyzes:**
@@ -231,7 +231,7 @@ AIKit analyzes:
 
 ```bash
 # Analyze state management
-/ak_cm_analyze-project --focus state
+/analyze-project --focus state
 ```
 
 **Analyzes:**
@@ -244,7 +244,7 @@ AIKit analyzes:
 
 ```bash
 # Analyze API structure
-/ak_cm_analyze-project --focus api
+/analyze-project --focus api
 ```
 
 **Analyzes:**
@@ -257,7 +257,7 @@ AIKit analyzes:
 
 ```bash
 # Analyze components
-/ak_cm_analyze-project --focus components
+/analyze-project --focus components
 ```
 
 **Analyzes:**
@@ -319,7 +319,7 @@ AIKit analyzes:
 ### Example Console Output
 
 ```bash
-/ak_cm_analyze-project
+/analyze-project
 
 # Output:
 📊 Project Analysis Report
@@ -379,7 +379,7 @@ AIKit analyzes:
 
 ```bash
 # Generate markdown report
-/ak_cm_analyze-project --output md > project-analysis.md
+/analyze-project --output md > project-analysis.md
 
 # project-analysis.md contents:
 # Table of contents
@@ -390,9 +390,9 @@ AIKit analyzes:
 
 ## Related Commands
 
-- **[/ak_cm_research](../research/research.md)** - External research
-- **[/ak_cm_review-codebase](../review/review-codebase.md)** - Code review
-- **[/ak_cm_design](../design/design.md)** - Design architecture
+- **[/research](../research/research.md)** - External research
+- **[/review-codebase](../review/review-codebase.md)** - Code review
+- **[/design](../design/design.md)** - Design architecture
 
 ## Related Skills
 

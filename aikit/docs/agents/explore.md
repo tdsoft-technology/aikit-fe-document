@@ -322,8 +322,8 @@ Pattern 4: Centralized error middleware (src/utils/error-handler.ts)
 
 ## Related Commands
 
-- **[/ak_cm_analyze-project](../commands/research/analyze-project.md)** - Analyze codebase
-- **[/ak_cm_research](../commands/research/research.md)** - Research patterns
+- **[/analyze-project](../commands/research/analyze-project.md)** - Analyze codebase
+- **[/research](../commands/research/research.md)** - Research patterns
 
 ## Next Steps
 

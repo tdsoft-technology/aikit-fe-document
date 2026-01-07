@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# /ak_cm_docs Command
+# /docs Command
 
 Generate project documentation from code and configuration.
 
@@ -10,13 +10,13 @@ Generate project documentation from code and configuration.
 
 ```bash
 # Generate documentation
-/ak_cm_docs
+/docs
 
 # Generate to specific directory
-/ak_cm_docs --output docs/
+/docs --output docs/
 
 # Generate with template
-/ak_cm_docs --template custom-template.md
+/docs --template custom-template.md
 ```
 
 ## Arguments
@@ -94,7 +94,7 @@ docs/
 
 ```bash
 # Generate to docs/ directory
-/ak_cm_docs --output docs/
+/docs --output docs/
 
 # Result: Creates all documentation pages
 ```
@@ -103,7 +103,7 @@ docs/
 
 ```bash
 # Use custom template
-/ak_cm_docs --template .aikit/docs-template.md
+/docs --template .aikit/docs-template.md
 
 # Result: Uses your template structure
 ```
@@ -204,8 +204,8 @@ Each agent file generates documentation page with:
 
 ## Related Commands
 
-- **[/ak_cm_config](config.md)** - Configure documentation generation
-- **[/ak_cm_status](status.md)** - Check documentation state
+- **[/config](config.md)** - Configure documentation generation
+- **[/status](status.md)** - Check documentation state
 
 ## Related Documentation
 

@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# /ak_cm_stash Command
+# /stash Command
 
 Stash away work temporarily to work on something else or switch branches.
 
@@ -10,19 +10,19 @@ Stash away work temporarily to work on something else or switch branches.
 
 ```bash
 # Stash current work
-/ak_cm_stash
+/stash
 
 # Stash with message
-/ak_cm_stash save "Work in progress on authentication"
+/stash save "Work in progress on authentication"
 
 # Stash with custom name
-/ak_cm_stash save auth-feature
+/stash save auth-feature
 
 # List stashes
-/ak_cm_stash list
+/stash list
 
 # Apply stash
-/ak_cm_stash apply
+/stash apply
 ```
 
 ## Arguments
@@ -290,10 +290,10 @@ git stash pop
 
 ## Related Commands
 
-- **[/ak_cm_branch](../git/branch.md)** - Create branches
-- **[/ak_cm_merge](../git/merge.md)** - Merge branches
-- **[/ak_cm_rebase](../git/rebase.md)** - Rebase branches
-- **[/ak_cm_cherry-pick](../git/cherry-pick.md)** - Cherry-pick commits
+- **[/branch](../git/branch.md)** - Create branches
+- **[/merge](../git/merge.md)** - Merge branches
+- **[/rebase](../git/rebase.md)** - Rebase branches
+- **[/cherry-pick](../git/cherry-pick.md)** - Cherry-pick commits
 
 ## Related Skills
 

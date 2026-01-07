@@ -2,14 +2,14 @@
 sidebar_position: 2
 ---
 
-# /ak_cm_version Command
+# /version Command
 
 Display AIKit version and environment information.
 
 ## Usage
 
 ```bash
-/ak_cm_version
+/version
 ```
 
 ## Output
@@ -66,7 +66,7 @@ AIKit uses semantic versioning: `MAJOR.MINOR.PATCH`
 
 ```bash
 # Check current version
-/ak_cm_version
+/version
 
 # Check latest version (if installed via npm)
 npm outdated @tdsoft-tech/aikit
@@ -102,8 +102,8 @@ npm install -g @tdsoft-tech/aikit
 
 ## Related Commands
 
-- **[/ak_cm_status](status.md)** - Show AIKit status
-- **[/ak_cm_install](install.md)** - Install or reinstall AIKit
+- **[/status](status.md)** - Show AIKit status
+- **[/install](install.md)** - Install or reinstall AIKit
 
 ## Related Documentation
 

@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# /ak_cm_status Command
+# /status Command
 
 Display current AIKit configuration and system status.
 
@@ -10,11 +10,11 @@ Display current AIKit configuration and system status.
 
 ```bash
 # Show full status
-/ak_cm_status
+/status
 
 # Show specific config section
-/ak_cm_status agents
-/ak_cm_status skills
+/status agents
+/status skills
 ```
 
 ## Arguments
@@ -67,7 +67,7 @@ Git State:
 ### All
 
 ```bash
-/ak_cm_status
+/status
 ```
 
 Shows everything.
@@ -75,7 +75,7 @@ Shows everything.
 ### Skills
 
 ```bash
-/ak_cm_status skills
+/status skills
 ```
 
 Shows:
@@ -86,7 +86,7 @@ Shows:
 ### Agents
 
 ```bash
-/ak_cm_status agents
+/status agents
 ```
 
 Shows:
@@ -97,7 +97,7 @@ Shows:
 ### Commands
 
 ```bash
-/ak_cm_status commands
+/status commands
 ```
 
 Shows:
@@ -108,7 +108,7 @@ Shows:
 ### Config
 
 ```bash
-/ak_cm_status config
+/status config
 ```
 
 Shows:
@@ -119,7 +119,7 @@ Shows:
 ### Beads
 
 ```bash
-/ak_cm_status beads
+/status beads
 ```
 
 Shows:
@@ -224,9 +224,9 @@ ls -la .beads/
 
 ## Related Commands
 
-- **[/ak_cm_config](config.md)** - Manage configuration
-- **[/ak_cm_version](version.md)** - Show version info
-- **[/ak_cm_session_current](../sessions/session-current.md)** - Show active session
+- **[/config](config.md)** - Manage configuration
+- **[/version](version.md)** - Show version info
+- **[/session_current](../sessions/session-current.md)** - Show active session
 
 ## Related Documentation
 

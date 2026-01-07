@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-# /ak_cm_session:show Command
+# /session-show Command
 
 Display detailed information about a specific session by ID.
 
@@ -10,13 +10,13 @@ Display detailed information about a specific session by ID.
 
 ```bash
 # Show session by ID
-/ak_cm_session:show 20260102-1430-auth-refactor
+/session-show 20260102-1430-auth-refactor
 
 # Show session by name
-/ak_cm_session:show "Authentication Refactor"
+/session-show "Authentication Refactor"
 
 # Show most recent session
-/ak_cm_session:show
+/session-show
 ```
 
 ## Arguments
@@ -42,7 +42,7 @@ Shows complete session details including:
 
 ```bash
 # Show session by exact ID
-/ak_cm_session:show 20260102-1430-auth-refactor
+/session-show 20260102-1430-auth-refactor
 
 # Output:
 ID: 20260102-1430-auth-refactor
@@ -59,7 +59,7 @@ Goals: 3/3 completed
 
 ```bash
 # Show session by name
-/ak_cm_session:show "Authentication Refactor"
+/session-show "Authentication Refactor"
 
 # Output:
 ID: 20260102-1430-auth-refactor
@@ -71,7 +71,7 @@ Name: Authentication Refactor
 
 ```bash
 # Show most recent session
-/ak_cm_session:show
+/session-show
 
 # Output:
 ID: 20260102-1430-auth-refactor
@@ -155,8 +155,8 @@ Added JWT token generation
 
 ## Related Commands
 
-- **[/ak_cm_session:list](session-list.md)** - List all sessions
-- **[/ak_cm_session:current](session-current.md)** - Show current session
-- [/ak_cm_session:start](session-start.md)** - Start a new session
-- [/ak_cm_session:end](session-end.md)** - End a session
-- [/ak_cm_session:update](session-update.md)** - Add progress notes
+- **[/session-list](session-list.md)** - List all sessions
+- **[/session-current](session-current.md)** - Show current session
+- [/session-start](session-start.md)** - Start a new session
+- [/session-end](session-end.md)** - End a session
+- [/session-update](session-update.md)** - Add progress notes

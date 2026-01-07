@@ -10,65 +10,65 @@ Utility commands in AIKit provide common operations like help, version checking,
 
 ```bash
 # Show help for all commands
-/ak_cm_help
+/help
 
 # Show help for specific command
-/ak_cm_help commit
+/help commit
 
 # Check AIKit status
-/ak_cm_status
+/status
 
 # Show AIKit version
-/ak_cm_version
+/version
 
 # View or edit configuration
-/ak_cm_config
-/ak_cm_config get key
-/ak_cm_config set key value
+/config
+/config get key
+/config set key value
 
 # Sync with git
-/ak_cm_sync
+/sync
 
 # Generate documentation
-/ak_cm_docs
+/docs
 
 # Install AIKit
-/ak_cm_install
+/install
 ```
 
 ## Available Commands
 
 | Command | Description | Use Case |
 |---------|-------------|----------|
-| /ak_cm_help | Show help information | Learn about commands |
-| /ak_cm_version | Show AIKit version | Check version |
-| /ak_cm_status | Show AIKit status | View configuration state |
-| /ak_cm_config | Manage configuration | View/set config |
-| /ak_cm_sync | Sync with git | Commit configuration |
-| /ak_cm_docs | Generate documentation | Create project docs |
-| /ak_cm_install | Install AIKit | Install or reinstall |
+| /help | Show help information | Learn about commands |
+| /version | Show AIKit version | Check version |
+| /status | Show AIKit status | View configuration state |
+| /config | Manage configuration | View/set config |
+| /sync | Sync with git | Commit configuration |
+| /docs | Generate documentation | Create project docs |
+| /install | Install AIKit | Install or reinstall |
 
 ## Command Details
 
-### /ak_cm_help
+### /help
 
 Show help information for all commands or specific command.
 
 ```bash
 # Show all commands
-/ak_cm_help
+/help
 
 # Show specific command help
-/ak_cm_help create
-/ak_cm_help plan
+/help create
+/help plan
 ```
 
-### /ak_cm_version
+### /version
 
 Display AIKit version information.
 
 ```bash
-/ak_cm_version
+/version
 ```
 
 **Output:**
@@ -80,12 +80,12 @@ npm: 10.8.2
 Platform: darwin (macOS)
 ```
 
-### /ak_cm_status
+### /status
 
 Show current AIKit configuration and status.
 
 ```bash
-/ak_cm_status
+/status
 ```
 
 **Output:**
@@ -106,54 +106,54 @@ Config files:
 Active session: 20260102-1430-auth-refactor
 ```
 
-### /ak_cm_config
+### /config
 
 View or edit AIKit configuration.
 
 ```bash
 # View all config
-/ak_cm_config
+/config
 
 # Get specific key
-/ak_cm_config get defaultAgent
-/ak_cm_config get qualityGates
+/config get defaultAgent
+/config get qualityGates
 
 # Set key
-/ak_cm_config set defaultAgent @planner
-/ak_cm_config set qualityGates.0.typecheck true
+/config set defaultAgent @planner
+/config set qualityGates.0.typecheck true
 ```
 
-### /ak_cm_sync
+### /sync
 
 Sync AIKit configuration and tracked files with git.
 
 ```bash
 # Sync all changes
-/ak_cm_sync
+/sync
 
 # Sync specific files
-/ak_cm_sync .aikit/ .beads/
+/sync .aikit/ .beads/
 ```
 
-### /ak_cm_docs
+### /docs
 
 Generate project documentation from code and configuration.
 
 ```bash
 # Generate documentation
-/ak_cm_docs
+/docs
 
 # Output to specific directory
-/ak_cm_docs --output docs/
+/docs --output docs/
 ```
 
-### /ak_cm_install
+### /install
 
 Install or reinstall AIKit globally.
 
 ```bash
 # Install globally
-/ak_cm_install --global
+/install --global
 
 # Install in project
 cd your-project
@@ -215,9 +215,9 @@ aikit init --global
 
 ## Related Commands
 
-- **[/ak_cm_help](help.md)** - Show detailed help
-- **[/ak_cm_config](config.md)** - Configuration management
-- **[/ak_cm_sync](sync.md)** - Git synchronization
+- **[/help](help.md)** - Show detailed help
+- **[/config](config.md)** - Configuration management
+- **[/sync](sync.md)** - Git synchronization
 
 ## Related Documentation
 

@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# /ak_cm_cherry-pick Command
+# /cherry-pick Command
 
 Apply specific commits from one branch to another without merging entire branch.
 
@@ -10,13 +10,13 @@ Apply specific commits from one branch to another without merging entire branch.
 
 ```bash
 # Cherry-pick a commit
-/ak_cm_cherry-pick abc1234
+/cherry-pick abc1234
 
 # Cherry-pick multiple commits
-/ak_cm_cherry-pick abc1234 def5678 ghi8901
+/cherry-pick abc1234 def5678 ghi8901
 
 # Cherry-pick commit range
-/ak_cm_cherry-pick abc1234..ghi8901
+/cherry-pick abc1234..ghi8901
 ```
 
 ## Arguments
@@ -265,9 +265,9 @@ git cherry-pick --skip
 
 ## Related Commands
 
-- **[/ak_cm_branch](../git/branch.md)** - Create branches
-- **[/ak_cm_merge](../git/merge.md)** - Merge branches
-- **[/ak_cm_rebase](../git/rebase.md)** - Rebase branches
+- **[/branch](../git/branch.md)** - Create branches
+- **[/merge](../git/merge.md)** - Merge branches
+- **[/rebase](../git/rebase.md)** - Rebase branches
 
 ## Related Skills
 

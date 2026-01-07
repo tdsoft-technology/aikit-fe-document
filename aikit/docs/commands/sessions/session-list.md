@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# /ak_cm_session:list Command
+# /session-list Command
 
 List all development sessions with filtering and search capabilities.
 
@@ -10,23 +10,23 @@ List all development sessions with filtering and search capabilities.
 
 ```bash
 # List all sessions
-/ak_cm_session:list
+/session-list
 
 # List last 10 sessions
-/ak_cm_session:list --limit 10
+/session-list --limit 10
 
 # List active sessions
-/ak_cm_session:list --status active
+/session-list --status active
 
 # List completed sessions
-/ak_cm_session:list --status completed
+/session-list --status completed
 
 # List sessions by date range
-/ak_cm_session:list --start "2026-01-01" --end "2026-01-31"
+/session-list --start "2026-01-01" --end "2026-01-31"
 
 # Search sessions
-/ak_cm_session:list --search authentication
-/ak_cm_session:list --search "user auth"
+/session-list --search authentication
+/session-list --search "user auth"
 ```
 
 ## Arguments
@@ -42,7 +42,7 @@ List all development sessions with filtering and search capabilities.
 ## Output Format
 
 ```bash
-/ak_cm_session:list
+/session-list
 
 # Output:
 ID: 20260102-1430-auth-refactor
@@ -81,33 +81,33 @@ Goals: 2/5 completed
 
 ```bash
 # List only completed sessions
-/ak_cm_session:list --status completed
+/session-list --status completed
 
 # List active sessions
-/ak_cm_session:list --status active
+/session-list --status active
 
 # List blocked sessions
-/ak_cm_session:list --status blocked
+/session-list --status blocked
 ```
 
 ### By Date Range
 
 ```bash
 # List sessions from January 2026
-/ak_cm_session:list --start "2026-01-01" --end "2026-01-31"
+/session-list --start "2026-01-01" --end "2026-01-31"
 
 # List last week
-/ak_cm_session:list --start "2026-01-27" --end "2026-02-02"
+/session-list --start "2026-01-27" --end "2026-02-02"
 ```
 
 ### By Search
 
 ```bash
 # Search for authentication sessions
-/ak_cm_session:list --search authentication
+/session-list --search authentication
 
 # Search for specific goal
-/ak_cm_session:list --search "JWT tokens"
+/session-list --search "JWT tokens"
 ```
 
 ## Best Practices
@@ -143,9 +143,9 @@ Goals: 2/5 completed
 
 ## Related Commands
 
-- **[/ak_cm_session:start](session-start.md)** - Start a new session
-- **[/ak_cm_session:update](session-update.md)** - Add progress notes
-- **[/ak_cm_session:end](session-end.md)** - End a session
-- **[/ak_cm_session:current](session-current.md)** - Show current session details
-- [/ak_cm_session:show](session-show.md)** - Show session details
-- [/ak_cm_session:search](session-search.md)** - Search sessions
+- **[/session-start](session-start.md)** - Start a new session
+- **[/session-update](session-update.md)** - Add progress notes
+- **[/session-end](session-end.md)** - End a session
+- **[/session-current](session-current.md)** - Show current session details
+- [/session-show](session-show.md)** - Show session details
+- [/session-search](session-search.md)** - Search sessions

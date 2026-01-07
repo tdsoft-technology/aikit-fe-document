@@ -288,8 +288,8 @@ function authenticate(email, password) {
 
 ## Related Commands
 
-- **[/ak_cm_review-codebase](../commands/research/review-codebase.md)** - Review codebase
-- **[/ak_cm_test](../commands/quick/test.md)** - Run tests after review
+- **[/review-codebase](../commands/research/review-codebase.md)** - Review codebase
+- **[/test](../commands/quick/test.md)** - Run tests after review
 
 ## Example Workflows
 

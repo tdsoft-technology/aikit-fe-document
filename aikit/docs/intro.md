@@ -188,9 +188,9 @@ Implement user authentication
 ### 3. Resume Yesterday's Work
 
 ```bash
-/session:current
+/session-current
 # See what you were working on
-/session:show <session-id>
+/session-show <session-id>
 # Load full context with /resume
 ```
 
@@ -311,7 +311,7 @@ aikit install
 ### 3. Create Your First Task
 
 ```bash
-/ak_cm_create Add user authentication
+/create Add user authentication
 ```
 
 **Or try interactive diagrams:**

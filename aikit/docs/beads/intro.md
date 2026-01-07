@@ -329,19 +329,19 @@ Guided setup for new projects.
 AIKit provides Beads commands via slash commands:
 
 ```bash
-/ak_cm_create Add user authentication
+/create Add user authentication
 # Same as: bd create "Add user authentication"
 
-/ak_cm_show 001
+/show 001
 # Same as: bd show 001
 
-/ak_cm_list --status in-progress
+/list --status in-progress
 # Same as: bd list --status in-progress
 
-/ak_cm_update 001 --status completed
+/update 001 --status completed
 # Same as: bd update 001 --status completed
 
-/ak_cm_complete 001
+/complete 001
 # Same as: bd complete 001
 ```
 
@@ -366,13 +366,13 @@ When using AIKit via MCP, Beads tools are available:
 
 ### Quality Gates
 
-AIKit automatically runs quality gates when completing tasks via `/ak_cm_complete` or `/ak_cm_finish`:
+AIKit automatically runs quality gates when completing tasks via `/complete` or `/finish`:
 
 ```bash
-/ak_cm_create Add user authentication
-/ak_cm_implement
+/create Add user authentication
+/implement
 # ... implementation ...
-/ak_cm_finish
+/finish
 # Runs quality gates:
 #   ✓ npm run typecheck
 #   ✓ npm run test
@@ -438,20 +438,20 @@ parent: "000"
 
 ```bash
 # 1. Create task
-/ak_cm_create Add user authentication
+/create Add user authentication
 
 # 2. Plan implementation
-/ak_cm_plan user authentication system
+/plan user authentication system
 
 # 3. Implement with TDD
-/ak_sk_test-driven-development
-/ak_cm_implement
+/test-driven-development
+/implement
 
 # 4. Update progress
-/ak_cm_update 001 --status in-progress
+/update 001 --status in-progress
 
 # 5. Complete with quality gates
-/ak_cm_finish
+/finish
 ```
 
 ### Bug Fix
@@ -461,10 +461,10 @@ parent: "000"
 bd create "Fix login timeout bug" --type bug --priority critical
 
 # 2. Debug with skill
-/ak_sk_systematic-debugging
+/systematic-debugging
 
 # 3. Implement fix
-/ak_cm_implement
+/implement
 
 # 4. Verify fix
 npm run test
@@ -480,10 +480,10 @@ bd complete 001
 bd create "Refactor auth middleware" --type refactor --priority medium
 
 # 2. Use refactoring skill
-/ak_sk_refactoring
+/refactoring
 
 # 3. Implement changes
-/ak_cm_implement
+/implement
 
 # 4. Ensure tests pass
 npm run test

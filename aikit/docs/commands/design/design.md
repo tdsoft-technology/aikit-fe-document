@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# /ak_cm_design Command
+# /design Command
 
 Design architecture, features, or workflows following AIKit design principles.
 
@@ -10,13 +10,13 @@ Design architecture, features, or workflows following AIKit design principles.
 
 ```bash
 # Design new feature
-/ak_cm_design "User authentication system"
+/design "User authentication system"
 
 # Design architecture
-/ak_cm_design --architecture
+/design --architecture
 
 # Design workflow
-/ak_cm_design --flow
+/design --flow
 ```
 
 ## Arguments
@@ -155,7 +155,7 @@ GET /api/v1/auth/me
 
 ```bash
 # Design authentication feature
-/ak_cm_design "Add user authentication"
+/design "Add user authentication"
 
 # AIKit will:
 # 1. Ask about requirements
@@ -168,7 +168,7 @@ GET /api/v1/auth/me
 
 ```bash
 # Design with architecture focus
-/ak_cm_design "Authentication system" --architecture
+/design "Authentication system" --architecture
 
 # AIKit will:
 # 1. Create system architecture
@@ -181,7 +181,7 @@ GET /api/v1/auth/me
 
 ```bash
 # Create workflow diagram
-/ak_cm_design "Checkout flow" --flow
+/design "Checkout flow" --flow
 
 # AIKit will:
 # 1. Define checkout steps
@@ -280,8 +280,8 @@ AIKit generates code examples for:
 
 ## Related Commands
 
-- **[/ak_cm_analyze-project](../analyze-project.md)** - Analyze architecture
-- **[/ak_cm_review-codebase](../review-codebase.md)** - Review current code
+- **[/analyze-project](../analyze-project.md)** - Analyze architecture
+- **[/review-codebase](../review-codebase.md)** - Review current code
 
 ## Related Skills
 

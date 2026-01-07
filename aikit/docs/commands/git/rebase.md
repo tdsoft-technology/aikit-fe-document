@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# /ak_cm_rebase Command
+# /rebase Command
 
 Rebase current branch onto another branch to rewrite history or integrate changes.
 
@@ -10,13 +10,13 @@ Rebase current branch onto another branch to rewrite history or integrate change
 
 ```bash
 # Rebase current branch onto main
-/ak_cm_rebase main
+/rebase main
 
 # Rebase with interactive mode
-/ak_cm_rebase main --interactive
+/rebase main --interactive
 
 # Rebase specific number of commits
-/ak_cm_rebase HEAD~5
+/rebase HEAD~5
 ```
 
 ## Arguments
@@ -33,7 +33,7 @@ Rebase current branch onto another branch to rewrite history or integrate change
 
 ```bash
 # Rebase current branch onto main
-/ak_cm_rebase main
+/rebase main
 
 # Example:
 git checkout feature-branch
@@ -51,7 +51,7 @@ git rebase main
 
 ```bash
 # Interactive rebase (edit, squash, drop, reword)
-/ak_cm_rebase main --interactive
+/rebase main --interactive
 
 # Opens editor with each commit:
 pick abc1234 Implement feature
@@ -76,7 +76,7 @@ pick ghi8901 Add tests
 
 ```bash
 # Rebase commits onto different branch
-/ak_cm_rebase upstream-branch --onto new-base
+/rebase upstream-branch --onto new-base
 
 # Example:
 git rebase upstream-branch --onto new-base
@@ -267,9 +267,9 @@ drop xyz789 Add API key
 
 ## Related Commands
 
-- **[/ak_cm_branch](../git/branch.md)** - Create branches
-- **[/ak_cm_merge](../git/merge.md)** - Merge branches
-- **[/ak_cm_cherry-pick](../git/cherry-pick.md)** - Cherry-pick commits
+- **[/branch](../git/branch.md)** - Create branches
+- **[/merge](../git/merge.md)** - Merge branches
+- **[/cherry-pick](../git/cherry-pick.md)** - Cherry-pick commits
 
 ## Related Skills
 

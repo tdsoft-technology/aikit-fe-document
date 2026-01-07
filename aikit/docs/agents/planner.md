@@ -33,7 +33,7 @@ Use @planner when:
 @planner Design authentication system
 
 # Or via command
-/ak_cm_delegator @planner Design authentication system
+/delegator @planner Design authentication system
 ```
 
 ## Workflow

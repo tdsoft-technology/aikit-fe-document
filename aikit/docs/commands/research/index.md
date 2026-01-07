@@ -10,33 +10,33 @@ Research commands in AIKit enable you to gather external information from docume
 
 | Command | Description | Use Case |
 |---------|-------------|----------|
-| /ak_cm_research | Deep research on a topic with documentation | Learnings, examples, and best practices |
-| /ak_cm_analyze-project | Analyze project structure, architecture, and patterns | Understand codebase organization |
-| /ak_cm_review-codebase | Review codebase for quality issues, patterns, and improvements | Conduct code review |
-| /ak_cm_design | Design architecture, features, or workflows following AIKit design principles |
-| /ak_cm_brainstorm | Brainstorm ideas, solutions, or approaches for problems | Generate multiple creative solutions |
+| /research | Deep research on a topic with documentation | Learnings, examples, and best practices |
+| /analyze-project | Analyze project structure, architecture, and patterns | Understand codebase organization |
+| /review-codebase | Review codebase for quality issues, patterns, and improvements | Conduct code review |
+| /design | Design architecture, features, or workflows following AIKit design principles |
+| /brainstorm | Brainstorm ideas, solutions, or approaches for problems | Generate multiple creative solutions |
 
 ## Command Reference
 
-### /ak_cm_research
+### /research
 
-**See:** [/ak_cm_research](research/research.md)**
+**See:** [/research](research/research.md)**
 
-### /ak_cm_analyze-project
+### /analyze-project
 
-**See:** [/ak_cm_analyze-project](analyze-project.md)**
+**See:** [/analyze-project](analyze-project.md)**
 
-### /ak_cm_review-codebase
+### /review-codebase
 
-**See:** [/ak_cm_review-codebase](review-codebase.md)**
+**See:** [/review-codebase](review-codebase.md)**
 
-### /ak_cm_design
+### /design
 
-**See:** [/ak_cm_design](design/design.md)**
+**See:** [/design](design/design.md)**
 
-### /ak_cm_brainstorm
+### /brainstorm
 
-**See:** [/ak_cm_brainstorm](brainstorm.md)**
+**See:** [/brainstorm](brainstorm.md)**
 
 ## How to Use Research Commands
 
@@ -44,7 +44,7 @@ Research commands in AIKit enable you to gather external information from docume
 
 ```bash
 # Clear, specific question
-/ak_cm_research "What are JWT best practices for token refresh?"
+/research "What are JWT best practices for token refresh?"
 ```
 
 ### 2. Execute Research
@@ -157,8 +157,8 @@ graph LR
 
 ## Related Commands
 
-- **[/ak_cm_analyze-project](../analyze-project.md)** - Analyze project context
-- **[/ak_cm_design](../design/design.md)** - Use research for design
+- **[/analyze-project](../analyze-project.md)** - Analyze project context
+- **[/design](../design/design.md)** - Use research for design
 
 ## Related Skills
 

@@ -12,23 +12,23 @@ Session commands in AIKit allow you to manage development sessions, track work a
 
 ```bash
 # List all session commands
-/ak_cm_list
+/list
 
 # Show help
-/ak_cm_help sessions
+/help sessions
 ```
 
 ## Available Commands
 
 | Command | Description |
 |---------|-------------|
-| /ak_cm_session:start | Start a new development session |
-| /ak_cm_session:update | Add progress notes to current session |
-| /ak_cm_session:end | End current session with summary |
-| /ak_cm_session:list | List all sessions |
-| /ak_cm_session:current | Show current session details |
-| /ak_cm_session:show | Show details of a specific session |
-| /ak_cm_session:search | Search for sessions |
+| /session-start | Start a new development session |
+| /session-update | Add progress notes to current session |
+| /session-end | End current session with summary |
+| /session-list | List all sessions |
+| /session-current | Show current session details |
+| /session-show | Show details of a specific session |
+| /session-search | Search for sessions |
 
 ## CLI vs AI Chat
 
@@ -41,9 +41,9 @@ aikit session end
 
 **AI Chat Commands:**
 ```bash
-/ak_cm_session:start "user-auth"
-/ak_cm_session:update "Added login form"
-/ak_cm_session:end
+/session-start "user-auth"
+/session-update "Added login form"
+/session-end
 ```
 
 ## Session Structure
@@ -121,18 +121,18 @@ Added JWT token generation
 
 ## Next Steps
 
-- **[/ak_cm_session:start](session-start.md)** - Start a new session
-- **[/ak_cm_session:update](session-update.md)** - Update current session
-- **[/ak_cm_session:end](session-end.md)** - End a session
-- **[/ak_cm_session:list](session-list.md)** - List all sessions
-- **[/ak_cm_session:current](session-current.md)** - Show current session
-- **[/ak_cm_session:show](session-show.md)** - Show session details
-- **[/ak_cm_session:search](session-search.md)** - Search sessions
+- **[/session-start](session-start.md)** - Start a new session
+- **[/session-update](session-update.md)** - Update current session
+- **[/session-end](session-end.md)** - End a session
+- **[/session-list](session-list.md)** - List all sessions
+- **[/session-current](session-current.md)** - Show current session
+- **[/session-show](session-show.md)** - Show session details
+- **[/session-search](session-search.md)** - Search sessions
 
 ## Related Commands
 
-- **[/ak_cm_handoff](../core/handoff.md)** - Create session handoff
-- **[/ak_cm_resume](../core/resume.md)** - Resume from handoff
+- **[/handoff](../core/handoff.md)** - Create session handoff
+- **[/resume](../core/resume.md)** - Resume from handoff
 
 ## Related Documentation
 

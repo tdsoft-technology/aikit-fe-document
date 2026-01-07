@@ -2,7 +2,7 @@
 sidebar_position: 8
 ---
 
-# /ak_cm_session:search Command
+# /session-search Command
 
 Search for sessions by name, goals, or progress notes.
 
@@ -10,16 +10,16 @@ Search for sessions by name, goals, or progress notes.
 
 ```bash
 # Search by keyword
-/ak_cm_session:search authentication
+/session-search authentication
 
 # Search by goals
-/ak_cm_session:search "JWT tokens"
+/session-search "JWT tokens"
 
 # Search by date
-/ak_cm_session:search --start "2026-01-01" --end "2026-01-31"
+/session-search --start "2026-01-01" --end "2026-01-31"
 
 # Combine filters
-/ak_cm_session:search "auth" --start "2026-01-01" --status completed
+/session-search "auth" --start "2026-01-01" --status completed
 ```
 
 ## Arguments
@@ -38,13 +38,13 @@ Search for sessions by name, goals, or progress notes.
 
 ```bash
 # Search for specific topic
-/ak_cm_session:search "OAuth"
+/session-search "OAuth"
 
 # Search for goal keywords
-/ak_cm_session:search "user profile" "JWT" "authentication"
+/session-search "user profile" "JWT" "authentication"
 
 # Search by code pattern
-/ak_cm_session:search "authentication" --status completed
+/session-search "authentication" --status completed
 ```
 
 ### Boolean Logic
@@ -53,7 +53,7 @@ You can combine search terms with `AND` and `OR` logic (not directly supported y
 
 ```bash
 # Search broadly then filter results
-/ak_cm_session:search "auth"
+/session-search "auth"
 # Filter by status from results
 ```
 
@@ -91,7 +91,7 @@ Search matches: Yes
 
 ## Related Commands
 
-- **[/ak_cm_session:start](session-start.md)** - Start a new session
-- **[/ak_cm_session:list](session-list.md)** - List all sessions
-- [/ak_cm_session:current](session-current.md)** - Show current session
-- [/ak_cm_session:show](session-show.md)** - Show session details
+- **[/session-start](session-start.md)** - Start a new session
+- **[/session-list](session-list.md)** - List all sessions
+- [/session-current](session-current.md)** - Show current session
+- [/session-show](session-show.md)** - Show session details

@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# /ak_cm_review-codebase Command
+# /review-codebase Command
 
 Review codebase for quality issues, patterns, and improvements.
 
@@ -10,16 +10,16 @@ Review codebase for quality issues, patterns, and improvements.
 
 ```bash
 # Full codebase review
-/ak_cm_review-codebase
+/review-codebase
 
 # Review specific area
-/ak_cm_review-codebase --focus authentication
+/review-codebase --focus authentication
 
 # Quick review
-/ak_cm_review-codebase --quick
+/review-codebase --quick
 
 # Deep review
-/ak_cm_review-codebase --depth thorough
+/review-codebase --depth thorough
 ```
 
 ## Arguments
@@ -91,7 +91,7 @@ When `--fix` flag is set, AIKit can:
 ### Console Output
 
 ```bash
-/ak_cm_review-codebase
+/review-codebase
 
 # Shows review summary in terminal
 ```
@@ -99,7 +99,7 @@ When `--fix` flag is set, AIKit can:
 ### Markdown Report
 
 ```bash
-/ak_cm_review-codebase --output md > code-review-report.md
+/review-codebase --output md > code-review-report.md
 ```
 
 **Generates:**
@@ -112,7 +112,7 @@ When `--fix` flag is set, AIKit can:
 ### JSON Output
 
 ```bash
-/ak_cm_review-codebase --output json > code-review-report.json
+/review-codebase --output json > code-review-report.json
 ```
 
 **Generates:**
@@ -261,7 +261,7 @@ When `--fix` flag is set, AIKit can:
 ### Console Summary
 
 ```bash
-/ak_cm_review-codebase
+/review-codebase
 
 # Output:
 📊 Codebase Review Report - Authentication Focus
@@ -286,7 +286,7 @@ When `--fix` flag is set, AIKit can:
 ### Markdown Report File
 
 ```bash
-/ak_cm_review-codebase --output md > code-review.md
+/review-codebase --output md > code-review.md
 
 # code-review.md contents:
 # Summary statistics
@@ -297,8 +297,8 @@ When `--fix` flag is set, AIKit can:
 
 ## Related Commands
 
-- **[/ak_cm_analyze-project](../analyze-project.md)** - Project analysis
-- **[/ak_cm_research](../research/research.md)** - External research
+- **[/analyze-project](../analyze-project.md)** - Project analysis
+- **[/research](../research/research.md)** - External research
 
 ## Related Skills
 

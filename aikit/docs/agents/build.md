@@ -212,9 +212,9 @@ npm run build         # Production build
 
 ## Related Commands
 
-- **[/ak_cm_implement](../commands/core/implement.md)** - Implement with TDD workflow
-- **[/ak_cm_test](../commands/quick/test.md)** - Run tests
-- **[/ak_cm_fix](../commands/quick/fix.md)** - Quick fixes
+- **[/implement](../commands/core/implement.md)** - Implement with TDD workflow
+- **[/test](../commands/quick/test.md)** - Run tests
+- **[/fix](../commands/quick/fix.md)** - Quick fixes
 
 ## Example Workflows
 
@@ -223,10 +223,10 @@ npm run build         # Production build
 # Task: Implement user authentication
 
 # 1. Plan (if needed)
-/ak_cm_plan User authentication system
+/plan User authentication system
 
 # 2. Use TDD skill
-/ak_sk_test-driven-development
+/test-driven-development
 
 # 3. Implement
 @build Implement user authentication with OAuth 2.0

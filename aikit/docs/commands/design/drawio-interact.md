@@ -397,8 +397,8 @@ If you were using the previous auto-sync version:
 
 ## Related Commands
 
-- **[/ak_cm_design](./design.md)** - Design architecture and workflows
-- **[/ak_cm_analyze-project](../core/analyze-project.md)** - Analyze codebase structure
+- **[/design](./design.md)** - Design architecture and workflows
+- **[/analyze-project](../core/analyze-project.md)** - Analyze codebase structure
 
 ## Related Skills
 

@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# /ak_cm_research Command
+# /research Command
 
 Conduct deep research on a topic, documenting findings and recommendations.
 
@@ -10,13 +10,13 @@ Conduct deep research on a topic, documenting findings and recommendations.
 
 ```bash
 # Research a topic
-/ak_cm_research "React performance optimization"
+/research "React performance optimization"
 
 # Research with output limit
-/ak_cm_research "JWT best practices" --numResults 10
+/research "JWT best practices" --numResults 10
 
 # Search for specific sources
-/ak_cm_research "PostgreSQL indexing" --sources "docs,github"
+/research "PostgreSQL indexing" --sources "docs,github"
 ```
 
 ## Arguments
@@ -128,7 +128,7 @@ Based on research of 5+ sources:
 
 ```bash
 # Research a topic
-/ak_cm_research "React Context API"
+/research "React Context API"
 
 # Result: Deep research with multiple sources, documented in memory
 ```
@@ -137,7 +137,7 @@ Based on research of 5+ sources:
 
 ```bash
 # Research with limits
-/ak_cm_research "Vue 3 composition API" --numResults 5
+/research "Vue 3 composition API" --numResults 5
 
 # Result: Top 5 most relevant resources
 ```
@@ -173,10 +173,10 @@ After completing research, save to memory:
 
 ## Related Commands
 
-- **[/ak_cm_analyze-project](../analyze-project.md)** - Analyze project structure
-- **[/ak_cm_review-codebase](../review-codebase.md)** - Review codebase
-- **[/ak_cm_brainstorm](../brainstorm.md)** - Generate ideas
-- **[/ak_cm_design](../design/design.md)** - Architecture design
+- **[/analyze-project](../analyze-project.md)** - Analyze project structure
+- **[/review-codebase](../review-codebase.md)** - Review codebase
+- **[/brainstorm](../brainstorm.md)** - Generate ideas
+- **[/design](../design/design.md)** - Architecture design
 
 ## Related Skills
 

@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Skills are **structured workflow instructions** that AI agents must follow. They enforce consistent processes for common development tasks.
 
-<MaterialIcon name="lightbulb" className="icon-info" /> **All skills now use the `/ak_sk_` prefix** (e.g., `/ak_sk_test-driven-development`)
+<MaterialIcon name="lightbulb" className="icon-info" /> **All skills now use the `/` prefix** (e.g., `/test-driven-development`)
 
 ## Why Skills?
 
@@ -37,7 +37,7 @@ With skills, AI agents:
 
 ```bash
 # Direct invocation with prefix
-/ak_sk_test-driven-development
+/test-driven-development
 
 # Or via tool
 > use_skill("test-driven-development")
@@ -183,6 +183,6 @@ Most commonly used skills:
 ## Next Steps
 
 - **[Agents](../agents/intro)** - Learn about specialized agents
-- **[Commands](../commands/intro)** - All slash commands (using `/ak_cm_` prefix)
+- **[Commands](../commands/intro)** - All slash commands (using `/` prefix)
 - **[Tools](../tools/intro)** - Built-in tools
 - **[Session Management](../sessions/intro)** - Track your development work

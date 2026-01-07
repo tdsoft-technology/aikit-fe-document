@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# /ak_cm_help Command
+# /help Command
 
 Display help information for all AIKit commands or specific commands.
 
@@ -10,15 +10,15 @@ Display help information for all AIKit commands or specific commands.
 
 ```bash
 # Show all commands
-/ak_cm_help
+/help
 
 # Show specific command help
-/ak_cm_help create
-/ak_cm_help plan
+/help create
+/help plan
 
 # Show help by category
-/ak_cm_help commands
-/ak_cm_help skills
+/help commands
+/help skills
 ```
 
 ## Arguments
@@ -34,7 +34,7 @@ Display help information for all AIKit commands or specific commands.
 ### Brief Help
 
 ```bash
-/ak_cm_help
+/help
 ```
 
 **Output:**
@@ -92,24 +92,24 @@ Utility:
   docs        Generate documentation
   install     Install AIKit
 
-Use /ak_cm_help <command> for detailed information.
+Use /help <command> for detailed information.
 ```
 
 ### Verbose Help
 
 ```bash
 # Show detailed help for specific command
-/ak_cm_help create --verbose
+/help create --verbose
 ```
 
 **Output:**
 ```bash
-COMMAND: /ak_cm_create
+COMMAND: /create
 
 DESCRIPTION: Create a new Beads task for tracking development work
 
 USAGE:
-  /ak_cm_create <title> [options]
+  /create <title> [options]
 
 OPTIONS:
   -m, --message <string>    Task description
@@ -117,19 +117,19 @@ OPTIONS:
   -p, --priority <priority>   Task priority: critical, high, medium, low
 
 EXAMPLES:
-  /ak_cm_create "Add user authentication"
-  /ak_cm_create "Fix login bug" --type bug --priority high
-  /ak_cm_create "Refactor auth service" --message "Extract to separate service"
+  /create "Add user authentication"
+  /create "Fix login bug" --type bug --priority high
+  /create "Refactor auth service" --message "Extract to separate service"
 
 RELATED:
-  /ak_cm_plan         Plan implementation strategy
-  /ak_cm_implement       Implement with TDD
-  /ak_cm_finish         Complete with quality gates
-  /ak_cm_list           List all tasks
+  /plan         Plan implementation strategy
+  /implement       Implement with TDD
+  /finish         Complete with quality gates
+  /list           List all tasks
 
 SEE ALSO:
-  /ak_cm_help commands     List all commands
-  /ak_cm_status          Show AIKit status
+  /help commands     List all commands
+  /status          Show AIKit status
 ```
 
 ## Command Categories
@@ -137,82 +137,82 @@ SEE ALSO:
 ### Core Workflow Commands
 
 ```bash
-/ak_cm_help create
-/ak_cm_help plan
-/ak_cm_help implement
-/ak_cm_help finish
+/help create
+/help plan
+/help implement
+/help finish
 ```
 
 ### Quick Actions Commands
 
 ```bash
-/ak_cm_help fix
-/ak_cm_help fix-types
-/ak_cm_help commit
-/ak_cm_help pr
-/ak_cm_help test
-/ak_cm_help lint
+/help fix
+/help fix-types
+/help commit
+/help pr
+/help test
+/help lint
 ```
 
 ### Research & Design Commands
 
 ```bash
-/ak_cm_help research
-/ak_cm_help analyze-project
-/ak_cm_help review-codebase
-/ak_cm_help design
-/ak_cm_help brainstorm
+/help research
+/help analyze-project
+/help review-codebase
+/help design
+/help brainstorm
 ```
 
 ### Git Commands
 
 ```bash
-/ak_cm_help branch
-/ak_cm_help merge
-/ak_cm_help rebase
-/ak_cm_help cherry-pick
-/ak_cm_help stash
+/help branch
+/help merge
+/help rebase
+/help cherry-pick
+/help stash
 ```
 
 ### Session Commands
 
 ```bash
-/ak_cm_help session-start
-/ak_cm_help session-update
-/ak_cm_help session-end
-/ak_cm_help session-list
-/ak_cm_help session-current
-/ak_cm_help session-show
-/ak_cm_help session-search
+/help session-start
+/help session-update
+/help session-end
+/help session-list
+/help session-current
+/help session-show
+/help session-search
 ```
 
 ### Utility Commands
 
 ```bash
-/ak_cm_help help
-/ak_cm_help version
-/ak_cm_help status
-/ak_cm_help config
-/ak_cm_help sync
-/ak_cm_help docs
-/ak_cm_help install
+/help help
+/help version
+/help status
+/help config
+/help sync
+/help docs
+/help install
 ```
 
 ## Search Help
 
 ```bash
 # Search for commands containing "test"
-/ak_cm_help --search test
+/help --search test
 
 # Shows commands with "test" in name:
-  - /ak_cm_test (run tests)
-  - /ak_cm_fix-types (fix type errors)
+  - /test (run tests)
+  - /fix-types (fix type errors)
 ```
 
 ## Related Commands
 
-- **[/ak_cm_status](../utility/status.md)** - Show AIKit status
-- **[/ak_cm_version](../utility/version.md)** - Show version information
+- **[/status](../utility/status.md)** - Show AIKit status
+- **[/version](../utility/version.md)** - Show version information
 
 ## Related Documentation
 

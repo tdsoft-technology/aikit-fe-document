@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-# /ak_cm_install Command
+# /install Command
 
 Install or reinstall AIKit globally.
 
@@ -10,10 +10,10 @@ Install or reinstall AIKit globally.
 
 ```bash
 # Install globally
-/ak_cm_install
+/install
 
 # Reinstall (update)
-/ak_cm_install --force
+/install --force
 
 # Install from local source
 cd /path/to/aikit
@@ -67,7 +67,7 @@ aikit --version
 
 ```bash
 # Force reinstall (use if issues)
-/ak_cm_install --force
+/install --force
 
 # Same as:
 npm uninstall -g @tdsoft-tech/aikit
@@ -147,7 +147,7 @@ aikit help
 npm update -g @tdsoft-tech/aikit
 
 # Reinstall if issues
-/ak_cm_install --force
+/install --force
 ```
 
 ## Troubleshooting
@@ -229,9 +229,9 @@ aikit status
 
 ## Related Commands
 
-- **[/ak_cm_version](version.md)** - Show installed version
-- **[/ak_cm_status](status.md)** - Verify installation
-- **[/ak_cm_init](../core/init.md)** - Initialize configuration
+- **[/version](version.md)** - Show installed version
+- **[/status](status.md)** - Verify installation
+- **[/init](../core/init.md)** - Initialize configuration
 
 ## Related Documentation
 

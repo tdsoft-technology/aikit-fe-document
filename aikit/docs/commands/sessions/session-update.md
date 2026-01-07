@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# /ak_cm_session:update Command
+# /session-update Command
 
 Add timestamped progress notes to the current session.
 
@@ -10,11 +10,11 @@ Add timestamped progress notes to the current session.
 
 ```bash
 # Add a progress note
-/ak_cm_session:update "Implemented JWT token generation"
+/session-update "Implemented JWT token generation"
 
 # Add multiple notes
-/ak_cm_session:update "Fixed authentication bug"
-/ak_cm_session:update "Added error handling"
+/session-update "Fixed authentication bug"
+/session-update "Added error handling"
 ```
 
 ## Notes Format
@@ -57,48 +57,48 @@ Implemented JWT token generation
 
 ```bash
 # Document progress as you work
-/ak_cm_session:update "Created User model interface"
+/session-update "Created User model interface"
 
 # Test the implementation
-/ak_cm_test Run tests
+/test Run tests
 
 # Document test results
-/ak_cm_session:update "Tests passing, 3/15 passing"
+/session-update "Tests passing, 3/15 passing"
 
 # Continue with next task
-/ak_cm_implement Add export functionality
+/implement Add export functionality
 ```
 
 ### Bug Tracking
 
 ```bash
 # Document bug investigation
-/ak_cm_session:update "Investigated login timeout issue"
+/session-update "Investigated login timeout issue"
 
 # Found root cause
-/ak_cm_session:update "Database query missing index"
+/session-update "Database query missing index"
 
 # Implemented fix
-/ak_cm_implement Add index to query
+/implement Add index to query
 
 # Verified fix
-/ak_cm_test Verify fix works
+/test Verify fix works
 
 # Close bug
-/ak_cm_session:update "Bug resolved, tests passing"
+/session-update "Bug resolved, tests passing"
 ```
 
 ### Research Sessions
 
 ```bash
 # Document research findings
-/ak_cm_session:update "Researched JWT patterns"
+/session-update "Researched JWT patterns"
 
 # Found 5 approaches
-/ak_cm_session:update "Selected approach #3 (refresh tokens)"
+/session-update "Selected approach #3 (refresh tokens)"
 
 # Continue with implementation
-/ak_cm_implement Implement JWT with refresh tokens
+/implement Implement JWT with refresh tokens
 ```
 
 ## Best Practices
@@ -137,16 +137,16 @@ If working in a team:
 
 ```bash
 # User A updates session
-/ak_cm_session:update "User A: Refactored auth controller"
+/session-update "User A: Refactored auth controller"
 
 # Later, User B updates session
-/ak_cm_session:update "User B: Added validation"
+/session-update "User B: Added validation"
 ```
 
 ## Related Commands
 
-- **[/ak_cm_session:start](session-start.md)** - Start a session
-- **[/ak_cm_session:end](session-end.md)** - End a session
-- **[/ak_cm_session:list](session-list.md)** - List all sessions
-- [/ak_cm_session:show](session-show.md)** - Show session details
-- [/ak_cm_session:current](session-current.md)** - Show current session
+- **[/session-start](session-start.md)** - Start a session
+- **[/session-end](session-end.md)** - End a session
+- **[/session-list](session-list.md)** - List all sessions
+- [/session-show](session-show.md)** - Show session details
+- [/session-current](session-current.md)** - Show current session

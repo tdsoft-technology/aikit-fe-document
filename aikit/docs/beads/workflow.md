@@ -38,7 +38,7 @@ Start by creating a new task:
 
 ```bash
 # Using AIKit command
-/ak_cm_create Add user authentication
+/create Add user authentication
 
 # Or using Beads directly
 bd create "Add user authentication"
@@ -82,13 +82,13 @@ Find available tasks:
 
 ```bash
 # List all tasks
-/ak_cm_list
+/list
 
 # Filter by status
-/ak_cm_list --status todo
+/list --status todo
 
 # Filter by priority
-/ak_cm_list --priority high
+/list --priority high
 ```
 
 <MaterialIcon name="info" className="icon-info" /> **Tip:** Use `bd ready` to find tasks ready to start (todo, unblocked).
@@ -100,7 +100,7 @@ Find available tasks:
 Mark task as in-progress:
 
 ```bash
-/ak_cm_update 001 --status in-progress
+/update 001 --status in-progress
 # Or
 bd update 001 --status in-progress
 ```
@@ -110,7 +110,7 @@ bd update 001 --status in-progress
 Generate detailed plan:
 
 ```bash
-/ak_cm_plan user authentication system
+/plan user authentication system
 ```
 
 AIKit will:
@@ -163,13 +163,13 @@ Activate a skill before implementing:
 
 ```bash
 # Activate TDD skill
-/ak_sk_test-driven-development
+/test-driven-development
 
 # Activate debugging skill
-/ak_sk_systematic-debugging
+/systematic-debugging
 
 # Activate refactoring skill
-/ak_sk_refactoring
+/refactoring
 ```
 
 ### Implement Task
@@ -177,7 +177,7 @@ Activate a skill before implementing:
 Execute implementation:
 
 ```bash
-/ak_cm_implement
+/implement
 ```
 
 AIKit will follow skill workflow:
@@ -198,9 +198,9 @@ AIKit will follow skill workflow:
 Add progress notes as you work:
 
 ```bash
-/ak_cm_update 001 --notes "Created authentication models"
-/ak_cm_update 001 --notes "Implemented JWT service"
-/ak_cm_update 001 --notes "Added login endpoint"
+/update 001 --notes "Created authentication models"
+/update 001 --notes "Implemented JWT service"
+/update 001 --notes "Added login endpoint"
 ```
 
 ### Session Management
@@ -209,14 +209,14 @@ Track development across sessions:
 
 ```bash
 # Start session
-/ak_cm_session:start "auth-implementation"
+/session-start "auth-implementation"
 
 # Add progress notes
-/ak_cm_session:update "Implemented JWT token generation"
-/ak_cm_session:update "Added login API endpoint"
+/session-update "Implemented JWT token generation"
+/session-update "Added login API endpoint"
 
 # End session
-/ak_cm_session:end
+/session-end
 ```
 
 ## Phase 4: Quality Gates
@@ -226,7 +226,7 @@ Track development across sessions:
 Complete task with mandatory checks:
 
 ```bash
-/ak_cm_finish
+/finish
 # Or
 bd complete 001
 ```
@@ -244,7 +244,7 @@ bd complete 001
 #### All Gates Pass
 
 ```bash
-/ak_cm_finish
+/finish
 
 ✓ Quality Gates Passed
   ✓ typecheck: No errors
@@ -260,7 +260,7 @@ Task 001 marked as completed
 #### Gate Fails
 
 ```bash
-/ak_cm_finish
+/finish
 
 ✗ Quality Gates Failed
   ✓ typecheck: No errors
@@ -273,7 +273,7 @@ Task 001 marked as completed
 
 Task status remains: in-progress
 
-Fix failures and retry /ak_cm_finish
+Fix failures and retry /finish
 ```
 
 ### Fixing Gate Failures
@@ -298,7 +298,7 @@ npm run test
 # Shows failing tests
 
 # Use debugging skill
-/ak_sk_systematic-debugging
+/systematic-debugging
 
 # Fix tests
 # Edit tests or implementation...
@@ -420,7 +420,7 @@ bd update 000 --status in-progress
 Generate review document:
 
 ```bash
-/ak_cm_review
+/review
 ```
 
 Creates `.beads/reviews/001-review.md`:
@@ -464,7 +464,7 @@ Creates `.beads/reviews/001-review.md`:
 Save progress for next session:
 
 ```bash
-/ak_cm_handoff
+/handoff
 ```
 
 Creates `memory/handoffs/[timestamp].md`:
@@ -516,7 +516,7 @@ gitCommits: 5
 Complete session with summary:
 
 ```bash
-/ak_cm_session:end
+/session-end
 ```
 
 Generates session summary:
@@ -540,10 +540,10 @@ Resume work from previous session:
 
 ```bash
 # Resume latest session
-/ak_cm_resume
+/resume
 
 # Or load specific session
-/ak_cm_resume 2026-01-02-1430
+/resume 2026-01-02-1430
 ```
 
 AIKit loads handoff and context:
@@ -558,16 +558,16 @@ Continue from where you left off:
 
 ```bash
 # Load session context
-/ak_cm_resume
+/resume
 
 # Select task to work on
-/ak_cm_list --status in-progress
+/list --status in-progress
 
 # Update status
-/ak_cm_update 004 --status in-progress
+/update 004 --status in-progress
 
 # Continue implementation
-/ak_cm_implement
+/implement
 ```
 
 ## Complete Workflow Diagram
@@ -580,26 +580,26 @@ sequenceDiagram
     participant QualityGates
     participant Git
 
-    User->>AIKit: /ak_cm_create Add auth
+    User->>AIKit: /create Add auth
     AIKit->>Beads: Create task 001
     Beads-->>AIKit: Task created
     AIKit-->>User: Task 001: Add authentication (todo)
 
-    User->>AIKit: /ak_cm_update 001 --status in-progress
+    User->>AIKit: /update 001 --status in-progress
     AIKit->>Beads: Update status
     Beads-->>AIKit: Status updated
     AIKit-->>User: Task 001: in-progress
 
-    User->>AIKit: /ak_cm_plan auth system
+    User->>AIKit: /plan auth system
     AIKit-->>User: Implementation plan created
 
-    User->>AIKit: /ak_sk_test-driven-development
+    User->>AIKit: /test-driven-development
     AIKit-->>User: TDD skill activated
 
-    User->>AIKit: /ak_cm_implement
+    User->>AIKit: /implement
     AIKit-->>User: Implementing with TDD...
 
-    User->>AIKit: /ak_cm_finish
+    User->>AIKit: /finish
     AIKit->>QualityGates: Run quality gates
     QualityGates->>QualityGates: typecheck
     QualityGates->>QualityGates: test
@@ -619,13 +619,13 @@ sequenceDiagram
         AIKit-->>User: ✗ Fix failures and retry
     end
 
-    User->>AIKit: /ak_cm_handoff
+    User->>AIKit: /handoff
     AIKit-->>User: Handoff created
 
-    User->>AIKit: /ak_cm_session:end
+    User->>AIKit: /session-end
     AIKit-->>User: Session ended
 
-    User->>AIKit: /ak_cm_resume
+    User->>AIKit: /resume
     AIKit-->>User: Context loaded
 ```
 
@@ -681,56 +681,56 @@ sequenceDiagram
 
 ```bash
 # Day 1
-/ak_cm_create Add contact form
-/ak_cm_plan contact form
-/ak_cm_implement
-/ak_cm_finish
+/create Add contact form
+/plan contact form
+/implement
+/finish
 
 # Day 2
-/ak_cm_create Form validation
-/ak_cm_implement
-/ak_cm_finish
+/create Form validation
+/implement
+/finish
 ```
 
 ### Complex Feature (Multi-Session)
 
 ```bash
 # Session 1
-/ak_cm_session:start "user-auth"
-/ak_cm_create Implement user auth
-/ak_cm_plan authentication system
-/ak_cm_implement
-/ak_cm_session:update "Implemented login"
-/ak_cm_handoff
-/ak_cm_session:end
+/session-start "user-auth"
+/create Implement user auth
+/plan authentication system
+/implement
+/session-update "Implemented login"
+/handoff
+/session-end
 
 # Session 2
-/ak_cm_session:start "auth-continuation"
-/ak_cm_resume
-/ak_cm_session:update "Adding refresh tokens"
-/ak_cm_implement
-/ak_cm_finish
-/ak_cm_session:end
+/session-start "auth-continuation"
+/resume
+/session-update "Adding refresh tokens"
+/implement
+/finish
+/session-end
 ```
 
 ### Bug Fix
 
 ```bash
-/ak_cm_create Fix login timeout
-/ak_cm_update 001 --status in-progress
-/ak_sk_systematic-debugging
+/create Fix login timeout
+/update 001 --status in-progress
+/systematic-debugging
 # ... debugging and fix ...
-/ak_cm_finish
+/finish
 ```
 
 ### Refactoring
 
 ```bash
-/ak_cm_create Refactor auth middleware
-/ak_cm_update 001 --status in-progress
-/ak_sk_refactoring
-/ak_cm_implement
-/ak_cm_finish
+/create Refactor auth middleware
+/update 001 --status in-progress
+/refactoring
+/implement
+/finish
 ```
 
 ## Troubleshooting
@@ -738,44 +738,44 @@ sequenceDiagram
 ### "Task already in-progress"
 
 ```bash
-/ak_cm_update 001 --status in-progress
+/update 001 --status in-progress
 # Error: Task already in-progress
 
 # Check current status
 bd show 001
 
 # Continue from current status
-/ak_cm_implement
+/implement
 ```
 
 ### "Quality gate keeps failing"
 
 ```bash
-/ak_cm_finish
+/finish
 # Keeps failing on test gate
 
 # Run tests locally
 npm run test
 
 # Use debugging skill
-/ak_sk_systematic-debugging
+/systematic-debugging
 
 # Fix specific failing tests
 # Retry gates
-/ak_cm_finish
+/finish
 ```
 
 ### "Handoff not found"
 
 ```bash
-/ak_cm_resume
+/resume
 # Error: No handoff found
 
 # List available sessions
-/ak_cm_session:list
+/session-list
 
 # Load specific session
-/ak_cm_session:show 2026-01-02-1430
+/session-show 2026-01-02-1430
 ```
 
 ## Next Steps

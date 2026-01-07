@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# /ak_cm_checkpoint_list Command
+# /checkpoint_list Command
 
 List all available checkpoints with filtering and search capabilities.
 
@@ -10,16 +10,16 @@ List all available checkpoints with filtering and search capabilities.
 
 ```bash
 # List all checkpoints
-/ak_cm_checkpoint_list
+/checkpoint_list
 
 # List last 10 checkpoints
-/ak_cm_checkpoint_list --limit 10
+/checkpoint_list --limit 10
 
 # Search by tag
-/ak_cm_checkpoint_list --tag refactoring
+/checkpoint_list --tag refactoring
 
 # Filter by date range
-/ak_cm_checkpoint_list --start "2026-01-01" --end "2026-01-31"
+/checkpoint_list --start "2026-01-01" --end "2026-01-31"
 ```
 
 ## Arguments
@@ -35,7 +35,7 @@ List all available checkpoints with filtering and search capabilities.
 ## Output Format
 
 ```bash
-/ak_cm_checkpoint_list
+/checkpoint_list
 
 # Output:
 ID: 20260102-1430
@@ -69,7 +69,7 @@ Commit: def5678
 ### List All Checkpoints
 
 ```bash
-/ak_cm_checkpoint_list
+/checkpoint_list
 
 # Shows all checkpoints in .aikit/checkpoints/
 ```
@@ -78,30 +78,30 @@ Commit: def5678
 
 ```bash
 # List refactoring checkpoints
-/ak_cm_checkpoint_list --tag refactoring
+/checkpoint_list --tag refactoring
 
 # List pre-change checkpoints
-/ak_cm_checkpoint_list --tag before-change
+/checkpoint_list --tag before-change
 ```
 
 ### Filter by Date
 
 ```bash
 # Checkpoints in January 2026
-/ak_cm_checkpoint_list --start "2026-01-01" --end "2026-01-31"
+/checkpoint_list --start "2026-01-01" --end "2026-01-31"
 
 # Last week
-/ak_cm_checkpoint_list --start "2026-01-27" --end "2026-02-02"
+/checkpoint_list --start "2026-01-27" --end "2026-02-02"
 ```
 
 ### Search Checkpoints
 
 ```bash
 # Search by name
-/ak_cm_checkpoint_list --search "authentication"
+/checkpoint_list --search "authentication"
 
 # Search by description
-/ak_cm_checkpoint_list --search "migration"
+/checkpoint_list --search "migration"
 ```
 
 ### Checkpoint Metadata
@@ -174,10 +174,10 @@ message: Before refactoring authentication module
 
 ## Related Commands
 
-- **[/ak_cm_checkpoint_create](create.md)** - Create checkpoint
-- **[/ak_cm_checkpoint_restore](restore.md)** - Restore from checkpoint
-- **[/ak_cm_branch](../git/branch.md)** - Manage branches
-- **[/ak_cm_stash](../git/stash.md)** - Save temporary work
+- **[/checkpoint_create](create.md)** - Create checkpoint
+- **[/checkpoint_restore](restore.md)** - Restore from checkpoint
+- **[/branch](../git/branch.md)** - Manage branches
+- **[/stash](../git/stash.md)** - Save temporary work
 
 ## Related Documentation
 

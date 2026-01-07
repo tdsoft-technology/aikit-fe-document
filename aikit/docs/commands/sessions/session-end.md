@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# /ak_cm_session:end Command
+# /session-end Command
 
 End the current session and generate a comprehensive summary of all work completed.
 
@@ -10,7 +10,7 @@ End the current session and generate a comprehensive summary of all work complet
 
 ```bash
 # End the session
-/ak_cm_session:end
+/session-end
 
 # Session will end with summary of:
 #   - Goals completed
@@ -20,7 +20,7 @@ End the current session and generate a comprehensive summary of all work complet
 #   - Files modified
 
 # Optionally add final note
-/ak_cm_session:end "All tests passing, ready for review"
+/session-end "All tests passing, ready for review"
 ```
 
 ## Workflow
@@ -128,7 +128,7 @@ Added JWT token generation
 
 ## Progress Notes Summary
 
-All progress notes added via /ak_cm_session:update throughout the session are compiled into this summary.
+All progress notes added via /session-update throughout the session are compiled into this summary.
 
 ## Best Practices
 
@@ -180,10 +180,10 @@ If you have ongoing work, the summary will include:
 
 ## Related Commands
 
-- **[/ak_cm_session:start](session-start.md)** - Start a session
-- **[/ak_cm_session:update](session-update.md)** - Add progress notes
-- [/ak_cm_session:list](session-list.md)** - List all sessions
-- [/ak_cm_session:current](session-current.md)** - Show current session
-- [/ak_cm_session:show](session-show.md)** - Show session details
-- **[/ak_cm_handoff](../core/handoff.md)** - Create handoff for next session
-- [/ak_cm_resume](../core/resume.md)** - Resume from handoff
+- **[/session-start](session-start.md)** - Start a session
+- **[/session-update](session-update.md)** - Add progress notes
+- [/session-list](session-list.md)** - List all sessions
+- [/session-current](session-current.md)** - Show current session
+- [/session-show](session-show.md)** - Show session details
+- **[/handoff](../core/handoff.md)** - Create handoff for next session
+- [/resume](../core/resume.md)** - Resume from handoff

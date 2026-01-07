@@ -6,14 +6,14 @@ sidebar_position: 3
 
 Get started with AIKit in 5 minutes.
 
-<MaterialIcon name="lightbulb" className="icon-info" /> **All commands use `/ak_cm_` prefix, skills use `/ak_sk_` prefix**
+<MaterialIcon name="lightbulb" className="icon-info" /> **All commands use `/` prefix, skills use `/` prefix**
 
 ## 1. Create Your First Task
 
 Create a new task using Beads:
 
 ```bash
-/ak_cm_create Add user authentication
+/create Add user authentication
 ```
 
 This creates a task in `.beads/` with status "in-progress".
@@ -23,7 +23,7 @@ This creates a task in `.beads/` with status "in-progress".
 Create a detailed implementation plan:
 
 ```bash
-/ak_cm_plan user authentication system
+/plan user authentication system
 ```
 
 AIKit will:
@@ -37,8 +37,8 @@ AIKit will:
 Use a skill to enforce best practices:
 
 ```bash
-/ak_sk_test-driven-development
-/ak_cm_implement
+/test-driven-development
+/implement
 ```
 
 The AI will:
@@ -51,7 +51,7 @@ The AI will:
 Finish the task with mandatory quality checks:
 
 ```bash
-/ak_cm_finish
+/finish
 ```
 
 AIKit runs these hard gates (all must pass):
@@ -68,14 +68,14 @@ If any gate fails, AIKit reports the issue and stops.
 Start a development session to track your work:
 
 ```bash
-/ak_cm_session:start "user-auth"
+/session-start "user-auth"
 ```
 
 Add progress notes as you work:
 
 ```bash
-/ak_cm_session:update "Implemented login form"
-/ak_cm_session:update "Added JWT authentication"
+/session-update "Implemented login form"
+/session-update "Added JWT authentication"
 ```
 
 ## 6. Handoff for Next Session
@@ -83,7 +83,7 @@ Add progress notes as you work:
 Save your progress:
 
 ```bash
-/ak_cm_handoff
+/handoff
 ```
 
 This creates a handoff bundle in `memory/handoffs/[timestamp].md` with:
@@ -97,7 +97,7 @@ This creates a handoff bundle in `memory/handoffs/[timestamp].md` with:
 End the session with a summary:
 
 ```bash
-/ak_cm_session:end
+/session-end
 ```
 
 AIKit generates a comprehensive summary with:
@@ -111,7 +111,7 @@ AIKit generates a comprehensive summary with:
 Continue where you left off:
 
 ```bash
-/ak_cm_resume
+/resume
 ```
 
 AIKit loads the latest handoff and continues your work.
@@ -120,19 +120,19 @@ AIKit loads the latest handoff and continues your work.
 
 ```bash
 # Session 1
-/ak_cm_session:start "user-login"
-/ak_cm_create Implement user login
-/ak_cm_plan login feature
-/ak_sk_test-driven-development
-/ak_cm_implement
-/ak_cm_session:update "Added login form"
-/ak_cm_finish
-/ak_cm_session:end
+/session-start "user-login"
+/create Implement user login
+/plan login feature
+/test-driven-development
+/implement
+/session-update "Added login form"
+/finish
+/session-end
 
 # Session 2
-/ak_cm_session:start "user-registration"
-/ak_cm_resume
-/ak_cm_session:update "Implementing registration"
+/session-start "user-registration"
+/resume
+/session-update "Implementing registration"
 # Continue with next task...
 ```
 
@@ -145,7 +145,7 @@ Find and use skills:
 > find_skills("test")
 
 # Use a skill via direct invocation
-/ak_sk_test-driven-development
+/test-driven-development
 
 # Or via tool
 > use_skill("test-driven-development")
@@ -187,7 +187,7 @@ Or use `/help` in Claude Code or OpenCode:
 
 ```bash
 /help
-/help ak_cm_plan
+/help /plan
 ```
 
 ## Common Workflows
@@ -195,26 +195,26 @@ Or use `/help` in Claude Code or OpenCode:
 ### Feature Development
 
 ```bash
-/ak_cm_create Add new feature
-/ak_cm_plan feature
-/ak_cm_implement
-/ak_cm_finish
+/create Add new feature
+/plan feature
+/implement
+/finish
 ```
 
 ### Bug Fix
 
 ```bash
-/ak_cm_fix bug description
+/fix bug description
 # or
-/ak_sk_systematic-debugging
+/systematic-debugging
 ```
 
 ### Code Review
 
 ```bash
-/ak_cm_review-codebase
+/review-codebase
 # or
-/ak_sk_code-review
+/code-review
 > Review this PR
 ```
 
@@ -222,15 +222,15 @@ Or use `/help` in Claude Code or OpenCode:
 
 ```bash
 # Session 1
-/ak_cm_create Complex feature
-/ak_cm_plan feature
-/ak_cm_implement
-/ak_cm_handoff
+/create Complex feature
+/plan feature
+/implement
+/handoff
 
 # Session 2
-/ak_cm_resume
-/ak_cm_implement
-/ak_cm_finish
+/resume
+/implement
+/finish
 ```
 
 ## Next Steps

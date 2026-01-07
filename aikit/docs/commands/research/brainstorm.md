@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# /ak_cm_brainstorm Command
+# /brainstorm Command
 
 Brainstorm ideas, solutions, or approaches for problems.
 
@@ -10,13 +10,13 @@ Brainstorm ideas, solutions, or approaches for problems.
 
 ```bash
 # Brainstorm solutions for authentication
-/ak_cm_brainstorm "JWT token refresh strategy"
+/brainstorm "JWT token refresh strategy"
 
 # Brainstorm new feature ideas
-/ak_cm_brainstorm "Next big product features"
+/brainstorm "Next big product features"
 
 # Brainstorm debugging approaches
-/ak_cm_brainstorm "Performance optimization ideas"
+/brainstorm "Performance optimization ideas"
 ```
 
 ## Arguments
@@ -77,7 +77,7 @@ Choose best options based on:
 
 ```bash
 # Start mind map
-/ak_cm_brainstorm "Authentication system" --count 15
+/brainstorm "Authentication system" --count 15
 
 # Generates 15 ideas organized around central topic
 ```
@@ -86,7 +86,7 @@ Choose best options based on:
 
 ```bash
 # SWOT analysis
-/ak_cm_brainstorm "Project migration"
+/brainstorm "Project migration"
 
 # Generates:
 # Strengths
@@ -99,7 +99,7 @@ Choose best options based on:
 
 ```bash
 # SCAMPER brainstorm
-/ak_cm_brainstorm "Revenue optimization"
+/brainstorm "Revenue optimization"
 
 # Generates:
 - Substitute
@@ -115,7 +115,7 @@ Choose best options based on:
 
 ```bash
 # Rapid idea generation
-/ak_cm_brainstorm "Quick bug fixes" --count 20
+/brainstorm "Quick bug fixes" --count 20
 ```
 
 Generates 20 ideas quickly.
@@ -125,7 +125,7 @@ Generates 20 ideas quickly.
 ### Console Summary
 
 ```bash
-/ak_cm_brainstorm
+/brainstorm
 
 # Output:
 💡 Brainstorm Results: "Authentication token refresh"
@@ -153,7 +153,7 @@ Generates 20 ideas quickly.
 ### Markdown Report
 
 ```bash
-/ak_cm_brainstorm --output md > brainstorm-results.md
+/brainstorm --output md > brainstorm-results.md
 
 # Generates: brainstorm-results.md with:
 # All 15 ideas with descriptions
@@ -168,7 +168,7 @@ Generates 20 ideas quickly.
 
 ```bash
 # Brainstorm solutions for slow API
-/ak_cm_brainstorm "API performance optimization" --count 10
+/brainstorm "API performance optimization" --count 10
 
 # AIKit generates ideas:
 # 1. Add Redis caching layer
@@ -187,7 +187,7 @@ Generates 20 ideas quickly.
 
 ```bash
 # Brainstorm new features
-/ak_cm_brainstorm "Next product roadmap" --count 15
+/brainstorm "Next product roadmap" --count 15
 
 # AIKit generates feature ideas:
 1. Dark mode support
@@ -252,8 +252,8 @@ Generates 20 ideas quickly.
 
 ## Related Commands
 
-- **[/ak_cm_research](../research/research.md)** - Research before brainstorming
-- **[/ak_cm_analyze-project](../analyze-project.md)** - Analyze context
+- **[/research](../research/research.md)** - Research before brainstorming
+- **[/analyze-project](../analyze-project.md)** - Analyze context
 
 ## Related Skills
 

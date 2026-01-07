@@ -6,13 +6,13 @@ sidebar_position: 5
 
 Complete task with mandatory quality gates.
 
-<MaterialIcon name="terminal" className="icon-info" /> **Command:** `/ak_cm_finish`
+<MaterialIcon name="terminal" className="icon-info" /> **Command:** `/finish`
 
 ## Usage
 
 ```bash
-/ak_cm_finish
-/ak_cm_finish bead-001
+/finish
+/finish bead-001
 ```
 
 ## Quality Gates (Must ALL Pass)
@@ -33,7 +33,7 @@ Complete task with mandatory quality gates.
 ## Example - Success
 
 ```bash
-/ak_cm_finish bead-001
+/finish bead-001
 
 # AIKit runs:
 Running quality gates...
@@ -53,13 +53,13 @@ Summary:
 Suggested commit:
 feat: add JWT authentication with login/logout
 
-Use /ak_cm_commit to create this commit.
+Use /commit to create this commit.
 ```
 
 ## Example - Failure
 
 ```bash
-/ak_cm_finish bead-001
+/finish bead-001
 
 # AIKit runs:
 Running quality gates...
@@ -75,7 +75,7 @@ Quality gates failed. Please fix errors before completing task.
 ## Best Practices
 
 1. **Fix errors locally** - Don't rely on AI to auto-fix
-2. **Run gates manually** - Test before using `/ak_cm_finish`
+2. **Run gates manually** - Test before using `/finish`
 3. **Review changes** - Check all changes are correct
 4. **Update tests** - Ensure tests cover new code
 
@@ -88,6 +88,6 @@ Quality gates failed. Please fix errors before completing task.
 
 ## Related Commands
 
-- **[/ak_cm_implement](implement)** - Implement work
-- **[/ak_cm_commit](../quick/commit)** - Create commit
+- **[/implement](implement)** - Implement work
+- **[/commit](../quick/commit)** - Create commit
 - **[Anti-Hallucination](../../advanced/anti-hallucination)** - Learn about quality gates

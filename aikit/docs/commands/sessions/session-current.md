@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# /ak_cm_session:current Command
+# /session-current Command
 
 Display details of the currently active session.
 
@@ -10,7 +10,7 @@ Display details of the currently active session.
 
 ```bash
 # Show current session
-/ak_cm_session:current
+/session-current
 ```
 
 ## Output
@@ -74,7 +74,7 @@ filesModified: 0
 
 ## Real-Time Updates
 
-As you add progress notes with `/ak_cm_session:update`, the session file is updated immediately.
+As you add progress notes with `/session-update`, the session file is updated immediately.
 
 ## Best Practices
 
@@ -96,14 +96,14 @@ As you add progress notes with `/ak_cm_session:update`, the session file is upda
 
 If you need to switch to a different session:
 
-1. End current session: `/ak_cm_session:end`
-2. Resume desired session: `/ak_cm_session:show <id>`
-3. Or start new session: `/ak_cm_session:start`
+1. End current session: `/session-end`
+2. Resume desired session: `/session-show <id>`
+3. Or start new session: `/session-start`
 
 ## Related Commands
 
-- **[/ak_cm_session:start](session-start.md)** - Start a new session
-- **[/ak_cm_session:update](session-update.md)** - Add progress notes
-- [/ak_cm_session:end](session-end.md)** - End a session
-- [/ak_cm_session:list](session-list.md)** - List all sessions
-- [/ak_cm_session:show](session-show.md)** - Show session details
+- **[/session-start](session-start.md)** - Start a new session
+- **[/session-update](session-update.md)** - Add progress notes
+- [/session-end](session-end.md)** - End a session
+- [/session-list](session-list.md)** - List all sessions
+- [/session-show](session-show.md)** - Show session details

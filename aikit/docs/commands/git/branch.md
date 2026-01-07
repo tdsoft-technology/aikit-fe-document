@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# /ak_cm_branch Command
+# /branch Command
 
 Create a new git branch following AIKit naming conventions.
 
@@ -10,13 +10,13 @@ Create a new git branch following AIKit naming conventions.
 
 ```bash
 # Create a feature branch
-/ak_cm_branch feat/new-feature
+/branch feat/new-feature
 
 # Create a bug fix branch
-/ak_cm_branch fix/authentication-bug
+/branch fix/authentication-bug
 
 # Create a refactor branch
-/ak_cm_branch refactor/user-service
+/branch refactor/user-service
 ```
 
 ## Arguments
@@ -107,20 +107,20 @@ git branch
 
 ```bash
 # Start new feature
-/ak_cm_branch feat/user-profiles
+/branch feat/user-profiles
 
 # Work on feature
 # ... commit changes ...
 
 # Merge back to main
-# (See: /ak_cm_merge)
+# (See: /merge)
 ```
 
 ### Bug Fix
 
 ```bash
 # Fix a bug
-/ak_cm_branch fix/authentication-timeout
+/branch fix/authentication-timeout
 
 # Implement fix
 # ... implement fix ...
@@ -134,7 +134,7 @@ git merge fix/authentication-timeout
 
 ```bash
 # Refactor code
-/ak_cm_branch refactor/extract-auth-service
+/branch refactor/extract-auth-service
 
 # Restructure while keeping tests green
 # ... make changes ...
@@ -148,7 +148,7 @@ git merge refactor/extract-auth-service
 
 ```bash
 # Urgent production fix
-/ak_cm_branch hotfix/security-vulnerability
+/branch hotfix/security-vulnerability
 
 # Fix immediately
 # ... implement fix ...
@@ -211,10 +211,10 @@ git branch -r
 
 ## Related Commands
 
-- **[/ak_cm_merge](../git/merge.md)** - Merge branches
-- **[/ak_cm_rebase](../git/rebase.md)** - Rebase branches
-- **[/ak_cm_cherry-pick](../git/cherry-pick.md)** - Cherry-pick commits
-- **[/ak_cm_stash](../git/stash.md)** - Stash changes
+- **[/merge](../git/merge.md)** - Merge branches
+- **[/rebase](../git/rebase.md)** - Rebase branches
+- **[/cherry-pick](../git/cherry-pick.md)** - Cherry-pick commits
+- **[/stash](../git/stash.md)** - Stash changes
 
 ## Related Skills
 

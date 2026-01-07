@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# /ak_cm_config Command
+# /config Command
 
 View or set AIKit configuration settings.
 
@@ -10,19 +10,19 @@ View or set AIKit configuration settings.
 
 ```bash
 # View all configuration
-/ak_cm_config
+/config
 
 # Get specific value
-/ak_cm_config get <key>
+/config get <key>
 
 # Set specific value
-/ak_cm_config set <key> <value>
+/config set <key> <value>
 
 # Reset to default
-/ak_cm_config reset <key>
+/config reset <key>
 
 # Show config file location
-/ak_cm_config which
+/config which
 ```
 
 ## Configuration Levels
@@ -66,10 +66,10 @@ Project-specific overrides. Contains:
 
 ```bash
 # Get default agent
-/ak_cm_config get defaultAgent
+/config get defaultAgent
 
 # Set default agent
-/ak_cm_config set defaultAgent @planner
+/config set defaultAgent @planner
 ```
 
 **Available values:**
@@ -86,13 +86,13 @@ Project-specific overrides. Contains:
 
 ```bash
 # Get quality gates
-/ak_cm_config get qualityGates
+/config get qualityGates
 
 # Add quality gate
-/ak_cm_config set qualityGates.0.typecheck true
+/config set qualityGates.0.typecheck true
 
 # Add custom gate
-/ak_cm_config set qualityGates.custom.e2e "npm run e2e"
+/config set qualityGates.custom.e2e "npm run e2e"
 ```
 
 **Standard gates:**
@@ -105,33 +105,33 @@ Project-specific overrides. Contains:
 
 ```bash
 # Get MCP server configuration
-/ak_cm_config get mcpServer
+/config get mcpServer
 
 # Configure MCP port
-/ak_cm_config set mcpServer.port 8080
+/config set mcpServer.port 8080
 
 # Enable MCP server
-/ak_cm_config set mcpServer.enabled true
+/config set mcpServer.enabled true
 ```
 
 ### Session Management
 
 ```bash
 # Get session timeout
-/ak_cm_config get session.timeout
+/config get session.timeout
 
 # Set session timeout (in minutes)
-/ak_cm_config set session.timeout 240
+/config set session.timeout 240
 ```
 
 ### Memory Configuration
 
 ```bash
 # Get memory settings
-/ak_cm_config get memory
+/config get memory
 
 # Set memory retention (in days)
-/ak_cm_config set memory.retention 30
+/config set memory.retention 30
 ```
 
 ## Examples
@@ -140,36 +140,36 @@ Project-specific overrides. Contains:
 
 ```bash
 # View all configuration
-/ak_cm_config
+/config
 
 # View specific section
-/ak_cm_config agents
-/ak_cm_config skills
-/ak_cm_config qualityGates
+/config agents
+/config skills
+/config qualityGates
 ```
 
 ### Modify Configuration
 
 ```bash
 # Set default agent to planner
-/ak_cm_config set defaultAgent @planner
+/config set defaultAgent @planner
 
 # Enable a quality gate
-/ak_cm_config set qualityGates.1.e2e true
+/config set qualityGates.1.e2e true
 
 # Configure MCP server
-/ak_cm_config set mcpServer.enabled true
-/ak_cm_config set mcpServer.port 8080
+/config set mcpServer.enabled true
+/config set mcpServer.port 8080
 ```
 
 ### Reset Configuration
 
 ```bash
 # Reset default agent
-/ak_cm_config reset defaultAgent
+/config reset defaultAgent
 
 # Reset to defaults
-/ak_cm_config reset --all
+/config reset --all
 ```
 
 ## Configuration Files
@@ -178,7 +178,7 @@ Project-specific overrides. Contains:
 
 ```bash
 # Show config file paths
-/ak_cm_config which
+/config which
 ```
 
 **Output:**
@@ -239,7 +239,7 @@ ls ~/.config/aikit/aikit.json
 cat ~/.config/aikit/aikit.json
 
 # Reset configuration if corrupted
-/ak_cm_config reset --all
+/config reset --all
 ```
 
 ### Invalid Configuration
@@ -247,7 +247,7 @@ cat ~/.config/aikit/aikit.json
 ```bash
 # If configuration errors occur:
 # Reset to defaults
-/ak_cm_config reset --all
+/config reset --all
 
 # Reinitialize
 aikit init --global
@@ -255,8 +255,8 @@ aikit init --global
 
 ## Related Commands
 
-- **[/ak_cm_status](status.md)** - Show current configuration
-- **[/ak_cm_install](install.md)** - Reinstall AIKit
+- **[/status](status.md)** - Show current configuration
+- **[/install](install.md)** - Reinstall AIKit
 
 ## Related Documentation
 

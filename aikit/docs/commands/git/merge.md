@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# /ak_cm_merge Command
+# /merge Command
 
 Merge branches into main branch using appropriate merge strategy.
 
@@ -10,13 +10,13 @@ Merge branches into main branch using appropriate merge strategy.
 
 ```bash
 # Merge feature branch
-/ak_cm_merge feat/new-feature
+/merge feat/new-feature
 
 # Merge bug fix
-/ak_cm_merge fix/authentication-bug
+/merge fix/authentication-bug
 
 # Merge with specific strategy
-/ak_cm_merge feat/new-feature --strategy squash
+/merge feat/new-feature --strategy squash
 ```
 
 ## Arguments
@@ -33,7 +33,7 @@ Merge branches into main branch using appropriate merge strategy.
 
 ```bash
 # Standard merge
-/ak_cm_merge feat/new-feature
+/merge feat/new-feature
 
 # Creates merge commit if not fast-forward
 git checkout main
@@ -49,7 +49,7 @@ git merge feat/new-feature
 
 ```bash
 # Squash all commits into one
-/ak_cm_merge feat/new-feature --strategy squash
+/merge feat/new-feature --strategy squash
 
 # Example:
 git checkout main
@@ -65,7 +65,7 @@ git merge --squash feat/new-feature
 
 ```bash
 # Rebase then merge
-/ak_cm_merge feat/new-feature --strategy rebase
+/merge feat/new-feature --strategy rebase
 
 # Example:
 git checkout feat/new-feature
@@ -225,27 +225,27 @@ npm run build  # Check build works
 
 ```bash
 # Merge feature
-/ak_cm_merge feat/user-profiles
+/merge feat/user-profiles
 
 # Merge commits feature branch with 15 commits into one
-/ak_cm_merge feat/user-profiles --strategy squash
+/merge feat/user-profiles --strategy squash
 ```
 
 ### Bug Fix Merge
 
 ```bash
 # Merge bug fix
-/ak_cm_merge fix/login-timeout
+/merge fix/login-timeout
 
 # Merge without fast-forward (keeps history clean)
-/ak_cm_merge fix/login-timeout --no-ff
+/merge fix/login-timeout --no-ff
 ```
 
 ### Hotfix Merge
 
 ```bash
 # Merge hotfix (urgent)
-/ak_cm_merge hotfix/security-vulnerability --no-ff
+/merge hotfix/security-vulnerability --no-ff
 
 # Tag after merge
 git tag v1.0.2-hotfix
@@ -254,9 +254,9 @@ git push origin main --tags
 
 ## Related Commands
 
-- **[/ak_cm_branch](../git/branch.md)** - Create branches
-- **[/ak_cm_rebase](../git/rebase.md)** - Rebase branches
-- **[/ak_cm_cherry-pick](../git/cherry-pick.md)** - Cherry-pick commits
+- **[/branch](../git/branch.md)** - Create branches
+- **[/rebase](../git/rebase.md)** - Rebase branches
+- **[/cherry-pick](../git/cherry-pick.md)** - Cherry-pick commits
 
 ## Related Skills
 

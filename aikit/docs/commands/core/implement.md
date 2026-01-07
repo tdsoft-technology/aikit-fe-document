@@ -6,13 +6,13 @@ sidebar_position: 4
 
 Implement a task with Test-Driven Development.
 
-<MaterialIcon name="terminal" className="icon-info" /> **Command:** `/ak_cm_implement`
+<MaterialIcon name="terminal" className="icon-info" /> **Command:** `/implement`
 
 ## Usage
 
 ```bash
-/ak_cm_implement task-001
-/ak_cm_implement "add login form"
+/implement task-001
+/implement "add login form"
 ```
 
 ## Workflow
@@ -36,10 +36,10 @@ Before marking complete:
 
 ```bash
 # Plan first
-/ak_cm_plan user login
+/plan user login
 
 # Implement with TDD
-/ak_cm_implement
+/implement
 
 # AIKit follows RED-GREEN-REFACTOR:
 # RED: Write test
@@ -60,6 +60,6 @@ function login(credentials: LoginInput): AuthResult {
 
 ## Related Commands
 
-- **[/ak_cm_plan](plan)** - Plan first
-- **[/ak_cm_finish](finish)** - Complete with quality gates
-- **[Skills Guide](../../skills/intro)** - Learn TDD skill (use `/ak_sk_test-driven-development`)
+- **[/plan](plan)** - Plan first
+- **[/finish](finish)** - Complete with quality gates
+- **[Skills Guide](../../skills/intro)** - Learn TDD skill (use `/test-driven-development`)

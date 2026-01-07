@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# /ak_cm_checkpoint_create Command
+# /checkpoint_create Command
 
 Create a new checkpoint to save your project state for future restoration.
 
@@ -10,13 +10,13 @@ Create a new checkpoint to save your project state for future restoration.
 
 ```bash
 # Create a checkpoint with description
-/ak_cm_checkpoint_create "Before refactoring auth module"
+/checkpoint_create "Before refactoring auth module"
 
 # Create checkpoint with tags
-/ak_cm_checkpoint_create "Completed user authentication" --tags auth,jwt,oauth
+/checkpoint_create "Completed user authentication" --tags auth,jwt,oauth
 
 # Auto-generate checkpoint name
-/ak_cm_checkpoint_create
+/checkpoint_create
 ```
 
 ## Arguments
@@ -74,20 +74,20 @@ git commit -m "checkpoint: Before refactoring auth module"
 
 ```bash
 # Save state before risky change
-/ak_cm_checkpoint_create "Before database migration"
+/checkpoint_create "Before database migration"
 
 # Proceed with migration
 # ... perform migration ...
 
 # If something goes wrong, restore:
-/ak_cm_checkpoint_restore 20260102-1430
+/checkpoint_restore 20260102-1430
 ```
 
 ### Save Progress
 
 ```bash
 # Create checkpoint after completing task
-/ak_cm_checkpoint_create "Completed user authentication" --tags done,jwt
+/checkpoint_create "Completed user authentication" --tags done,jwt
 
 # Creates: .aikit/checkpoints/20260102-1500.md
 # Tags: done, jwt
@@ -161,9 +161,9 @@ Each checkpoint contains:
 
 ## Related Commands
 
-- **[/ak_cm_checkpoint_list](checkpoint/list.md)** - List all checkpoints
-- **[/ak_cm_checkpoint_restore](checkpoint/restore.md)** - Restore from checkpoint
-- **[/ak_cm_branch](../git/branch.md)** - Git branch management
+- **[/checkpoint_list](checkpoint/list.md)** - List all checkpoints
+- **[/checkpoint_restore](checkpoint/restore.md)** - Restore from checkpoint
+- **[/branch](../git/branch.md)** - Git branch management
 
 ## Related Documentation
 

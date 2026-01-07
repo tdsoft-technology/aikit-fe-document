@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# /ak_cm_sync Command
+# /sync Command
 
 Sync AIKit configuration and tracked files with git.
 
@@ -10,13 +10,13 @@ Sync AIKit configuration and tracked files with git.
 
 ```bash
 # Sync all changes
-/ak_cm_sync
+/sync
 
 # Sync specific directories
-/ak_cm_sync .aikit/ .beads/
+/sync .aikit/ .beads/
 
 # Dry run (show what would be synced)
-/ak_cm_sync --dry-run
+/sync --dry-run
 ```
 
 ## Arguments
@@ -77,7 +77,7 @@ Commit ID: abc1234
 
 ```bash
 # Sync all tracked files
-/ak_cm_sync
+/sync
 
 # Result:
 # Stages .aikit/, .beads/ files
@@ -89,17 +89,17 @@ Commit ID: abc1234
 
 ```bash
 # Sync configuration and Beads
-/ak_cm_sync .aikit/ .beads/
+/sync .aikit/ .beads/
 
 # Sync memory files
-/ak_cm_sync .aikit/memory/
+/sync .aikit/memory/
 ```
 
 ### Dry Run
 
 ```bash
 # Show what would be synced
-/ak_cm_sync --dry-run
+/sync --dry-run
 
 # Output:
 Would sync:
@@ -114,7 +114,7 @@ Total files: 3
 
 ```bash
 # Sync with custom message
-/ak_cm_sync --message "Add new authentication patterns"
+/sync --message "Add new authentication patterns"
 
 # Result:
 # Uses custom message instead of default
@@ -184,7 +184,7 @@ When working in a team:
 git pull origin main
 
 # 2. Sync local changes
-/ak_cm_sync
+/sync
 
 # 3. Push
 git push origin main
@@ -192,14 +192,14 @@ git push origin main
 
 ## Related Commands
 
-- **[/ak_cm_status](status.md)** - Check status before syncing
-- **[/ak_cm_config](config.md)** - Configure sync behavior
+- **[/status](status.md)** - Check status before syncing
+- **[/config](config.md)** - Configure sync behavior
 
 ## Related Git Commands
 
-- **[/ak_cm_branch](../git/branch.md)** - Create branch before sync
-- **[/ak_cm_merge](../git/merge.md)** - Merge before sync
-- **[/ak_cm_rebase](../git/rebase.md)** - Rebase before sync
+- **[/branch](../git/branch.md)** - Create branch before sync
+- **[/merge](../git/merge.md)** - Merge before sync
+- **[/rebase](../git/rebase.md)** - Rebase before sync
 
 ## Related Documentation
 

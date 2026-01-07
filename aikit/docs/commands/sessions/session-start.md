@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# /ak_cm_session:start Command
+# /session-start Command
 
 Start a new development session to track your work with goals and progress notes.
 
@@ -10,19 +10,19 @@ Start a new development session to track your work with goals and progress notes
 
 ```bash
 # Start a session with goals
-/ak_cm_session:start "user-auth" -g "Add JWT support" "Fix authentication bugs"
+/session-start "user-auth" -g "Add JWT support" "Fix authentication bugs"
 
 # Start with name only
-/ak_cm_session:start "auth-refactor"
+/session-start "auth-refactor"
 
 # Start with optional tags
-/ak_cm_session:start "feature-work" --tags auth,jwt
+/session-start "feature-work" --tags auth,jwt
 ```
 
 ## Arguments
 
 ```bash
-/ak_cm_session:start <name> [options]
+/session-start <name> [options]
 
 Options:
   -g, --goals <goals>    - Session goals (multiple)
@@ -66,8 +66,8 @@ Goals:
   - Fix authentication bugs
 
 You can now:
-- Add progress notes: /ak_cm_session:update "Implementing JWT"
-- End session: /ak_cm_session:end
+- Add progress notes: /session-update "Implementing JWT"
+- End session: /session-end
 ```
 
 ## Examples
@@ -76,38 +76,38 @@ You can now:
 
 ```bash
 # Start session with multiple goals
-/ak_cm_session:start "feature-dev" -g "Add user profiles" "Implement search" "Add export"
+/session-start "feature-dev" -g "Add user profiles" "Implement search" "Add export"
 
 # Work on first goal
-/ak_cm_session:update "Completed user profiles"
+/session-update "Completed user profiles"
 
 # Complete first goal
-/ak_cm_session:update "Profiles implemented"
+/session-update "Profiles implemented"
 
 # Work on second goal
-/ak_cm_session:update "Working on search"
+/session-update "Working on search"
 
 # Complete when ready
-/ak_cm_session:end
+/session-end
 ```
 
 ### Bug Fixing Session
 
 ```bash
 # Start session for bug fix
-/ak_cm_session:start "auth-bug-fix" -g "Fix login timeout"
+/session-start "auth-bug-fix" -g "Fix login timeout"
 
 # Fix the bug
-/ak_cm_implement Fix authentication timeout issue
+/implement Fix authentication timeout issue
 
 # Verify fix
-/ak_cm_test Run authentication tests
+/test Run authentication tests
 
 # Add note
-/ak_cm_session:update "Timeout fixed, tests passing"
+/session-update "Timeout fixed, tests passing"
 
 # End session when done
-/ak_cm_session:end
+/session-end
 ```
 
 ## Session File Structure
@@ -140,7 +140,7 @@ filesModified: 0
 
 ## Progress
 
-[Session update notes added via /ak_cm_session:update]
+[Session update notes added via /session-update]
 ```
 
 ## Best Practices
@@ -188,7 +188,7 @@ filesModified: 0
 
 ## Related Commands
 
-- **[/ak_cm_session:update](session-update.md)** - Add progress notes
-- **[/ak_cm_session:end](session-end.md)** - Complete session with summary
-- **[/ak_cm_session:list](session-list.md)** - List all sessions
-- **[/ak_cm_session:current](session-current.md)** - Show current session details
+- **[/session-update](session-update.md)** - Add progress notes
+- **[/session-end](session-end.md)** - Complete session with summary
+- **[/session-list](session-list.md)** - List all sessions
+- **[/session-current](session-current.md)** - Show current session details
