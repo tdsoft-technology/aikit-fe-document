@@ -1,0 +1,96 @@
+{
+  "$schema": "./docs-config.schema.json",
+  "version": "1.0.0",
+  "description": "AIKit Documentation Configuration - Controls platform visibility",
+  "platforms": {
+    "opencode": {
+      "enabled": true,
+      "label": "OpenCode",
+      "badge": "recommended",
+      "badgeColor": "green",
+      "showInNav": true,
+      "showInQuickStart": true,
+      "showInInstallation": true
+    },
+    "claude": {
+      "enabled": false,
+      "label": "Claude Code",
+      "badge": "Beta",
+      "badgeColor": "yellow",
+      "showInNav": true,
+      "showInQuickStart": true,
+      "showInInstallation": true,
+      "betaWarning": "Claude Code support is in Beta. Some features may be limited or experimental."
+    }
+  },
+  "navigation": {
+    "showPlatformTabs": true,
+    "defaultPlatform": "opencode",
+    "showBothPlatforms": true,
+    "platformSwitcherText": "Switch Platform:",
+    "hideDisabledPlatform": false
+  },
+  "sections": {
+    "installation": {
+      "showBothPlatforms": true,
+      "defaultTo": "opencode"
+    },
+    "quickStart": {
+      "showBothPlatforms": true
+    },
+    "commands": {
+      "showBothPlatforms": true
+    },
+    "skills": {
+      "showBothPlatforms": true
+    },
+    "agents": {
+      "showBothPlatforms": true
+    },
+    "oneShot": {
+      "showBothPlatforms": true
+    },
+    "sessionManagement": {
+      "showBothPlatforms": false,
+      "platformsToShow": [
+        "opencode"
+      ]
+    }
+  },
+  "toggles": {
+    "showClaudeCode": true,
+    "showBetaBadges": true,
+    "showPlatformComparison": true,
+    "defaultClaudeVisible": true
+  },
+  "ui": {
+    "badgeStyles": {
+      "recommended": {
+        "text": "recommended",
+        "bgColor": "#16a34a",
+        "textColor": "#ffffff"
+      },
+      "beta": {
+        "text": "Beta",
+        "bgColor": "#f59e0b",
+        "textColor": "#ffffff"
+      }
+    },
+    "platformTabs": {
+      "opencode": {
+        "icon": "🔵",
+        "color": "#3b82f6"
+      },
+      "claude": {
+        "icon": "🟡",
+        "color": "#eab308"
+      }
+    }
+  },
+  "notes": {
+    "howToHideClaude": "Set platforms.claude.enabled to false to hide Claude Code from documentation",
+    "howToShowClaude": "Set platforms.claude.enabled to true to show Claude Code in documentation",
+    "quickToggleGuide": "Use aikit CLI commands: aikit platform enable/disable claude",
+    "configLocation": "document/aikit/docs-config.json"
+  }
+}
