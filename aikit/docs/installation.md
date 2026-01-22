@@ -6,13 +6,17 @@ sidebar_position: 2
 
 Install AIKit in minutes and start using structured workflows with your AI coding assistant.
 
+<div className="platform-highlight">
+  🚀 <strong>NEW:</strong> AIKit now supports <a href="#antigravity">Google Antigravity</a> - Google DeepMind's AI IDE!
+</div>
+
 ## Prerequisites
 
 Before installing AIKit, ensure you have:
 
 - **Node.js** version 18.0 or above
 - **npm** package manager (comes with Node.js)
-- **OpenCode** or **Claude Code CLI** installed and configured
+- **Google Antigravity**, **OpenCode**, **Cursor**, or **Claude Code CLI** installed and configured
 
 <MaterialIcon name="check_circle" className="icon-success" /> **Check Node.js version:**
 ```bash
@@ -117,16 +121,55 @@ This creates:
 
 <MaterialIcon name="star" className="icon-warning" /> **Automatic Beads Setup**
 - `.beads/` directory is created automatically with full configuration
-- Ready to use with OpenCode and Claude Code - no manual setup required
+- Ready to use with Antigravity, OpenCode, Cursor, and Claude Code - no manual setup required
 - Includes config.yaml, metadata.json, and git hooks
 - Track all development tasks with quality gates
 
-## Step 3: Install into OpenCode or Claude Code
+## Step 3: Install into Your AI Coding Assistant
 
 Choose your AI coding assistant:
 
-<Tabs groupId="assistant" defaultValue="opencode" queryString="assistant">
-<TabItem value="opencode" label="OpenCode" default>
+<Tabs groupId="assistant" defaultValue="antigravity" queryString="assistant">
+<TabItem value="antigravity" label="🚀 Antigravity (NEW)" default>
+
+### Install into Google Antigravity
+
+```bash
+aikit install antigravity
+```
+
+This makes all skills available in Google Antigravity's native format:
+
+- ✅ 42+ skills as `SKILL.md` files
+- ✅ Native folder structure (`.agent/skills/`)
+- ✅ Auto-discovery by Gemini agent
+- ✅ YAML frontmatter format
+- ✅ Progressive disclosure pattern
+
+**Prerequisites:**
+- [Google Antigravity](https://antigravity.google) installed
+
+**Skills are installed to:** `.agent/skills/<skill-name>/SKILL.md`
+
+**Example skill structure:**
+```
+.agent/skills/
+├── aikit-plan/
+│   └── SKILL.md
+├── aikit-test/
+│   └── SKILL.md
+└── aikit-review/
+    └── SKILL.md
+```
+
+**Why Antigravity?**
+- 🧠 Powered by Google's Gemini AI
+- 🚀 Next-generation AI coding experience
+- 🔄 Automatic skill discovery and activation
+- ⚡ Built by Google DeepMind
+
+</TabItem>
+<TabItem value="opencode" label="OpenCode">
 
 ### Install into OpenCode
 
@@ -143,6 +186,30 @@ This makes all skills, agents, and commands available in OpenCode:
 - ✅ All tools and plugins
 
 **Commands are installed to:** `.opencode/command/` and `.opencode/skill/`
+
+</TabItem>
+<TabItem value="cursor" label="Cursor">
+
+### Install into Cursor
+
+```bash
+aikit install cursor
+```
+
+This makes all skills, agents, and commands available in Cursor:
+
+- ✅ 22 built-in skills
+- ✅ 8 specialized agents
+- ✅ 42+ slash commands (prefixed with `aikit-`)
+- ✅ Session management
+- ✅ All tools and plugins
+
+**Prerequisites:**
+- [Cursor IDE installed](https://cursor.com)
+
+**Commands are installed to:** `.cursor/commands/` and `.cursor/skills/`
+
+**Note:** All AIKit commands are prefixed with `aikit-` in Cursor to avoid conflicts with built-in commands (e.g., `/aikit-plan`, `/aikit-fix`).
 
 </TabItem>
 <TabItem value="claude" label="Claude Code CLI">
@@ -163,7 +230,7 @@ This makes all skills, agents, and commands available in Claude Code CLI:
 
 **Commands are installed to:** `.claude/commands/` and `.claude/skills/`
 
-**Note:** You can install into both OpenCode and Claude Code CLI simultaneously - just run both commands!
+**Note:** You can install into multiple platforms simultaneously - just run the commands for each!
 
 </TabItem>
 </Tabs>
@@ -414,12 +481,52 @@ aikit commands list
 If you accidentally installed for the wrong platform:
 
 ```bash
+# For Google Antigravity
+aikit install antigravity
+
 # For OpenCode
 aikit install opencode
+
+# For Cursor
+aikit install cursor
 
 # For Claude Code CLI
 aikit install claude
 ```
+
+### Skills not showing in Antigravity
+
+If AIKit skills don't appear in Google Antigravity:
+
+```bash
+# Reinstall into Antigravity
+aikit install antigravity
+
+# Check installation directory
+ls -la .agent/skills/
+
+# Verify skills exist
+aikit skills list
+```
+
+**Note:** Antigravity uses folder-based skills. Each skill is in its own folder with a `SKILL.md` file.
+
+### Commands not showing in Cursor
+
+If AIKit commands don't appear in Cursor:
+
+```bash
+# Reinstall into Cursor
+aikit install cursor
+
+# Check installation directory
+ls -la .cursor/commands/
+
+# Verify commands exist
+aikit commands list
+```
+
+**Note:** All AIKit commands in Cursor are prefixed with `aikit-` to avoid conflicts (e.g., `/aikit-plan`, `/aikit-fix`).
 
 ### Permission errors (Linux/macOS)
 

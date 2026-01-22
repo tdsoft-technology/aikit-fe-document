@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
@@ -34,7 +34,7 @@ const config: Config = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: 'v0.1.18',
+              label: 'v0.1.35',
               path: '/',
             },
           },
@@ -146,7 +146,7 @@ const config: Config = {
     },
     announcementBar: {
       id: 'beta-notice',
-      content: '⚡ AIKit v0.1.30 is now available - Check out the new features!',
+      content: '⚡ AIKit v0.1.35 is now available - Check out the new features!',
       backgroundColor: '#25c2a0',
       textColor: '#091e42',
       isCloseable: true,

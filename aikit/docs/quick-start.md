@@ -6,6 +6,74 @@ sidebar_position: 3
 
 Get started with AIKit in 5 minutes.
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<div className="platform-selector">
+  🚀 <strong>NEW:</strong> AIKit now supports Google Antigravity!
+</div>
+
+## Choose Your Platform
+
+<Tabs groupId="platform" defaultValue="antigravity">
+<TabItem value="antigravity" label="🚀 Antigravity" default>
+
+### Google Antigravity Quick Start
+
+```bash
+# 1. Initialize AIKit for Antigravity
+aikit init antigravity
+
+# 2. Install skills
+aikit install antigravity
+
+# 3. Open your project in Antigravity
+# Skills are auto-discovered from .agent/skills/
+```
+
+**Skills location:** `.agent/skills/<skill-name>/SKILL.md`
+
+The Gemini agent will automatically discover and use your skills!
+
+</TabItem>
+<TabItem value="opencode" label="OpenCode">
+
+### OpenCode Quick Start
+
+```bash
+# 1. Initialize AIKit
+aikit init opencode
+
+# 2. Install commands and skills
+aikit install opencode
+
+# 3. Use commands with / prefix
+/plan user authentication
+```
+
+</TabItem>
+<TabItem value="cursor" label="Cursor">
+
+### Cursor Quick Start
+
+```bash
+# 1. Initialize AIKit
+aikit init cursor
+
+# 2. Install commands and skills
+aikit install cursor
+
+# 3. Use commands with /aikit- prefix
+/aikit-plan user authentication
+```
+
+**Note:** Commands are prefixed with `aikit-` in Cursor.
+
+</TabItem>
+</Tabs>
+
+---
+
 <MaterialIcon name="lightbulb" className="icon-info" /> **All commands use `/` prefix, skills use `/` prefix**
 
 ## 1. Create Your First Task

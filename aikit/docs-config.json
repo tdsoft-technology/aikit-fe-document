@@ -3,11 +3,31 @@
   "version": "1.0.0",
   "description": "AIKit Documentation Configuration - Controls platform visibility",
   "platforms": {
+    "antigravity": {
+      "enabled": true,
+      "label": "Google Antigravity",
+      "badge": "NEW",
+      "badgeColor": "gradient",
+      "showInNav": true,
+      "showInQuickStart": true,
+      "showInInstallation": true,
+      "featured": true,
+      "betaWarning": "Google Antigravity - The next generation AI coding experience from Google DeepMind."
+    },
     "opencode": {
       "enabled": true,
       "label": "OpenCode",
-      "badge": "recommended",
+      "badge": "stable",
       "badgeColor": "green",
+      "showInNav": true,
+      "showInQuickStart": true,
+      "showInInstallation": true
+    },
+    "cursor": {
+      "enabled": true,
+      "label": "Cursor",
+      "badge": "popular",
+      "badgeColor": "purple",
       "showInNav": true,
       "showInQuickStart": true,
       "showInInstallation": true
@@ -25,7 +45,7 @@
   },
   "navigation": {
     "showPlatformTabs": true,
-    "defaultPlatform": "opencode",
+    "defaultPlatform": "antigravity",
     "showBothPlatforms": true,
     "platformSwitcherText": "Switch Platform:",
     "hideDisabledPlatform": false
@@ -65,9 +85,25 @@
   },
   "ui": {
     "badgeStyles": {
+      "NEW": {
+        "text": "NEW",
+        "bgColor": "linear-gradient(135deg, #4285f4, #ea4335, #fbbc04, #34a853)",
+        "textColor": "#ffffff",
+        "animated": true
+      },
       "recommended": {
         "text": "recommended",
         "bgColor": "#16a34a",
+        "textColor": "#ffffff"
+      },
+      "stable": {
+        "text": "stable",
+        "bgColor": "#16a34a",
+        "textColor": "#ffffff"
+      },
+      "popular": {
+        "text": "popular",
+        "bgColor": "#8b5cf6",
         "textColor": "#ffffff"
       },
       "beta": {
@@ -77,9 +113,18 @@
       }
     },
     "platformTabs": {
+      "antigravity": {
+        "icon": "🚀",
+        "color": "linear-gradient(135deg, #4285f4, #ea4335)",
+        "featured": true
+      },
       "opencode": {
         "icon": "🔵",
         "color": "#3b82f6"
+      },
+      "cursor": {
+        "icon": "🟣",
+        "color": "#8b5cf6"
       },
       "claude": {
         "icon": "🟡",
@@ -88,9 +133,13 @@
     }
   },
   "notes": {
+    "howToHideAntigravity": "Set platforms.antigravity.enabled to false to hide Antigravity from documentation",
+    "howToShowAntigravity": "Set platforms.antigravity.enabled to true to show Antigravity in documentation",
     "howToHideClaude": "Set platforms.claude.enabled to false to hide Claude Code from documentation",
     "howToShowClaude": "Set platforms.claude.enabled to true to show Claude Code in documentation",
-    "quickToggleGuide": "Use aikit CLI commands: aikit platform enable/disable claude",
+    "howToHideCursor": "Set platforms.cursor.enabled to false to hide Cursor from documentation",
+    "howToShowCursor": "Set platforms.cursor.enabled to true to show Cursor in documentation",
+    "quickToggleGuide": "Use aikit CLI commands: aikit platform enable/disable <platform>",
     "configLocation": "document/aikit/docs-config.json"
   }
 }

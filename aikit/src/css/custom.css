@@ -444,3 +444,115 @@ tr:hover td {
   animation: fadeInUp 0.6s ease-out 0.2s backwards;
 }
 
+/* Google Antigravity Featured Styles */
+.featured-banner,
+.platform-highlight,
+.hero-banner {
+  background: linear-gradient(135deg, #4285f4 0%, #ea4335 25%, #fbbc04 50%, #34a853 75%, #4285f4 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+}
+
+.featured-banner a,
+.platform-highlight a,
+.hero-banner a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.featured-banner a:hover,
+.platform-highlight a:hover,
+.hero-banner a:hover {
+  color: #ffffcc;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.new-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #4285f4, #ea4335, #fbbc04, #34a853);
+  background-size: 200% 200%;
+  animation: gradientShift 2s ease infinite, pulse 1.5s ease infinite;
+  color: #ffffff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(66, 133, 244, 0.4);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Featured Platform Card */
+.featured-platform {
+  background: linear-gradient(135deg, rgba(66, 133, 244, 0.1), rgba(52, 168, 83, 0.1));
+  border: 2px solid transparent;
+  border-image: linear-gradient(135deg, #4285f4, #ea4335, #fbbc04, #34a853) 1;
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-platform::before {
+  content: '🚀 FEATURED';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, #4285f4, #34a853);
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 0 0 0 12px;
+}
+
+/* Platform Selector */
+.platform-selector {
+  background: linear-gradient(135deg, #4285f4, #34a853);
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+/* Antigravity-specific tab styling */
+[data-value="antigravity"] {
+  position: relative;
+}
+
+[data-value="antigravity"]::after {
+  content: '🚀';
+  margin-left: 0.5rem;
+}
+

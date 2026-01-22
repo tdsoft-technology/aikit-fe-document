@@ -1,14 +1,45 @@
 ---
 sidebar_position: 1
-description: AIKit - Supercharge Claude Code with structured workflows, visual diagramming, task tracking, and quality gates. The open-source AI coding agent toolkit for professional developers.
-keywords: ['Claude Code', 'AI coding agent', 'AI development toolkit', 'Claude AI assistant', 'task tracking', 'quality gates', 'AI workflows', 'diagramming tool', 'Mermaid', 'Draw.io integration', 'TDD workflow', 'code review automation']
+description: AIKit - Supercharge Google Antigravity, Claude Code, OpenCode, and Cursor with structured workflows, visual diagramming, task tracking, and quality gates. The open-source AI coding agent toolkit for professional developers.
+keywords: ['Google Antigravity', 'Claude Code', 'OpenCode', 'Cursor', 'AI coding agent', 'AI development toolkit', 'Gemini', 'Google DeepMind', 'task tracking', 'quality gates', 'AI workflows', 'diagramming tool', 'Mermaid', 'Draw.io integration', 'TDD workflow', 'code review automation']
 ---
 
 # Welcome to AIKit
 
-**Transform Claude Code into a production-grade development environment.**
+<div className="hero-banner">
+  <span className="new-badge">🚀 NEW</span>
+  <strong>Now with Google Antigravity Support!</strong>
+</div>
 
-AIKit is an open-source toolkit that supercharges **Claude Code** (Anthropic's official CLI) and **OpenCode** with structured workflows, visual diagramming, task tracking, and automated quality gates. Built for developers who want reliable, repeatable AI-powered development.
+**Transform your AI coding assistant into a production-grade development environment.**
+
+AIKit is an open-source toolkit that supercharges **Google Antigravity** (Google DeepMind's AI IDE), **OpenCode**, **Cursor**, and **Claude Code** with structured workflows, visual diagramming, task tracking, and automated quality gates. Built for developers who want reliable, repeatable AI-powered development.
+
+---
+
+## 🚀 Featured: Google Antigravity Integration
+
+<div className="featured-platform">
+
+**AIKit now supports Google Antigravity** - Google DeepMind's next-generation AI coding experience!
+
+```bash
+# Initialize with Antigravity
+aikit init antigravity
+
+# Install skills to .agent/skills/
+aikit install antigravity
+```
+
+**Why Antigravity + AIKit?**
+- 🧠 **Gemini-powered** - Leverage Google's most advanced AI
+- 📁 **Native skill format** - Skills installed as `SKILL.md` files
+- 🔄 **Progressive disclosure** - Agent discovers skills automatically
+- ⚡ **Zero config** - Works out of the box
+
+[Get Started with Antigravity →](installation#antigravity)
+
+</div>
 
 ---
 

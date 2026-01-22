@@ -1,14 +1,29 @@
 ---
 sidebar_position: 2
-description: Complete feature guide for AIKit - visual diagramming, structured workflows, task tracking with quality gates, specialized AI agents, and session management for Claude Code and OpenCode.
-keywords: ['Claude Code features', 'AI coding toolkit features', 'Draw.io integration', 'Mermaid diagrams', 'TDD workflow', 'task tracking', 'quality gates', 'AI agents', 'session management', 'code review automation', 'Figma integration']
+description: Complete feature guide for AIKit - visual diagramming, structured workflows, task tracking with quality gates, specialized AI agents, and session management for Google Antigravity, OpenCode, Cursor, and Claude Code.
+keywords: ['Google Antigravity features', 'Gemini AI coding', 'Claude Code features', 'AI coding toolkit features', 'Draw.io integration', 'Mermaid diagrams', 'TDD workflow', 'task tracking', 'quality gates', 'AI agents', 'session management', 'code review automation', 'Figma integration']
 ---
 
 # AIKit Features
 
-**Everything AIKit brings to Claude Code and OpenCode.**
+<div className="featured-banner">
+  🚀 <strong>NEW:</strong> Full Google Antigravity support with native SKILL.md format!
+</div>
 
-AIKit transforms Claude Code from a powerful AI assistant into a **complete development environment** with visual diagramming, structured workflows, task tracking, and automated quality gates.
+**Everything AIKit brings to Google Antigravity, OpenCode, Cursor, and Claude Code.**
+
+AIKit transforms your AI coding assistant into a **complete development environment** with visual diagramming, structured workflows, task tracking, and automated quality gates.
+
+---
+
+## <MaterialIcon name="devices" className="icon-primary" /> Supported Platforms
+
+| Platform | Status | Skills Format | Commands |
+|----------|--------|---------------|----------|
+| 🚀 **Google Antigravity** | Featured | Folder + `SKILL.md` | Via skills |
+| 🔵 **OpenCode** | Stable | Flat `.md` files | Native `/` commands |
+| 🟣 **Cursor** | Active | Flat `.md` files | `aikit-` prefix |
+| 🟡 **Claude Code** | Beta | Flat `.md` files | Native `/` commands |
 
 ---
 
